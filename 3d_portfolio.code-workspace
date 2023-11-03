@@ -1,9 +1,9 @@
 {
-	"folders": [
-		{
-			"name": "3d_portfolio",
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "name": "3d_portfolio",
+      "path": "."
+    }
+  ],
+  "settings": {}
 }
