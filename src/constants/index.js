@@ -8,13 +8,13 @@ import {
   html,
   css,
   reactjs,
-  redux,
   php,
   nodejs,
-  mongodb,
   git,
   figma,
   docker,
+  premiere,
+  photoshop,
   hilton,
   owned,
   menlo,
@@ -22,7 +22,6 @@ import {
   carrent,
   jobit,
   tripguide,
-  threejs,
 } from "../assets";
 
 export const navLinks = [
@@ -42,19 +41,19 @@ export const navLinks = [
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Digital Marketing",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Entrepreneurship",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Global Perspective",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Leadership",
     icon: creator,
   },
 ];
@@ -81,10 +80,6 @@ const technologies = [
     icon: reactjs,
   },
   {
-    name: "Redux Toolkit",
-    icon: redux,
-  },
-  {
     name: "PHP",
     icon: php,
   },
@@ -93,12 +88,12 @@ const technologies = [
     icon: nodejs,
   },
   {
-    name: "MongoDB",
-    icon: mongodb,
+    name: "Premiere",
+    icon: premiere,
   },
   {
-    name: "Three JS",
-    icon: threejs,
+    name: "Photoshop",
+    icon: photoshop,
   },
   {
     name: "git",
@@ -205,10 +200,6 @@ const projects = [
       {
         name: "react",
         color: "blue-text-gradient",
-      },
-      {
-        name: "mongodb",
-        color: "green-text-gradient",
       },
       {
         name: "tailwind",

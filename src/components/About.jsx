@@ -43,8 +43,8 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am currently interning at a startup in Japan as a Web Engineering
-        Intern.
+        I am a Senior at Menlo College majoring in Entrepreneurship and minoring
+        in Business Analytics.
       </motion.p>
 
       <div className="mt-20 flex flex flex-wrap gap-10">
