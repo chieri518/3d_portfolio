@@ -26,7 +26,7 @@ import ellipsis from "./company/ellipsis.png";
 import menlo from "./company/menlo.png";
 
 import carrent from "./carrent.png";
-import jobit from "./jobit.png";
+import uif from "./uif_group.png";
 import tripguide from "./tripguide.png";
 
 export {
@@ -55,6 +55,6 @@ export {
   ellipsis,
   menlo,
   carrent,
-  jobit,
+  uif,
   tripguide,
 };
