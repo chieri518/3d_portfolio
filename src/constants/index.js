@@ -10,7 +10,7 @@ import {
   reactjs,
   php,
   nodejs,
-  git,
+  readmore,
   figma,
   docker,
   premiere,
@@ -19,6 +19,8 @@ import {
   owned,
   menlo,
   ellipsis,
+  governormedal,
+  marketingconf,
   carrent,
   uif,
   tripguide,
@@ -96,10 +98,6 @@ const technologies = [
     icon: photoshop,
   },
   {
-    name: "git",
-    icon: git,
-  },
-  {
     name: "figma",
     icon: figma,
   },
@@ -175,38 +173,97 @@ const experiences = [
   },
 ];
 
-const testimonials = [
+const references = [
   {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
+    reference:
+      "Abe is an innovative entrepreneur with strong leadership acumen and achieves quality results in her work.",
+    name: "Dariush Rafinejad, Ph.D.",
+    designation: "CEO",
+    company: "Blue Dome Consulting for Sustainability",
+    image:
+      "https://media.licdn.com/dms/image/v2/C5603AQHwBM6Q06QeJg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1566161085065?e=1733961600&v=beta&t=K2AIsjUzPkJGQq33QyJ2hG52KXkYOeEluzV5qy71BdE",
   },
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
+    reference:
+      "Chieri is an all-around superstar with the ability to adapt to any situation she's asked to step into.",
+    name: "Austin Bumpus",
+    designation: "Social Media Manager",
+    company: "The Institute for Experiential AI at Northeastern University",
+    image:
+      "https://media.licdn.com/dms/image/v2/C4D03AQE49EKzpOBdNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1610318639635?e=1733961600&v=beta&t=tlpAsvAircZAEzn4FOsDhZCQ9-AktddqgakNmcMpsGo",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
+    reference:
+      "Chieri brings enthusiasm and a positive attitude to the workplace, while maintaining a high level of professionalism and skill.",
+    name: "Robert Hayashi",
+    designation: "Senior Manager - eCommerce Japan",
+    company: "Hilton",
+    image:
+      "https://media.licdn.com/dms/image/v2/C5603AQEvg5w0ez-IGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635905199834?e=1733961600&v=beta&t=y3eWTY4fBnjuWN5cp-lJA_wW7YeETPcai07maXss4cY",
+  },
+];
+
+const awards = [
+  {
+    name: "The Governor General’s Academic Medal",
+    description:
+      "For nearly 150 years, the Governor General’s Academic Medals have recognized the outstanding scholastic achievements of students in Canada. They are awarded to the student graduating with the highest average from a high school, as well as from approved college or university programs.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: governormedal,
+  },
+  {
+    name: "Richard F. O’Brien Award",
+    description:
+      "These awards are designated for students from each class who best exemplify the true spirit of Menlo College through all-around excellence.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "restapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "scss",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: uif,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "The Young Leadership Award",
+    description:
+      "The Young Leadership Award was given to only 3 qualified individuals based on the internal evaluation on the set parameters by the conference committee with regards to the individual's skills and influence to the industry.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: marketingconf,
   },
 ];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "chetz",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "A student organization established to bridge the Japanese students with various cultures.",
     tags: [
       {
         name: "react",
@@ -221,9 +278,9 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "University Innovation Fellowship",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "The University Innovation Fellows program empowers students and faculty to become leaders of change in higher education. Fellows are leading a global movement to ensure that all students gain the attitudes, skills and knowledge required to navigate a complex world.",
     tags: [
       {
         name: "react",
@@ -264,4 +321,4 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, references, awards, projects };

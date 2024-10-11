@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { testimonials } from "../constants";
+import { references } from "../constants";
 
 const FeedbackCard = ({
   index,
-  testimonial,
+  reference,
   name,
   designation,
   company,
@@ -19,7 +19,7 @@ const FeedbackCard = ({
   >
     <p className="text-white font-black text-[48px]">"</p>
     <div className="mt-1">
-      <p className="text-white tracking-wider text-[18px]">{testimonial}</p>
+      <p className="text-white tracking-wider text-[18px]">{reference}</p>
       <div className="mt-7 flex justify-between items-center gap-1">
         <div className="flex-1 flex flex-col">
           <p className="text-white font-medium text-[16px]">
@@ -48,12 +48,12 @@ const Feedbacks = () => {
       >
         <motion.div variants={textVariant()}>
           <p className={styles.sectionSubText}>What others say...</p>
-          <h2 className={styles.sectionHeadText}>Testimonials</h2>
+          <h2 className={styles.sectionHeadText}>References</h2>
         </motion.div>
       </div>
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-        {testimonials.map((testimonial, index) => (
-          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
+        {references.map((reference, index) => (
+          <FeedbackCard key={reference.name} index={index} {...reference} />
         ))}
       </div>
     </div>
