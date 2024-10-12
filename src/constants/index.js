@@ -10,7 +10,6 @@ import {
   reactjs,
   php,
   nodejs,
-  readmore,
   figma,
   docker,
   premiere,
@@ -20,24 +19,23 @@ import {
   menlo,
   ellipsis,
   governormedal,
+  honor,
   marketingconf,
-  carrent,
   uif,
-  tripguide,
 } from "../assets";
 
 export const navLinks = [
   {
-    id: "about",
+    id: "#about",
     title: "About",
   },
   {
-    id: "work",
-    title: "Work",
+    id: "projects",
+    title: "Projects",
   },
   {
-    id: "contact",
-    title: "Contact",
+    id: "experience",
+    title: "Experience",
   },
 ];
 
@@ -208,53 +206,20 @@ const awards = [
     name: "The Governor General’s Academic Medal",
     description:
       "For nearly 150 years, the Governor General’s Academic Medals have recognized the outstanding scholastic achievements of students in Canada. They are awarded to the student graduating with the highest average from a high school, as well as from approved college or university programs.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
+
     image: governormedal,
   },
   {
     name: "Richard F. O’Brien Award",
     description:
       "These awards are designated for students from each class who best exemplify the true spirit of Menlo College through all-around excellence.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "restapi",
-        color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: uif,
+    image: honor,
     source_code_link: "https://github.com/",
   },
   {
     name: "The Young Leadership Award",
     description:
       "The Young Leadership Award was given to only 3 qualified individuals based on the internal evaluation on the set parameters by the conference committee with regards to the individual's skills and influence to the industry.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "tailwind",
-        color: "pink-text-gradient",
-      },
-    ],
     image: marketingconf,
   },
 ];
@@ -266,15 +231,15 @@ const projects = [
       "A student organization established to bridge the Japanese students with various cultures.",
     tags: [
       {
-        name: "react",
+        name: "entrepreneurship",
         color: "blue-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "multicultural",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: uif,
     source_code_link: "https://github.com/",
   },
   {
@@ -283,16 +248,12 @@ const projects = [
       "The University Innovation Fellows program empowers students and faculty to become leaders of change in higher education. Fellows are leading a global movement to ensure that all students gain the attitudes, skills and knowledge required to navigate a complex world.",
     tags: [
       {
-        name: "react",
+        name: "design thinking",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "leadership",
         color: "green-text-gradient",
-      },
-      {
-        name: "scss",
-        color: "pink-text-gradient",
       },
     ],
     image: uif,
@@ -316,7 +277,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: uif,
     source_code_link: "https://github.com/",
   },
 ];

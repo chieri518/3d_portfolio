@@ -25,11 +25,10 @@ import ellipsis from "./company/ellipsis.png";
 import menlo from "./company/menlo.png";
 
 import governormedal from "./governormedal.png";
+import honor from "./honor.png";
 import marketingconf from "./marketingconf.png";
 
-import carrent from "./carrent.png";
 import uif from "./uif.png";
-import tripguide from "./tripguide.png";
 
 export {
   logo,
@@ -56,8 +55,7 @@ export {
   ellipsis,
   menlo,
   governormedal,
+  honor,
   marketingconf,
-  carrent,
   uif,
-  tripguide,
 };
