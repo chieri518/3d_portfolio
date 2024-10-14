@@ -282,4 +282,23 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, references, awards, projects };
+const heroTexts = [
+  "Global Citizen",
+  500,
+  "Website Developer",
+  500,
+  "Digital Marketer",
+  500,
+  "Senior at Menlo College",
+  500,
+];
+
+export {
+  services,
+  technologies,
+  experiences,
+  references,
+  awards,
+  projects,
+  heroTexts,
+};

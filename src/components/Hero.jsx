@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { TypeAnimation } from "react-type-animation";
 
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import { fadeIn, textVariant } from "../utils/motion";
+import { heroTexts } from "../constants";
 
-const Hero = () => {
+const Hero = ({ loading, isMobile }) => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -12,17 +15,27 @@ const Hero = () => {
         <div className="flex flex-col items-start justify-center items-center mt-5">
           <div className="w-5 h-5 rounded-full bg-[#80ffdb]" />
           <div className="w-1 sm:h-80 h-40 green-gradient" />
-        </div>
-        <div>
+        </div>{" "}
+        <motion.div
+          variants={textVariant()}
+          initial="hidden"
+          whileInView={!loading && "show"}
+          viewport={{ once: true, amount: 0.25 }}
+        >
           <h1 className={`${styles.heroHeadText} text-white`}>
             Hi, I'm <span className="text-[#80ffdb]">Chieri</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            I'm an aspiring digital marketer from Japan based in Silicon Valley.
+            <TypeAnimation
+              sequence={heroTexts}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+            />
           </p>
-        </div>
+        </motion.div>
       </div>
-      <ComputersCanvas />
+      <ComputersCanvas isMobile={isMobile} />
       <div className="abosolute xs:bottom-10 bottom:32 w-full flex justify-center items-center">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">

@@ -6,6 +6,7 @@ import web from "./web.png";
 import readmore from "./readmore.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
+import email from "./email.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -27,7 +28,6 @@ import menlo from "./company/menlo.png";
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
 import marketingconf from "./marketingconf.png";
-
 import uif from "./uif.png";
 
 export {
@@ -39,6 +39,7 @@ export {
   readmore,
   menu,
   close,
+  email,
   css,
   docker,
   figma,
