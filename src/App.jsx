@@ -1,14 +1,12 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import {
   About,
-  Contact,
   Feedbacks,
   Hero,
   Navbar,
   Tech,
   Awards,
   Works,
-  StarsCanvas,
 } from "./components";
 import { Projects, Experience } from "./pages";
 
@@ -24,10 +22,6 @@ const LandingPage = () => {
       <Awards />
       <Works />
       <Feedbacks />
-      <div className="relative z-0">
-        <StarsCanvas />
-        <Contact />
-      </div>
     </>
   );
 };

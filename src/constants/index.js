@@ -22,6 +22,9 @@ import {
   honor,
   marketingconf,
   uif,
+  github,
+  linkedin,
+  instagram,
 } from "../assets";
 
 export const navLinks = [
@@ -111,7 +114,7 @@ const experiences = [
     company_name: "Hilton - Area Office at Hilton Tokyo",
     icon: hilton,
     iconBg: "#E6DEDD",
-    date: "Oct 2023 - Present",
+    date: "Oct 2023 - Jun 2024",
     points: [
       "Contributed to content management for 19 Hilton hotels within the Japan eCommerce team.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -293,6 +296,24 @@ const heroTexts = [
   500,
 ];
 
+const socials = [
+  {
+    id: "github",
+    icon: github,
+    link: "https://github.com/chieri518",
+  },
+  {
+    id: "linkedin",
+    icon: linkedin,
+    link: "https://www.linkedin.com/in/chieriabe/",
+  },
+  {
+    id: "instagram",
+    icon: instagram,
+    link: "https://www.instagram.com/chieriabe",
+  },
+];
+
 export {
   services,
   technologies,
@@ -301,4 +322,5 @@ export {
   awards,
   projects,
   heroTexts,
+  socials,
 };

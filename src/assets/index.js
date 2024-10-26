@@ -30,6 +30,10 @@ import honor from "./honor.png";
 import marketingconf from "./marketingconf.png";
 import uif from "./uif.png";
 
+import instagram from "./instagram.png";
+import linkedin from "./linkedin.png";
+import github from "./github.png";
+
 export {
   logo,
   backend,
@@ -59,4 +63,7 @@ export {
   honor,
   marketingconf,
   uif,
+  instagram,
+  linkedin,
+  github,
 };

@@ -4,7 +4,7 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { services } from "../constants";
+import { services, socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
@@ -66,6 +66,18 @@ const About = () => {
             <img src={email} alt="email icon" className="w-[30px] h-[30px]" />
             chieriabe518@gmail.com
           </Link>
+        </div>
+        <div className="flex gap-5 items-center">
+          {socials.map((social) => (
+            <Link
+              href={social.link}
+              target="_blank"
+              key={social.id}
+              className="w-8 h-8 hover:-translate-y-2 ease-in transition-all duration-100 cursor-pointer"
+            >
+              <img src={social.icon} />
+            </Link>
+          ))}
         </div>
         <Link
           href="document/Chieri_Abe_Resume.pdf"
