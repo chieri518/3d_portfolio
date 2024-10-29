@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { readmore } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects } from "../constants";
+import { projects, task } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 import Navbar from "./navbar";
@@ -64,6 +64,40 @@ const ProjectCard = ({
   );
 };
 
+const ProjectDetails = ({ overview, challenges, learnings }) => {
+  return (
+    <div className="mt-8 p-5 bg-secondary rounded-2xl">
+      <h3 className="text-white font-semibold text-[20px]">Project Details</h3>
+
+      {/* Overview Section */}
+      <div className="mt-4">
+        <h4 className="text-primary font-bold text-[18px]">Overview</h4>
+        <p className="text-white text-[15px] mt-2 leading-[24px]">{overview}</p>
+      </div>
+
+      {/* Challenges and Solutions Section */}
+      <div className="mt-4">
+        <h4 className="text-primary font-bold text-[18px]">
+          Challenges and Solutions
+        </h4>
+        <p className="text-white text-[15px] mt-2 leading-[24px]">
+          {challenges}
+        </p>
+      </div>
+
+      {/* Learning Outcomes Section */}
+      <div className="mt-4">
+        <h4 className="text-primary font-bold text-[18px]">
+          Learning Outcomes
+        </h4>
+        <p className="text-white text-[15px] mt-2 leading-[24px]">
+          {learnings}
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const Works = () => {
   return (
     <>
@@ -85,6 +119,12 @@ const Works = () => {
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
+
+        <ProjectDetails
+          overview={task.overview}
+          challenges={task.challenges}
+          learnings={task.learnings}
+        />
       </div>
     </>
   );

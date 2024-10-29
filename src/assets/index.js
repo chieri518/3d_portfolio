@@ -6,7 +6,7 @@ import web from "./web.png";
 import readmore from "./readmore.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
-import email from "./email.png";
+import email from "./email.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";

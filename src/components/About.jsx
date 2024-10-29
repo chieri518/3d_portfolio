@@ -8,7 +8,7 @@ import { services, socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-import email from "/src/assets/email.png";
+import email from "/src/assets/email.svg";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -26,7 +26,7 @@ const ServiceCard = ({ index, title, icon }) => {
           className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
         >
           <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white  text-[20px] font-bold text-center">
+          <h3 className="text-black  text-[20px] font-bold text-center">
             {title}
           </h3>
         </div>
@@ -54,7 +54,7 @@ const About = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.25 }}
-        className="mt-4 dark:text-ctnSecondaryDark text-gray-300 text-[17px] w-full leading-[30px] flex flex-col justify-between gap-6"
+        className="mt-4 dark:text-ctnSecondaryDark text-black text-[17px] w-full leading-[30px] flex flex-col justify-between gap-6"
       >
         <div className="w-fit break-words">
           <Link
@@ -85,8 +85,8 @@ const About = () => {
           rel="noreferrer"
           className="w-fit"
         >
-          <div className="btn w-fit bg-[#80ffdb] text-primary px-7 py-2 rounded-md overflow-hidden relative cursor-pointer">
-            <div className="original bg-white text-tertiary px-7 py-2">
+          <div className="btn w-fit bg-[#80ffdb] text-black px-7 py-2 rounded-md overflow-hidden relative cursor-pointer">
+            <div className="original bg-black text-tertiary px-7 py-2">
               Resume
             </div>
             <div className="letters">

@@ -2,11 +2,10 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 import { fadeIn, textVariant } from "../utils/motion";
 import { heroTexts } from "../constants";
 
-const Hero = ({ loading, isMobile }) => {
+const Hero = ({ loading }) => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <div
@@ -18,10 +17,10 @@ const Hero = ({ loading, isMobile }) => {
           whileInView={!loading && "show"}
           viewport={{ once: true, amount: 0.25 }}
         >
-          <h1 className={`${styles.heroHeadText} text-white`}>
+          <h1 className={`${styles.heroHeadText} text-black`}>
             Hi, I'm <span className="text-[#80ffdb]">Chieri</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-white-100`}>
+          <p className={`${styles.heroSubText} mt-2 text-black`}>
             <TypeAnimation
               sequence={heroTexts}
               wrapper="span"
@@ -31,10 +30,9 @@ const Hero = ({ loading, isMobile }) => {
           </p>
         </motion.div>
       </div>
-      <ComputersCanvas isMobile={isMobile} />
       <div className="absolute xs:bottom-10 bottom:32 w-full flex justify-center items-center">
         <a href="#about">
-          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-tertiary flex justify-center items-start p-2">
             <motion.div
               animate={{
                 y: [0, 24, 0],

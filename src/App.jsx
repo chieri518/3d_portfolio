@@ -6,7 +6,7 @@ import {
   Navbar,
   Tech,
   Awards,
-  Works,
+  Features,
 } from "./components";
 import { Projects, Experience } from "./pages";
 
@@ -20,7 +20,7 @@ const LandingPage = () => {
       <About />
       <Tech />
       <Awards />
-      <Works />
+      <Features />
       <Feedbacks />
     </>
   );
