@@ -34,7 +34,7 @@ const ProjectCard = ({
           <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+              className="white-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
             >
               <img
                 src={readmore}
@@ -47,7 +47,7 @@ const ProjectCard = ({
 
         <div className="mt-5">
           <h3 className="text-black font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-black text-[14px]">{description}</p>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
 
         <div className="mt-4 flex flex-wrap gap-2">
@@ -74,7 +74,9 @@ const Features = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Description of the projects....
+          By blending creativity with data-driven insights, I create targeted
+          campaigns and user-centered websites to deliver measurable marketing
+          results.
         </motion.p>
       </div>
 

@@ -1,13 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import {
-  About,
-  Feedbacks,
-  Hero,
-  Navbar,
-  Tech,
-  Awards,
-  Features,
-} from "./components";
+import { About, Feedbacks, Hero, Navbar, Awards, Features } from "./components";
 import { Projects, Experience } from "./pages";
 
 const LandingPage = () => {
@@ -18,9 +10,8 @@ const LandingPage = () => {
         <Hero />
       </div>
       <About />
-      <Tech />
-      <Awards />
       <Features />
+      <Awards />
       <Feedbacks />
     </>
   );

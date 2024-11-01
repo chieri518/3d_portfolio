@@ -1,8 +1,8 @@
 import {
-  mobile,
-  backend,
-  creator,
-  web,
+  click,
+  target,
+  plane,
+  rocket,
   javascript,
   typescript,
   html,
@@ -22,6 +22,10 @@ import {
   honor,
   marketingconf,
   uif,
+  websitedev,
+  socialmedia,
+  dataanalysis,
+  email,
   github,
   linkedin,
   instagram,
@@ -41,19 +45,19 @@ export const navLinks = [
 const services = [
   {
     title: "Digital Marketing",
-    icon: web,
+    icon: click,
   },
   {
     title: "Entrepreneurship",
-    icon: mobile,
+    icon: rocket,
   },
   {
     title: "Global Perspective",
-    icon: backend,
+    icon: plane,
   },
   {
     title: "Leadership",
-    icon: creator,
+    icon: target,
   },
 ];
 
@@ -213,7 +217,6 @@ const awards = [
     description:
       "These awards are designated for students from each class who best exemplify the true spirit of Menlo College through all-around excellence.",
     image: honor,
-    source_code_link: "https://github.com/",
   },
   {
     name: "The Young Leadership Award",
@@ -225,59 +228,59 @@ const awards = [
 
 const highlights = [
   {
-    name: "chetz",
+    name: "Social Media Marketing",
     description:
-      "A student organization established to bridge the Japanese students with various cultures.",
+      "Skilled in creating and managing targeted social media campaigns across platforms, I focus on building brand engagement, increasing follower growth, and delivering content that resonates with diverse audiences. My approach combines audience insights with strategic content planning to optimize reach and engagement.",
     tags: [
       {
-        name: "entrepreneurship",
+        name: "Photoshop",
         color: "blue-text-gradient",
       },
       {
-        name: "multicultural",
+        name: "Premiere",
         color: "pink-text-gradient",
       },
     ],
-    image: uif,
-    source_code_link: "https://github.com/",
+    image: socialmedia,
+    source_code_link: "/projects",
   },
   {
-    name: "University Innovation Fellowship",
+    name: "Data Analysis",
     description:
-      "The University Innovation Fellows program empowers students and faculty to become leaders of change in higher education. Fellows are leading a global movement to ensure that all students gain the attitudes, skills and knowledge required to navigate a complex world.",
+      "Proficient in data interpretation and analytics tools, I turn raw data into actionable insights that drive marketing decisions. By analyzing campaign metrics and user behavior, I identify trends, measure effectiveness, and continuously refine strategies to maximize ROI and impact.",
     tags: [
       {
-        name: "design thinking",
+        name: "Google Analytics",
         color: "blue-text-gradient",
       },
       {
-        name: "leadership",
+        name: "Hootsuite",
         color: "green-text-gradient",
       },
     ],
-    image: uif,
-    source_code_link: "https://github.com/",
+    image: dataanalysis,
+    source_code_link: "/projects",
   },
   {
-    name: "Trip Guide",
+    name: "Website Development",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Experienced in developing and maintaining user-friendly websites, I create digital experiences that are both visually appealing and functional. My work includes designing, updating, and optimizing websites to ensure they meet the needs of varied audiences and align with brand objectives.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "tyoescript",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "HTML",
         color: "pink-text-gradient",
       },
     ],
-    image: uif,
-    source_code_link: "https://github.com/",
+    image: websitedev,
+    source_code_link: "/projects",
   },
 ];
 
@@ -414,6 +417,11 @@ const heroTexts = [
 ];
 
 const socials = [
+  {
+    id: "email",
+    icon: email,
+    link: "mailto:chieriabe518@gmail.com",
+  },
   {
     id: "github",
     icon: github,

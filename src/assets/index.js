@@ -1,8 +1,8 @@
 import logo from "./logo.png";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
+import click from "./click.png";
+import target from "./target.png";
+import plane from "./plane.png";
+import rocket from "./rocket.png";
 import readmore from "./readmore.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -30,16 +30,20 @@ import honor from "./honor.png";
 import marketingconf from "./marketingconf.png";
 import uif from "./uif.png";
 
+import websitedev from "./websitedev.png";
+import socialmedia from "./socialmedia.png";
+import dataanalysis from "./dataanalysis.png";
+
 import instagram from "./instagram.png";
 import linkedin from "./linkedin.png";
 import github from "./github.png";
 
 export {
   logo,
-  backend,
-  creator,
-  mobile,
-  web,
+  click,
+  target,
+  plane,
+  rocket,
   readmore,
   menu,
   close,
@@ -63,6 +67,9 @@ export {
   honor,
   marketingconf,
   uif,
+  websitedev,
+  socialmedia,
+  dataanalysis,
   instagram,
   linkedin,
   github,

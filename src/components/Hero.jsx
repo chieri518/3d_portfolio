@@ -17,10 +17,10 @@ const Hero = ({ loading }) => {
           whileInView={!loading && "show"}
           viewport={{ once: true, amount: 0.25 }}
         >
-          <h1 className={`${styles.heroHeadText} text-black`}>
-            Hi, I'm <span className="text-[#80ffdb]">Chieri</span>
+          <h1 className={`${styles.heroHeadText} text-secondary`}>
+            Hi, I'm <span className="pink-text-gradient">Chieri</span>
           </h1>
-          <p className={`${styles.heroSubText} mt-2 text-black`}>
+          <p className={`${styles.heroSubText} mt-2`}>
             <TypeAnimation
               sequence={heroTexts}
               wrapper="span"
