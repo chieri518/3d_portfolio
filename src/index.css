@@ -270,3 +270,7 @@
 .btn:hover span:nth-child(6) {
   transition-delay: 0.5s;
 }
+
+.vertical-timeline::before {
+  background: #dddddd;
+}
