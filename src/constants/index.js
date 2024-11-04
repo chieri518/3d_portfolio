@@ -439,7 +439,7 @@ const socials = [
   },
 ];
 
-const task = [
+const tasks = [
   {
     name: "Project Name",
     description: "Short description of the project.",
@@ -465,5 +465,5 @@ export {
   projects,
   heroTexts,
   socials,
-  task,
+  tasks,
 };

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { readmore } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects, task } from "../constants";
+import { projects, tasks } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
 import Navbar from "./navbar";
@@ -17,7 +17,9 @@ const ProjectDetails = ({ overview, challenges, learnings }) => {
       {/* Overview Section */}
       <div className="mt-4">
         <h4 className="text-primary font-bold text-[18px]">Overview</h4>
-        <p className="text-white text-[15px] mt-2 leading-[24px]">{overview}</p>
+        <p className="text-white text-[15px] mt-2 leading-[24px]">
+          {tasks.overview}
+        </p>
       </div>
 
       {/* Challenges and Solutions Section */}
@@ -60,9 +62,9 @@ const Works = () => {
         </motion.p>
       </div>
       <ProjectDetails
-        overview={task.overview}
-        challenges={task.challenges}
-        learnings={task.learnings}
+        overview={tasks.overview}
+        challenges={tasks.challenges}
+        learnings={tasks.learnings}
       />
     </>
   );

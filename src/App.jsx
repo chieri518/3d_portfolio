@@ -1,6 +1,6 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { About, Feedbacks, Hero, Navbar, Awards, Features } from "./components";
-import { Projects, Experience } from "./pages";
+import { About, Feedbacks, Hero, Awards, Features } from "./components";
+import { Projects, Experience, Navbar } from "./pages";
 
 const LandingPage = () => {
   return (
@@ -17,13 +17,35 @@ const LandingPage = () => {
   );
 };
 
+const ExperiencePage = () => {
+  return (
+    <>
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+        <Navbar />
+      </div>
+      <Experience />
+    </>
+  );
+};
+
+const ProjectsPage = () => {
+  return (
+    <>
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+        <Navbar />
+      </div>
+      <Projects />
+    </>
+  );
+};
+
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
-        <Route path="/experience" element={<Experience />} />
-        <Route path="/projects" element={<Projects />} />
+        <Route path="/experience" element={<ExperiencePage />} />
+        <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
     </BrowserRouter>
   );
