@@ -1,56 +1,66 @@
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { readmore } from "../assets";
 import { SectionWrapper } from "../hoc";
-import { projects, tasks } from "../constants";
+import { works } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-import Navbar from "./navbar";
-
-const ProjectDetails = ({ overview, challenges, learnings }) => {
+const PostCard = ({
+  index,
+  name,
+  description,
+  tags,
+  image,
+  source_code_link,
+}) => {
   return (
-    <div className="mt-8 p-5 bg-secondary rounded-2xl">
-      <h3 className="text-white font-semibold text-[20px]">Project Details</h3>
+    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+      <div className="bg-tertiary p-5 rounded-2xl flex w-full my-5">
+        {/* Left Column: Image */}
+        <div className="w-1/3 h-auto relative">
+          <img
+            src={image}
+            alt={name}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+            <div
+              onClick={() => window.open(source_code_link, "_blank")}
+              className="white-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+            >
+              <img
+                src={readmore}
+                alt="readmore"
+                className="w-1/2 h-1/2 object-contain"
+              />
+            </div>
+          </div>
+        </div>
 
-      {/* Overview Section */}
-      <div className="mt-4">
-        <h4 className="text-primary font-bold text-[18px]">Overview</h4>
-        <p className="text-white text-[15px] mt-2 leading-[24px]">
-          {tasks.overview}
-        </p>
-      </div>
+        {/* Right Column: Text Content */}
+        <div className="w-2/3 ml-5">
+          <h3 className="text-black font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
 
-      {/* Challenges and Solutions Section */}
-      <div className="mt-4">
-        <h4 className="text-primary font-bold text-[18px]">
-          Challenges and Solutions
-        </h4>
-        <p className="text-white text-[15px] mt-2 leading-[24px]">
-          {challenges}
-        </p>
+          <div className="mt-4 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+                #{tag.name}
+              </p>
+            ))}
+          </div>
+        </div>
       </div>
-
-      {/* Learning Outcomes Section */}
-      <div className="mt-4">
-        <h4 className="text-primary font-bold text-[18px]">
-          Learning Outcomes
-        </h4>
-        <p className="text-white text-[15px] mt-2 leading-[24px]">
-          {learnings}
-        </p>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 
-const Works = () => {
+const Projects = () => {
   return (
     <>
-      <Navbar />
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>My work</p>
+        <p className={styles.sectionSubText}>WHAT I HAVE DONE SO FAR...</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
       <div className="w-full flex">
@@ -58,16 +68,19 @@ const Works = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Description of the projects....
+          By blending creativity with data-driven insights, I create targeted
+          campaigns and user-centered websites to deliver measurable marketing
+          results.
         </motion.p>
       </div>
-      <ProjectDetails
-        overview={tasks.overview}
-        challenges={tasks.challenges}
-        learnings={tasks.learnings}
-      />
+
+      <div className="mt-20 p-5 gap-7">
+        {works.map((highlight, index) => (
+          <PostCard key={`post-${index}`} index={index} {...highlight} />
+        ))}
+      </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default SectionWrapper(Projects, "");

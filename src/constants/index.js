@@ -29,6 +29,7 @@ import {
   github,
   linkedin,
   instagram,
+  youtubevid,
 } from "../assets";
 
 export const navLinks = [
@@ -271,7 +272,7 @@ const highlights = [
         color: "blue-text-gradient",
       },
       {
-        name: "tyoescript",
+        name: "typescript",
         color: "green-text-gradient",
       },
       {
@@ -281,6 +282,65 @@ const highlights = [
     ],
     image: websitedev,
     source_code_link: "/projects",
+  },
+];
+
+const works = [
+  {
+    name: "Student Feature Video",
+    description:
+      "I had the privilege of editing a video featuring Catherine Batang, a recent graduate who passionately shared her experiences at Menlo College. She emphasized the vital role of our close-knit community in fostering her academic and athletic success, highlighting the encouragement and camaraderie that characterize the Menlo experience. In my editing process, I applied my digital marketing expertise by strategically incorporating B-roll footage to enhance visual engagement and narrative depth. I also focused on improving audio quality by reducing background noise and meticulously cutting pauses to ensure a polished final product. This project not only allowed me to refine my video editing skills but also reinforced my appreciation for the supportive environment at Menlo, where students collaboratively uplift one another in their pursuits. I am proud to contribute to a piece that celebrates the strength of our community.",
+    tags: [
+      {
+        name: "Adobe Premiere",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "YouTube",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: youtubevid,
+    source_code_link: "https://youtu.be/U3l9ExJTvOk?si=CXvnUglL9hM56aQB",
+  },
+  {
+    name: "Graduation Celebration Reel",
+    description:
+      "Proficient in data interpretation and analytics tools, I turn raw data into actionable insights that drive marketing decisions. By analyzing campaign metrics and user behavior, I identify trends, measure effectiveness, and continuously refine strategies to maximize ROI and impact.",
+    tags: [
+      {
+        name: "Google Analytics",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Hootsuite",
+        color: "green-text-gradient",
+      },
+    ],
+    image: dataanalysis,
+    source_code_link: "/projects",
+  },
+  {
+    name: "Senior Spotlight Post",
+    description:
+      "Experienced in developing and maintaining user-friendly websites, I create digital experiences that are both visually appealing and functional. My work includes designing, updating, and optimizing websites to ensure they meet the needs of varied audiences and align with brand objectives.",
+    tags: [
+      {
+        name: "LinkedIn",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Capcut",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Copywriting",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: websitedev,
+    source_code_link:
+      "https://www.linkedin.com/posts/menlo-college_celebrating-seniors-raymond-juballa-23-activity-7054948106827689984-619v",
   },
 ];
 
@@ -462,6 +522,7 @@ export {
   references,
   awards,
   highlights,
+  works,
   projects,
   heroTexts,
   socials,
