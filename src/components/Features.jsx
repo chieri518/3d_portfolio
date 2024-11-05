@@ -31,18 +31,6 @@ const ProjectCard = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="white-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={readmore}
-                alt="readmore"
-                className="w-1/22 h-1/2 object-contain"
-              />
-            </div>
-          </div>
         </div>
 
         <div className="mt-5">

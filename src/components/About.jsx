@@ -7,6 +7,7 @@ import { styles } from "../styles";
 import { services, socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
+import { profile } from "../assets";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
@@ -68,7 +69,13 @@ const About = () => {
             <div
               options={{ max: 45, scale: 1, speed: 450 }}
               className="bg-tertiary rounded-[20px] min-h-[250px] flex justify-evenly items-center flex-col overflow-hidden"
-            ></div>
+            >
+              <img
+                src={profile}
+                alt="profile"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
         </Tilt>
       </div>

@@ -7,6 +7,7 @@ import readmore from "./readmore.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
 import email from "./email.svg";
+import profile from "./profile.png";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -38,6 +39,8 @@ import instagram from "./instagram.png";
 import linkedin from "./linkedin.png";
 import github from "./github.png";
 
+import youtubevid from "./youtubevid.png";
+
 export {
   logo,
   click,
@@ -48,6 +51,7 @@ export {
   menu,
   close,
   email,
+  profile,
   css,
   docker,
   figma,
@@ -73,4 +77,5 @@ export {
   instagram,
   linkedin,
   github,
+  youtubevid,
 };
