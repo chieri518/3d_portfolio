@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { About, Feedbacks, Hero, Awards, Features } from "./components";
+import { About, Feedbacks, Awards, Highlights } from "./components";
 import { Projects, Experience, Navbar } from "./pages";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -8,10 +8,9 @@ const LandingPage = () => {
     <>
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <Navbar />
-        <Hero />
       </div>
       <About />
-      <Features />
+      <Highlights />
       <Awards />
       <Feedbacks />
     </>

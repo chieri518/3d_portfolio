@@ -9,6 +9,9 @@ import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 import { profile } from "../assets";
 
+import { TypeAnimation } from "react-type-animation";
+import { heroTexts } from "../constants";
+
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <Tilt className="xs:w-[250px] w-full">
@@ -34,13 +37,35 @@ const ServiceCard = ({ index, title, icon }) => {
   );
 };
 
+const Name = ({ loading }) => {
+  return (
+    <section className="relative w-full mx-auto">
+      <motion.div
+        variants={textVariant()}
+        initial="hidden"
+        whileInView={!loading && "show"}
+        viewport={{ once: true, amount: 0.25 }}
+      >
+        <h1 className={`${styles.heroHeadText} text-secondary`}>
+          Hi, I'm <span className="pink-text-gradient">Chieri</span>
+        </h1>
+        <p className={`${styles.heroSubText} mt-2`}>
+          <TypeAnimation
+            sequence={heroTexts}
+            wrapper="span"
+            cursor={true}
+            repeat={Infinity}
+          />
+        </p>
+      </motion.div>
+    </section>
+  );
+};
+
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview</h2>
-      </motion.div>
+      <Name />
       <div className="flex items-center min-[1000px]:flex-row flex-col-reverse">
         <p
           variants={fadeIn("", "", 0.1, 1)}
@@ -54,10 +79,10 @@ const About = () => {
           broad perspective and cultural sensitivity that I bring to all aspects
           of my work🌍 Feel free to explore my projects and get in touch at{" "}
           <a
-            href="mailto:chieriabe123@gmail.com"
+            href="mailto:chieriabe518@gmail.com"
             className="animate-text bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent font-black"
           >
-            chieriabe123@gmail.com
+            chieriabe518@gmail.com
           </a>{" "}
           . I'm always open to new opportunities and collaborations!{" "}
         </p>
@@ -88,17 +113,18 @@ const About = () => {
       >
         <div className="flex gap-5 items-center">
           {socials.map((social) => (
-            <Link
-              href={social.source_code_link}
+            <a
+              href={social.link}
               target="_blank"
+              rel="noreferrer"
               key={social.id}
               className="w-8 h-8 hover:-translate-y-2 ease-in transition-all duration-100 cursor-pointer"
             >
-              <img src={social.icon} />
-            </Link>
+              <img src={social.icon} alt={social.id} />
+            </a>
           ))}
         </div>
-        <Link
+        <a
           href="document/Chieri_Abe_Resume.pdf"
           target="_blank"
           rel="noreferrer"
@@ -117,8 +143,25 @@ const About = () => {
               <span>e</span>
             </div>
           </div>
-        </Link>
+        </a>
       </motion.div>
+      <div className="w-full flex justify-center items-center ">
+        <a href="#Highlights">
+          <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
+            <motion.div
+              animate={{
+                y: [0, 24, 0],
+              }}
+              transition={{
+                duration: 1.5,
+                repeat: Infinity,
+                repeatType: "loop",
+              }}
+              className="w-3 h-3 rounded-full bg-secondary mb-1"
+            />
+          </div>
+        </a>
+      </div>
       <div className="mt-20 flex flex flex-wrap gap-10">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />

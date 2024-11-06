@@ -30,6 +30,8 @@ import {
   linkedin,
   instagram,
   youtubevid,
+  instareel,
+  linkedinpost,
 } from "../assets";
 
 export const navLinks = [
@@ -317,8 +319,8 @@ const works = [
         color: "green-text-gradient",
       },
     ],
-    image: dataanalysis,
-    source_code_link: "/projects",
+    image: instareel,
+    source_code_link: "https://www.instagram.com/reel/CsfHVGigWhI",
   },
   {
     name: "Senior Spotlight Post",
@@ -338,7 +340,7 @@ const works = [
         color: "pink-text-gradient",
       },
     ],
-    image: websitedev,
+    image: linkedinpost,
     source_code_link:
       "https://www.linkedin.com/posts/menlo-college_celebrating-seniors-raymond-juballa-23-activity-7054948106827689984-619v",
   },
@@ -480,22 +482,22 @@ const socials = [
   {
     id: "email",
     icon: email,
-    source_code_link: "mailto:chieriabe518@gmail.com",
+    link: "mailto:chieriabe518@gmail.com",
   },
   {
     id: "github",
     icon: github,
-    source_code_link: "https://github.com/chieri518",
+    link: "https://github.com/chieri518",
   },
   {
     id: "linkedin",
     icon: linkedin,
-    source_code_link: "https://www.linkedin.com/in/chieriabe/",
+    link: "https://www.linkedin.com/in/chieriabe/",
   },
   {
     id: "instagram",
     icon: instagram,
-    source_code_link: "https://www.instagram.com/chieriabe",
+    link: "https://www.instagram.com/chieriabe",
   },
 ];
 
