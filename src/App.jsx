@@ -1,6 +1,7 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { About, Feedbacks, Hero, Awards, Features } from "./components";
 import { Projects, Experience, Navbar } from "./pages";
+import { Analytics } from "@vercel/analytics/react";
 
 const LandingPage = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
       </Routes>
+      <Analytics />
     </BrowserRouter>
   );
 };
