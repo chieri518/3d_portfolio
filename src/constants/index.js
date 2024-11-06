@@ -480,22 +480,22 @@ const socials = [
   {
     id: "email",
     icon: email,
-    link: "mailto:chieriabe518@gmail.com",
+    source_code_link: "mailto:chieriabe518@gmail.com",
   },
   {
     id: "github",
     icon: github,
-    link: "https://github.com/chieri518",
+    source_code_link: "https://github.com/chieri518",
   },
   {
     id: "linkedin",
     icon: linkedin,
-    link: "https://www.linkedin.com/in/chieriabe/",
+    source_code_link: "https://www.linkedin.com/in/chieriabe/",
   },
   {
     id: "instagram",
     icon: instagram,
-    link: "https://www.instagram.com/chieriabe",
+    source_code_link: "https://www.instagram.com/chieriabe",
   },
 ];
 

@@ -89,7 +89,7 @@ const About = () => {
         <div className="flex gap-5 items-center">
           {socials.map((social) => (
             <Link
-              href={social.link}
+              href={social.source_code_link}
               target="_blank"
               key={social.id}
               className="w-8 h-8 hover:-translate-y-2 ease-in transition-all duration-100 cursor-pointer"
