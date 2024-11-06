@@ -40,6 +40,8 @@ import linkedin from "./linkedin.png";
 import github from "./github.png";
 
 import youtubevid from "./youtubevid.png";
+import instareel from "./instareel.png";
+import linkedinpost from "./linkedinpost.png";
 
 export {
   logo,
@@ -78,4 +80,6 @@ export {
   linkedin,
   github,
   youtubevid,
+  instareel,
+  linkedinpost,
 };

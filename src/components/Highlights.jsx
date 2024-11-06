@@ -2,19 +2,11 @@ import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { readmore } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { highlights } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const ProjectCard = ({ index, name, description, tags, image }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <Tilt
@@ -50,9 +42,10 @@ const ProjectCard = ({
   );
 };
 
-const Features = () => {
+const Highlights = () => {
   return (
     <>
+      <section id="Highlights" />
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>My work</p>
         <h2 className={styles.sectionHeadText}>Highlights</h2>
@@ -77,4 +70,4 @@ const Features = () => {
   );
 };
 
-export default SectionWrapper(Features, "");
+export default SectionWrapper(Highlights, "");

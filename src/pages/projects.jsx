@@ -24,10 +24,10 @@ const PostCard = ({
             alt={name}
             className="w-full h-full object-cover rounded-2xl"
           />
-          <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
+          <div className="absolute bottom-3 right-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="white-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+              className="black-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
             >
               <img
                 src={readmore}
@@ -60,7 +60,7 @@ const Projects = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>WHAT I HAVE DONE SO FAR...</p>
+        <p className={styles.sectionSubText}>WHAT I WORKED ON SO FAR...</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
       <div className="w-full flex">

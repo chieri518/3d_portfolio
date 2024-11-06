@@ -1,7 +1,6 @@
-import Hero from "./Hero";
 import About from "./About";
 import Awards from "./Awards";
-import Features from "./Features";
+import Highlights from "./Highlights";
 import Feedbacks from "./Feedbacks";
 
-export { Hero, About, Awards, Features, Feedbacks };
+export { About, Awards, Highlights, Feedbacks };
