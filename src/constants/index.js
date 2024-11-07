@@ -308,7 +308,7 @@ const works = [
   {
     name: "Graduation Celebration Reel",
     description:
-      "Proficient in data interpretation and analytics tools, I turn raw data into actionable insights that drive marketing decisions. By analyzing campaign metrics and user behavior, I identify trends, measure effectiveness, and continuously refine strategies to maximize ROI and impact.",
+      "I employed a 360 camera to create an immersive, all-encompassing view of graduation day, highlighting the energy and joy shared by the graduates, families, and faculty. Using a 360 setup allowed me to capture every angle, making sure that no special moment was missed. During the editing process, I carefully selected dynamic transitions and strategically directed viewer focus to key scenes, enhancing the visual flow and impact. By framing pivotal moments within the 360 footage, I created a seamless, engaging reel that communicated the excitement of the event and the achievements of the graduates. This project showcased my ability to leverage advanced filming techniques and edit creatively to convey a compelling narrative, effectively bringing the commencement experience to life for all viewers.",
     tags: [
       {
         name: "Google Analytics",
@@ -325,7 +325,7 @@ const works = [
   {
     name: "Senior Spotlight Post",
     description:
-      "Experienced in developing and maintaining user-friendly websites, I create digital experiences that are both visually appealing and functional. My work includes designing, updating, and optimizing websites to ensure they meet the needs of varied audiences and align with brand objectives.",
+      " I edited a compelling video that highlighted the achievements and stories of graduating seniors. I tailored the content to maximize engagement on social media, creating a shorter version that captured the essential moments and core message while resonating with the platform's audience. This condensed version was carefully crafted to pique interest and encourage viewers to watch the full-length video on YouTube, where they could experience the full scope of each student’s journey. This project demonstrated my ability to adapt content for multiple platforms, maintain key messaging, and strategically drive traffic across media channels.",
     tags: [
       {
         name: "LinkedIn",

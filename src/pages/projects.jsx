@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-
 import { styles } from "../styles";
 import { readmore } from "../assets";
 import { SectionWrapper } from "../hoc";
@@ -16,9 +15,9 @@ const PostCard = ({
 }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <div className="bg-tertiary p-5 rounded-2xl flex w-full my-5">
+      <div className="bg-tertiary p-4 md:p-5 rounded-2xl flex flex-col md:flex-row w-full my-5">
         {/* Left Column: Image */}
-        <div className="w-1/3 h-auto relative">
+        <div className="w-full md:w-1/3 h-auto relative">
           <img
             src={image}
             alt={name}
@@ -27,7 +26,7 @@ const PostCard = ({
           <div className="absolute bottom-3 right-3 card-img_hover">
             <div
               onClick={() => window.open(source_code_link, "_blank")}
-              className="black-gradient rounded-full w-10 h-10 flex justify-center items-center cursor-pointer"
+              className="pink-gradient rounded-full w-8 h-8 md:w-10 md:h-10 flex justify-center items-center cursor-pointer"
             >
               <img
                 src={readmore}
@@ -39,13 +38,18 @@ const PostCard = ({
         </div>
 
         {/* Right Column: Text Content */}
-        <div className="w-2/3 ml-5">
-          <h3 className="text-black font-bold text-[24px]">{name}</h3>
+        <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-5">
+          <h3 className="text-black font-bold text-[20px] md:text-[24px]">
+            {name}
+          </h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
 
           <div className="mt-4 flex flex-wrap gap-2">
             {tags.map((tag) => (
-              <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+              <p
+                key={tag.name}
+                className={`text-[12px] md:text-[14px] ${tag.color}`}
+              >
                 #{tag.name}
               </p>
             ))}
@@ -66,7 +70,7 @@ const Projects = () => {
       <div className="w-full flex">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[15px] md:text-[17px] max-w-full md:max-w-3xl leading-[24px] md:leading-[30px]"
         >
           By blending creativity with data-driven insights, I create targeted
           campaigns and user-centered websites to deliver measurable marketing
@@ -74,7 +78,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 p-5 gap-7">
+      <div className="mt-10 md:mt-20 p-3 md:p-5 gap-5 md:gap-7 flex flex-col">
         {works.map((highlight, index) => (
           <PostCard key={`post-${index}`} index={index} {...highlight} />
         ))}
