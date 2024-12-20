@@ -185,7 +185,7 @@ const references = [
     designation: "CEO",
     company: "Blue Dome Consulting for Sustainability",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQHwBM6Q06QeJg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1566161085065?e=1733961600&v=beta&t=K2AIsjUzPkJGQq33QyJ2hG52KXkYOeEluzV5qy71BdE",
+      "https://media.licdn.com/dms/image/v2/C5603AQHwBM6Q06QeJg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1566161085065?e=1740009600&v=beta&t=iIMeqm1BkIEiJa7I4S6t1dWvL7U0MiNuN-ff9M7HHdg",
   },
   {
     reference:
@@ -194,7 +194,7 @@ const references = [
     designation: "Social Media Manager",
     company: "The Institute for Experiential AI at Northeastern University",
     image:
-      "https://media.licdn.com/dms/image/v2/C4D03AQE49EKzpOBdNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1610318639635?e=1733961600&v=beta&t=tlpAsvAircZAEzn4FOsDhZCQ9-AktddqgakNmcMpsGo",
+      "https://media.licdn.com/dms/image/v2/C4D03AQE49EKzpOBdNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1610318639635?e=1740009600&v=beta&t=oLjHlbfTf6wJRJJHt_sDhWSuONP7STiRWKLJjIKXjbM",
   },
   {
     reference:
@@ -203,7 +203,16 @@ const references = [
     designation: "Senior Manager - eCommerce Japan",
     company: "Hilton",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQEvg5w0ez-IGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635905199834?e=1733961600&v=beta&t=y3eWTY4fBnjuWN5cp-lJA_wW7YeETPcai07maXss4cY",
+      "https://media.licdn.com/dms/image/v2/C5603AQEvg5w0ez-IGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635905199834?e=1740009600&v=beta&t=8qTZ32YAPRUTvSVir6QK6FQ8wBJ_hwmukUCatxsf4ZE",
+  },
+  {
+    reference:
+      "She is truly interested in entrepreneurship and innovation and - beside all of this - a great person. Whoever has the opportunity to work with Chieri: Do it!",
+    name: "Fabian Eggers",
+    designation: "Professor",
+    company: "Menlo College",
+    image:
+      "https://media.licdn.com/dms/image/v2/C5603AQF4BrU_fqMjNQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662771913064?e=1740009600&v=beta&t=Od8SJeYE5HFDbdzXwLsdHOyLXP3U4YELwcpDVMJ9Fh0",
   },
 ];
 

@@ -1,3 +1,7 @@
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -41,6 +45,28 @@ const FeedbackCard = ({
 );
 
 const Feedbacks = () => {
+  const settings = {
+    accessibility: true,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
   return (
     <div className="mt-12 bg-white rounded-[20px]">
       <div
@@ -51,10 +77,13 @@ const Feedbacks = () => {
           <h2 className={styles.sectionHeadText}>References</h2>
         </motion.div>
       </div>
-      <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
-        {references.map((reference, index) => (
-          <FeedbackCard key={reference.name} index={index} {...reference} />
-        ))}
+
+      <div className={`${styles.paddingX} -mt-20 pb-14 gap-7`}>
+        <Slider {...settings}>
+          {references.map((reference, index) => (
+            <FeedbackCard key={reference.name} index={index} {...reference} />
+          ))}
+        </Slider>
       </div>
     </div>
   );

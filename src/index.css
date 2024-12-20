@@ -274,3 +274,8 @@
 .vertical-timeline::before {
   background: #dddddd;
 }
+
+.slider-container {
+  width: 100%;
+  height: auto;
+}
