@@ -125,7 +125,7 @@ const About = () => {
           ))}
         </div>
         <a
-          href="document/Chieri_Abe_Resume.pdf"
+          href="document/Resume_Chieri.A.pdf"
           target="_blank"
           rel="noreferrer"
           className="w-fit"
