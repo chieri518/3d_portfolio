@@ -14,6 +14,7 @@ import {
   docker,
   premiere,
   photoshop,
+  metapyxl,
   hilton,
   owned,
   menlo,
@@ -113,16 +114,25 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Website Intern",
-    company_name: "Hilton - Area Office at Hilton Tokyo",
+    title: "Senior Marketing Manager",
+    company_name: "Metapyxl",
+    icon: metapyxl,
+    iconBg: "#E6DEDD",
+    date: "Nov 2024 - Present",
+    points: [
+      "Developed and executed marketing strategies that drove brand awareness and user engagement, leveraging data-driven insights and innovative campaigns.",
+    ],
+  },
+
+  {
+    title: "Website Intern (Full-Time)",
+    company_name: "Hilton",
     icon: hilton,
     iconBg: "#E6DEDD",
     date: "Oct 2023 - Jun 2024",
     points: [
-      "Contributed to content management for 19 Hilton hotels within the Japan eCommerce team.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+      "Elevated the digital presence of all 21 Hilton managed hotels in Japan by leveraging Google Analytics insights and property feedback to develop highly engaging, user-friendly webpages across both owned and external platforms.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
 
@@ -300,7 +310,7 @@ const works = [
   {
     name: "Student Feature Video",
     description:
-      "I had the privilege of editing a video featuring Catherine Batang, a recent graduate who passionately shared her experiences at Menlo College. She emphasized the vital role of our close-knit community in fostering her academic and athletic success, highlighting the encouragement and camaraderie that characterize the Menlo experience. In my editing process, I applied my digital marketing expertise by strategically incorporating B-roll footage to enhance visual engagement and narrative depth. I also focused on improving audio quality by reducing background noise and meticulously cutting pauses to ensure a polished final product. This project not only allowed me to refine my video editing skills but also reinforced my appreciation for the supportive environment at Menlo, where students collaboratively uplift one another in their pursuits. I am proud to contribute to a piece that celebrates the strength of our community.",
+      "I had the privilege of editing a video featuring Catherine Batang, a recent graduate who passionately shared her experiences at Menlo College. In my editing process, I applied my digital marketing expertise by strategically incorporating B-roll footage to enhance visual engagement and narrative depth. I also focused on improving audio quality by reducing background noise and meticulously cutting pauses to ensure a polished final product. I am proud to contribute to a piece that celebrates the strength of our community.",
     tags: [
       {
         name: "Adobe Premiere",
@@ -334,7 +344,7 @@ const works = [
   {
     name: "Senior Spotlight Post",
     description:
-      " I edited a compelling video that highlighted the achievements and stories of graduating seniors. I tailored the content to maximize engagement on social media, creating a shorter version that captured the essential moments and core message while resonating with the platform's audience. This condensed version was carefully crafted to pique interest and encourage viewers to watch the full-length video on YouTube, where they could experience the full scope of each student’s journey. This project demonstrated my ability to adapt content for multiple platforms, maintain key messaging, and strategically drive traffic across media channels.",
+      "I edited a compelling video that highlighted the achievements and stories of graduating seniors. I tailored the content to maximize engagement on social media, creating a shorter version that captured the essential moments and core message while resonating with the platform's audience. This condensed version was carefully crafted to pique interest and encourage viewers to watch the full-length video on YouTube, where they could experience the full scope of each student’s journey. This project demonstrated my ability to adapt content for multiple platforms, maintain key messaging, and strategically drive traffic across media channels.",
     tags: [
       {
         name: "LinkedIn",
