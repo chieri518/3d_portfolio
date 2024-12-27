@@ -1,6 +1,6 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { About, Feedbacks, Awards, Highlights } from "./components";
-import { Projects, Experience, Navbar } from "./pages";
+import { Projects, Experience, Leadership, Navbar } from "./pages";
 import { Analytics } from "@vercel/analytics/react";
 
 const LandingPage = () => {
@@ -39,6 +39,17 @@ const ProjectsPage = () => {
   );
 };
 
+const LeadershipPage = () => {
+  return (
+    <>
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+        <Navbar />
+      </div>
+      <Leadership />
+    </>
+  );
+};
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -46,6 +57,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/leadership" element={<LeadershipPage />} />
       </Routes>
       <Analytics />
     </BrowserRouter>

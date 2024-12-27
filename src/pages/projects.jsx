@@ -37,7 +37,6 @@ const PostCard = ({
           </div>
         </div>
 
-        {/* Right Column: Text Content */}
         <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-5">
           <h3 className="text-black font-bold text-[20px] md:text-[24px]">
             {name}
@@ -87,4 +86,4 @@ const Projects = () => {
   );
 };
 
-export default SectionWrapper(Projects, "");
+export default SectionWrapper(Projects);

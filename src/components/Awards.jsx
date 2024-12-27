@@ -53,4 +53,4 @@ const Awards = () => {
   );
 };
 
-export default SectionWrapper(Awards, "");
+export default SectionWrapper(Awards);

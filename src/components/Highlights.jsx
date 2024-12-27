@@ -70,4 +70,4 @@ const Highlights = () => {
   );
 };
 
-export default SectionWrapper(Highlights, "");
+export default SectionWrapper(Highlights);
