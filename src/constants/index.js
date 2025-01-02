@@ -18,11 +18,15 @@ import {
   hilton,
   owned,
   menlo,
+  uif1,
+  uif2,
+  uif3,
+  uif4,
+  uif5,
   ellipsis,
   governormedal,
   honor,
   marketingconf,
-  uif,
   websitedev,
   socialmedia,
   dataanalysis,
@@ -188,6 +192,15 @@ const experiences = [
 ];
 
 const references = [
+  {
+    reference:
+      "Chieri consistently brought innovative perspectives, often challenging traditional methods to improve our processes.",
+    name: "Noriko Liu",
+    designation: "Regional Head of Marketing - Japan, Korea and Micronesia",
+    company: "Hilton",
+    image:
+      "https://media.licdn.com/dms/image/v2/C4E03AQGRuqHlvy0NSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1571407166369?e=1741219200&v=beta&t=p9JojO-hahONn5EIraXK5TMFZ3Mk7PRGOVLI6_hRIxk",
+  },
   {
     reference:
       "Abe is an innovative entrepreneur with strong leadership acumen and achieves quality results in her work.",
@@ -365,127 +378,6 @@ const works = [
   },
 ];
 
-const projects = [
-  {
-    name: "chetz",
-    description:
-      "A student organization established to bridge the Japanese students with various cultures.",
-    tags: [
-      {
-        name: "entrepreneurship",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "multicultural",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: uif,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "University Innovation Fellowship",
-    description:
-      "The University Innovation Fellows program empowers students and faculty to become leaders of change in higher education. Fellows are leading a global movement to ensure that all students gain the attitudes, skills and knowledge required to navigate a complex world.",
-    tags: [
-      {
-        name: "design thinking",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "leadership",
-        color: "green-text-gradient",
-      },
-    ],
-    image: uif,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Social Media",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: uif,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Email Marketing",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: uif,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: "Website Development",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: uif,
-    source_code_link: "https://github.com/",
-  },
-  {
-    name: " ",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: uif,
-    source_code_link: "https://github.com/",
-  },
-];
-
 const heroTexts = [
   "Global Citizen",
   500,
@@ -520,19 +412,21 @@ const socials = [
   },
 ];
 
-const tasks = [
+const uif = [
   {
-    name: "Project Name",
-    description: "Short description of the project.",
-    overview: "Detailed overview of the project goals and purpose.",
-    technologies: ["React", "Node.js", "MongoDB"],
-    challenges:
-      "Description of the challenges faced and solutions implemented.",
-    features: ["Feature 1", "Feature 2", "Feature 3"],
-    learnings:
-      "What you learned from this project and how it advanced your skills.",
-    image: "project-image-url",
-    source_code_link: "link-to-source-code",
+    source: uif1,
+  },
+  {
+    source: uif2,
+  },
+  {
+    source: uif3,
+  },
+  {
+    source: uif4,
+  },
+  {
+    source: uif5,
   },
 ];
 
@@ -544,8 +438,7 @@ export {
   awards,
   highlights,
   works,
-  projects,
   heroTexts,
   socials,
-  tasks,
+  uif,
 };

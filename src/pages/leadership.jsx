@@ -14,43 +14,9 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
+import { uif } from "../constants";
 
 import Navbar from "./navbar";
-
-const communityImages = [
-  {
-    src: "src/assets/web.png",
-    alt: "People singing karaoke at React Conf",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "Sunil Pai speaking at React India",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "A hallway conversation between two people at React Conf",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "A hallway conversation at React India",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "Elizabet Oliveira speaking at React Conf",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "People taking a group selfie at React India",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "Nat Alison speaking at React Conf",
-  },
-  {
-    src: "src/assets/web.png",
-    alt: "Organizers greeting attendees at React India",
-  },
-];
 
 function CommunityGallery() {
   const ref = useRef();
@@ -73,37 +39,6 @@ function CommunityGallery() {
     return () => observer.disconnect();
   }, []);
 
-  const [isLazy, setIsLazy] = useState(true);
-
-  useEffect(() => {
-    if (!isLazy) {
-      return;
-    }
-    const rootVertical = parseInt(window.innerHeight * 2.5);
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsLazy(false);
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: `${rootVertical}px 0px`,
-      }
-    );
-    observer.observe(ref.current);
-    return () => observer.disconnect();
-  }, [isLazy]);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setIsLazy(false);
-    }, 20 * 1000);
-    return () => clearTimeout(timeout);
-  }, []);
-
   return (
     <div
       ref={ref}
@@ -115,16 +50,16 @@ function CommunityGallery() {
           animationPlayState: shouldPlay ? "running" : "paused", // Controls play state
         }}
       >
-        <CommunityImages isLazy={isLazy} />
+        <UIFImages />
       </div>
     </div>
   );
 }
 
-const CommunityImages = memo(function CommunityImages({ isLazy }) {
+const UIFImages = memo(function UIFImages() {
   return (
     <>
-      {communityImages.map(({ src, alt }, i) => (
+      {uif.map(({ src }, i) => (
         <div
           key={i}
           className={cn(
@@ -140,9 +75,7 @@ const CommunityImages = memo(function CommunityImages({ isLazy }) {
             )}
           >
             <img
-              loading={isLazy ? "lazy" : "eager"}
-              src={src}
-              alt={alt}
+              src={uif}
               className="aspect-[4/3] h-full w-full flex object-cover rounded-2xl bg-gray-10 dark:bg-gray-80"
             />
           </div>

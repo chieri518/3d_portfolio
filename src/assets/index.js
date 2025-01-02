@@ -27,6 +27,12 @@ import owned from "./company/owned.png";
 import ellipsis from "./company/ellipsis.png";
 import menlo from "./company/menlo.png";
 
+import uif1 from "./gallery/uif_01.png";
+import uif2 from "./gallery/uif_02.png";
+import uif3 from "./gallery/uif_03.png";
+import uif4 from "./gallery/uif_04.png";
+import uif5 from "./gallery/uif_05.png";
+
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
 import marketingconf from "./marketingconf.png";
@@ -71,6 +77,11 @@ export {
   owned,
   ellipsis,
   menlo,
+  uif1,
+  uif2,
+  uif3,
+  uif4,
+  uif5,
   governormedal,
   honor,
   marketingconf,
