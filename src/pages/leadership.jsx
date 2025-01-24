@@ -47,7 +47,7 @@ function CommunityGallery() {
       <div
         className="w-full py-12 lg:py-20 whitespace-nowrap flex flex-row animate-marquee lg:animate-large-marquee"
         style={{
-          animationPlayState: shouldPlay ? "running" : "paused", // Controls play state
+          animationPlayState: shouldPlay ? "running" : "paused",
         }}
       >
         <UIFImages />
