@@ -14,6 +14,7 @@ import {
   docker,
   premiere,
   photoshop,
+  lemin,
   metapyxl,
   hilton,
   owned,
@@ -121,6 +122,16 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Busienss Development Specialist",
+    company_name: "Lemin Captcha by Capy Inc.",
+    icon: lemin,
+    iconBg: "#FFF9EC",
+    date: "Feb 2025 - Present",
+    points: [
+      "Supported company's brand and community growth by developing marketing strategies, executing KPI reporting, and conducting targeted cold outreach to foster strategic relationships.",
+    ],
+  },
   {
     title: "Senior Marketing Manager",
     company_name: "Metapyxl",
@@ -343,6 +354,27 @@ const highlights = [
 
 const works = [
   {
+    name: "University Innovation Fellows",
+    description:
+      "Selected as a University Innovation Fellow by Stanford University's d.school. Completed a 6-week intensive training focused on design thinking, entrepreneurship, and institutional change. Collaborated with students and faculty to identify challenges and implement innovative solutions that enhance the student experience and promote a culture of innovation on campus.",
+    tags: [
+      {
+        name: "Leadership",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Design Thinking",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Entrepreneurship",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: uif1,
+    source_code_link: "https://chieriabe.vercel.app/uif",
+  },
+  {
     name: "Student Feature Video",
     description:
       "I had the privilege of editing a video featuring Catherine Batang, a recent graduate who passionately shared her experiences at Menlo College. In my editing process, I applied my digital marketing expertise by strategically incorporating B-roll footage to enhance visual engagement and narrative depth. I also focused on improving audio quality by reducing background noise and meticulously cutting pauses to ensure a polished final product. I am proud to contribute to a piece that celebrates the strength of our community.",
@@ -465,6 +497,53 @@ const steamhouse = [
   },
 ];
 
+const uiftimeline = [
+  {
+    week: "Week One",
+    title: "Wayfinding",
+    color: "#DCD6FF",
+    paragraph:
+      "We kicked off our training journey by learning the essential tools, platforms, and techniques that would guide us throughout the program and beyond. We played the UIF Monopoly game, engaging in activities that helped us explore different aspects of innovation and entrepreneurship on campus. We shared our results on the team’s Training Mural and began planning for our upcoming stakeholder meeting by setting a date, identifying invitees, and considering logistics. Additionally, we got an early start on the Landscape Canvas, knowing it would require in-depth research. This session laid the groundwork for collaboration, strategic thinking, and a deeper understanding of our campus ecosystem.",
+  },
+  {
+    week: "Week Two",
+    title: "Design Thinking",
+    color: "#D6F0FF",
+    paragraph:
+      "We explored design thinking as a human-centered approach to innovation by tackling the challenge: “How might universities support students’ social and emotional well-being?” Through this process, we practiced empathizing with users, brainstorming diverse ideas, and identifying surprising insights that emerged along the way. This session helped us understand how thoughtful, student-focused solutions can be developed by truly listening to the needs of the community and approaching problems with creativity and curiosity.",
+  },
+
+  {
+    week: "Week Three",
+    title: "Landscape Canvas",
+    color: "#DFFFEF",
+    paragraph:
+      "We focused on uncovering assets and identifying gaps within our campus innovation and entrepreneurship (I&E) ecosystem. We completed the Landscape Canvas spreadsheet and synthesized our findings to gain a clearer understanding of existing resources and areas for improvement. Additionally, we created or updated our Campus Overview page on the wiki to reflect our research. This session helped us build a strong foundation for future projects by mapping out the current state of I&E on campus and highlighting opportunities for growth.",
+  },
+
+  {
+    week: "Week Four",
+    title: "Strategic Priorities",
+    color: "#FFFAF0",
+    paragraph:
+      "We narrowed our focus to 3 to 4 high-impact projects that have the potential to significantly enhance the innovation and entrepreneurship (I&E) ecosystem on campus. We began prototyping and refining our ideas, using feedback and insights to shape more effective solutions. As part of this process, we also fleshed out our project plans and documented them on our public-facing wiki page. This session pushed us to move from research to action, turning our ideas into tangible initiatives that address real needs within our campus community.",
+  },
+  {
+    week: "Week Five",
+    title: "Lean Startup",
+    color: "#FFEDED",
+    paragraph:
+      "We focused on building meaningful relationships with key stakeholders in our campus innovation and entrepreneurship (I&E) ecosystem. Rather than pitching our projects, we met one-on-one with stakeholders to understand their needs, success metrics, and perspectives. Using the Change Model Canvas, we conducted interviews with campus leaders and engaged in thoughtful conversations to ensure our projects align with broader institutional goals. We also held meetings with our Faculty Champions and previously-trained Fellows to gather feedback and refine both our project strategies and the Campus Overview and Strategic Priorities wiki pages. This session emphasized the importance of collaboration, empathy, and alignment in creating initiatives that are both impactful and sustainable.",
+  },
+  {
+    week: "Week Six",
+    title: "Storytelling",
+    color: "#FFDEDE",
+    paragraph:
+      "We focused on using strategic storytelling to share our vision for change on campus. We outlined, prototyped, and produced storytelling artifacts that effectively communicated the purpose and impact of our UIF projects. To gain broader campus support, we held a stakeholder meeting where we presented our initiatives and gathered feedback. We also ensured that all deliverables from previous sessions were finalized and that our public-facing materials accurately and professionally reflected both our team and our campus. This session emphasized the power of storytelling as a tool to inspire action, build support, and bring our ideas to life.",
+  },
+];
+
 export {
   services,
   technologies,
@@ -477,4 +556,5 @@ export {
   socials,
   uif,
   steamhouse,
+  uiftimeline,
 };

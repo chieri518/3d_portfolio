@@ -1,11 +1,16 @@
 import { memo, useState, useEffect, useRef } from "react";
 import cn from "classnames";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { uif, steamhouse } from "../constants";
+import { uif, steamhouse, uiftimeline } from "../constants";
 import { uiflogo, steamhousewide } from "../assets";
+import Tilt from "react-parallax-tilt";
 
 import Navbar from "./navbar";
 
@@ -114,6 +119,41 @@ const UIFImages = memo(function UIFImages() {
     </>
   );
 });
+const ProjectCard = ({ title, animation = "right", delay = 0.5 }) => (
+  <Tilt className="w-full md:w-1/2 p-2">
+    <motion.div
+      variants={fadeIn(animation, "spring", delay, 0.75)}
+      className="w-full green-pink-gradient p-[1px] rounded-[20px]"
+    >
+      <div className="bg-white rounded-[20px] py-5 px-12 min-h-[100px] flex justify-center items-center flex-col">
+        <h3 className="text-black text-[20px] font-bold text-center">
+          {title}
+        </h3>
+      </div>
+    </motion.div>
+  </Tilt>
+);
+
+const UIFCard = ({ experience }) => (
+  <VerticalTimelineElement
+    contentStyle={{ background: experience.color, color: "#000000" }}
+    contentArrowStyle={{ borderRight: "7px solid #77ddf9" }}
+    iconStyle={{ display: "none" }}
+  >
+    <div>
+      <p
+        className="text-secondary text-[16px] font-semibold"
+        style={{ margin: 0 }}
+      >
+        {experience.week}
+      </p>
+      <h3 className="text-black text-[24px] font-bold">{experience.title}</h3>
+    </div>
+    <p className="text-black text-[14px] pl-1 tracking-wider">
+      {experience.paragraph}
+    </p>
+  </VerticalTimelineElement>
+);
 
 const STEAMHouseImages = memo(function STEAMHouseImages() {
   const images = [...steamhouse, ...steamhouse];
@@ -175,23 +215,35 @@ const UIF = () => {
           Fellows from 300+ schools worldwide, UIF is shaping the future of
           higher education through student-led impact.
         </p>
-        <motion.div
-          variants={fadeIn("", "", 0.5, 1)}
-          className="xs:w-[250px] w-full"
+        <a
+          href="https://universityinnovationfellows.org/"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          <a
-            href="https://universityinnovationfellows.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img
-              src={uiflogo}
-              alt="uiflogo"
-              className="w-full h-full object-contain"
-            />
-          </a>
-        </motion.div>
+          <img
+            src={uiflogo}
+            alt="uiflogo"
+            className="w-full h-full object-contain"
+          />
+        </a>
       </div>
+      <h2 className={styles.sectionHeadText}>2022 UIF Projects</h2>
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline>
+          {uiftimeline.map((experience, index) => (
+            <UIFCard key={index} experience={experience} />
+          ))}
+        </VerticalTimeline>
+      </div>
+      <div className="flex flex-col sm:flex-row gap-6">
+        <ProjectCard title="Steam House" animation="right" delay={0.5} />
+        <ProjectCard title="Project Management" animation="left" delay={0.6} />
+      </div>
+
+      <motion.div
+        variants={fadeIn("", "", 0.5, 1)}
+        className="xs:w-[250px] w-full"
+      ></motion.div>
       <STEAMHouseGallery />
       <img
         src={steamhousewide}

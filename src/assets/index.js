@@ -21,6 +21,7 @@ import typescript from "./tech/typescript.png";
 import photoshop from "./tech/photoshop.png";
 import premiere from "./tech/premiere.png";
 
+import lemin from "./company/lemin.png";
 import metapyxl from "./company/metapyxl.png";
 import hilton from "./company/hilton.png";
 import owned from "./company/owned.png";
@@ -78,6 +79,7 @@ export {
   typescript,
   premiere,
   photoshop,
+  lemin,
   metapyxl,
   hilton,
   owned,
