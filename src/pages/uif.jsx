@@ -18,7 +18,7 @@ import { uif } from "../constants";
 
 import Navbar from "./navbar";
 
-function CommunityGallery() {
+function UIFGallery() {
   const ref = useRef();
 
   const [shouldPlay, setShouldPlay] = useState(false);
@@ -100,7 +100,7 @@ const UIF = () => {
       </motion.div>
 
       <div className="mt-20 flex flex-col">
-        <CommunityGallery />
+        <UIFGallery />
       </div>
     </section>
   );
