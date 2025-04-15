@@ -32,6 +32,11 @@ import uif2 from "./gallery/uif_02.png";
 import uif3 from "./gallery/uif_03.png";
 import uif4 from "./gallery/uif_04.png";
 import uif5 from "./gallery/uif_05.png";
+import uif11 from "./gallery/uif_11.png";
+import uif12 from "./gallery/uif_12.png";
+import uif13 from "./gallery/uif_13.png";
+import uif14 from "./gallery/uif_14.png";
+import uif15 from "./gallery/uif_15.png";
 
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
@@ -47,6 +52,9 @@ import github from "./github.png";
 import youtubevid from "./youtubevid.png";
 import instareel from "./instareel.png";
 import linkedinpost from "./linkedinpost.png";
+
+import uiflogo from "./uiflogo.png";
+import steamhousewide from "./steamhousewide.png";
 
 export {
   logo,
@@ -80,6 +88,11 @@ export {
   uif3,
   uif4,
   uif5,
+  uif11,
+  uif12,
+  uif13,
+  uif14,
+  uif15,
   governormedal,
   honor,
   marketingconf,
@@ -91,4 +104,6 @@ export {
   youtubevid,
   instareel,
   linkedinpost,
+  uiflogo,
+  steamhousewide,
 };

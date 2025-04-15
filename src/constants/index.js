@@ -23,6 +23,11 @@ import {
   uif3,
   uif4,
   uif5,
+  uif11,
+  uif12,
+  uif13,
+  uif14,
+  uif15,
   ellipsis,
   governormedal,
   honor,
@@ -442,6 +447,24 @@ const uif = [
   },
 ];
 
+const steamhouse = [
+  {
+    src: uif11,
+  },
+  {
+    src: uif12,
+  },
+  {
+    src: uif13,
+  },
+  {
+    src: uif14,
+  },
+  {
+    src: uif15,
+  },
+];
+
 export {
   services,
   technologies,
@@ -453,4 +476,5 @@ export {
   heroTexts,
   socials,
   uif,
+  steamhouse,
 };
