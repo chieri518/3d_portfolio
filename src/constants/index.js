@@ -33,7 +33,6 @@ import {
   email,
   github,
   linkedin,
-  instagram,
   youtubevid,
   instareel,
   linkedinpost,
@@ -199,7 +198,7 @@ const references = [
     designation: "Regional Head of Marketing - Japan, Korea and Micronesia",
     company: "Hilton",
     image:
-      "https://media.licdn.com/dms/image/v2/C4E03AQGRuqHlvy0NSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1571407166369?e=1741219200&v=beta&t=p9JojO-hahONn5EIraXK5TMFZ3Mk7PRGOVLI6_hRIxk",
+      "https://media.licdn.com/dms/image/v2/C4E03AQGRuqHlvy0NSw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1571407166369?e=1750291200&v=beta&t=MLiaSw6RmQowBPgp00kZLHK2DfZ4JJ7XtWA_0oIcVcg",
   },
   {
     reference:
@@ -208,16 +207,16 @@ const references = [
     designation: "CEO",
     company: "Blue Dome Consulting for Sustainability",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQHwBM6Q06QeJg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1566161085065?e=1740009600&v=beta&t=iIMeqm1BkIEiJa7I4S6t1dWvL7U0MiNuN-ff9M7HHdg",
+      "https://media.licdn.com/dms/image/v2/C5603AQHwBM6Q06QeJg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1566161085065?e=1750291200&v=beta&t=DMtqQVteQ7SMDXom4chqx2kC80CjESyZ2S1pKCnCUx4",
   },
   {
     reference:
       "Chieri is an all-around superstar with the ability to adapt to any situation she's asked to step into.",
     name: "Austin Bumpus",
-    designation: "Social Media Manager",
-    company: "The Institute for Experiential AI at Northeastern University",
+    designation: "Digital Marketing Manager",
+    company: "Menlo College",
     image:
-      "https://media.licdn.com/dms/image/v2/C4D03AQE49EKzpOBdNg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1610318639635?e=1740009600&v=beta&t=oLjHlbfTf6wJRJJHt_sDhWSuONP7STiRWKLJjIKXjbM",
+      "https://media.licdn.com/dms/image/v2/D4E35AQFj9iiryFEdFw/profile-framedphoto-shrink_400_400/B4EZVxRoatHcAc-/0/1741362202528?e=1745290800&v=beta&t=fl7G7cUNEgfKkgDL7DaCrA47Qs5rjUL0TNKriVxoXJo",
   },
   {
     reference:
@@ -226,7 +225,7 @@ const references = [
     designation: "Senior Manager - eCommerce Japan",
     company: "Hilton",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQEvg5w0ez-IGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635905199834?e=1740009600&v=beta&t=8qTZ32YAPRUTvSVir6QK6FQ8wBJ_hwmukUCatxsf4ZE",
+      "https://media.licdn.com/dms/image/v2/C5603AQEvg5w0ez-IGQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1635905199834?e=1750291200&v=beta&t=wfrYVu-VC4FlzKv9ATpz6T0IeMJw2p3ckonaNWRvcII",
   },
   {
     reference:
@@ -235,7 +234,25 @@ const references = [
     designation: "Professor",
     company: "Menlo College",
     image:
-      "https://media.licdn.com/dms/image/v2/C5603AQF4BrU_fqMjNQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662771913064?e=1740009600&v=beta&t=Od8SJeYE5HFDbdzXwLsdHOyLXP3U4YELwcpDVMJ9Fh0",
+      "https://media.licdn.com/dms/image/v2/C5603AQF4BrU_fqMjNQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1662771913064?e=1750291200&v=beta&t=A0vEK0VJKXZ10ECBfO2sPtMpa2bGJJX99hDGyEQ2ZUc",
+  },
+  {
+    reference:
+      "Her dedication, communication skills, and work ethic make her an invaluable team member. I highly recommend her for any future opportunities!",
+    name: "Nina Roth, MPH",
+    designation: "Director of Client Services",
+    company: "Ellipsis Health",
+    image:
+      "https://media.licdn.com/dms/image/v2/C4D03AQFqTxSckyV3-w/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1539568387007?e=1750291200&v=beta&t=SmEs_d_Bq1g6Kocf2rSPizFL3Dk18s3w-0zxdg5Cx64",
+  },
+  {
+    reference:
+      "She thrives in ambiguity, quickly adapting to new projects and continuously seeking ways to improve our strategies and processes.",
+    name: "Saybah Biawogi",
+    designation: "Director of Marketing and Communications",
+    company: "Menlo College",
+    image:
+      "https://media.licdn.com/dms/image/v2/D5603AQH4Dj_gWI8sUA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692732734910?e=1750291200&v=beta&t=yCQnh3gjQnc10wjK5w9_-qCpZ5HBi656FJsCBUbYmJs",
   },
 ];
 
@@ -404,11 +421,6 @@ const socials = [
     id: "linkedin",
     icon: linkedin,
     link: "https://www.linkedin.com/in/chieriabe/",
-  },
-  {
-    id: "instagram",
-    icon: instagram,
-    link: "https://www.instagram.com/chieriabe",
   },
 ];
 

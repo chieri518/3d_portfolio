@@ -42,7 +42,6 @@ import websitedev from "./websitedev.png";
 import socialmedia from "./socialmedia.png";
 import dataanalysis from "./dataanalysis.png";
 
-import instagram from "./instagram.png";
 import linkedin from "./linkedin.png";
 import github from "./github.png";
 
@@ -89,7 +88,6 @@ export {
   websitedev,
   socialmedia,
   dataanalysis,
-  instagram,
   linkedin,
   github,
   youtubevid,
