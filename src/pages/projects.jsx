@@ -16,7 +16,6 @@ const PostCard = ({
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div className="bg-tertiary p-4 md:p-5 rounded-2xl flex flex-col md:flex-row w-full my-5">
-        {/* Left Column: Image */}
         <div className="w-full md:w-1/3 h-auto relative">
           <img
             src={image}

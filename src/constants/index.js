@@ -426,19 +426,19 @@ const socials = [
 
 const uif = [
   {
-    source: uif1,
+    src: uif1,
   },
   {
-    source: uif2,
+    src: uif2,
   },
   {
-    source: uif3,
+    src: uif3,
   },
   {
-    source: uif4,
+    src: uif4,
   },
   {
-    source: uif5,
+    src: uif5,
   },
 ];
 
