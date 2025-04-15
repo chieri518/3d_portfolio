@@ -68,7 +68,7 @@ const Feedbacks = () => {
     ],
   };
   return (
-    <div className="mt-12 bg-white rounded-[20px]">
+    <div className="mt-12 bg-tertiary rounded-[20px]">
       <div
         className={`${styles.padding} bg-tertiary rounded-2xl min-h-[300px]`}
       >
@@ -85,6 +85,22 @@ const Feedbacks = () => {
           ))}
         </Slider>
       </div>
+
+      <motion.div
+        whileHover={{ scale: 1.05 }}
+        transition={{ type: "spring", stiffness: 300 }}
+        className="btn px-6 py-2 overflow-hidden relative cursor-pointer w-fit mx-auto"
+      >
+        <a
+          href="https://www.linkedin.com/in/chieriabe/details/recommendations/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <div className="bg-primary text-black px-6 py-2 font-medium rounded-md">
+            Read More
+          </div>
+        </a>
+      </motion.div>
     </div>
   );
 };
