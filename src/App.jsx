@@ -1,6 +1,6 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { About, Feedbacks, Awards, Highlights } from "./components";
-import { Projects, Experience, Leadership, Navbar } from "./pages";
+import { Projects, Experience, UIF, Navbar } from "./pages";
 import { Analytics } from "@vercel/analytics/react";
 
 const LandingPage = () => {
@@ -39,13 +39,13 @@ const ProjectsPage = () => {
   );
 };
 
-const LeadershipPage = () => {
+const UIFPage = () => {
   return (
     <>
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <Navbar />
       </div>
-      <Leadership />
+      <UIF />
     </>
   );
 };
@@ -57,7 +57,7 @@ const App = () => {
         <Route path="/" element={<LandingPage />} />
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/leadership" element={<LeadershipPage />} />
+        <Route path="/uif" element={<UIFPage />} />
       </Routes>
       <Analytics />
     </BrowserRouter>

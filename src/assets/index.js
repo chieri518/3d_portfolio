@@ -36,7 +36,6 @@ import uif5 from "./gallery/uif_05.png";
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
 import marketingconf from "./marketingconf.png";
-import uif from "./uif.png";
 
 import websitedev from "./websitedev.png";
 import socialmedia from "./socialmedia.png";
@@ -84,7 +83,6 @@ export {
   governormedal,
   honor,
   marketingconf,
-  uif,
   websitedev,
   socialmedia,
   dataanalysis,

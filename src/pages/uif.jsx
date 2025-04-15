@@ -86,13 +86,17 @@ const UIFImages = memo(function UIFImages() {
   );
 });
 
-const Leadership = () => {
+const UIF = () => {
   return (
     <section className="relative w-full h-screen mx-auto">
       <Navbar />
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far...</p>
-        <h2 className={styles.sectionHeadText}>Leadership Experience</h2>
+        <h2 className={styles.sectionHeadText}>
+          University Innovation Fellowship
+        </h2>
+        <p className={styles.sectionSubText}>
+          @ Hasso Plattner Institute of Design at Stanford University
+        </p>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
@@ -102,4 +106,4 @@ const Leadership = () => {
   );
 };
 
-export default SectionWrapper(Leadership);
+export default SectionWrapper(UIF);

@@ -1,6 +1,6 @@
 import Navbar from "./navbar";
 import Projects from "./projects";
 import Experience from "./experience";
-import Leadership from "./leadership";
+import UIF from "./uif";
 
-export { Navbar, Projects, Experience, Leadership };
+export { Navbar, Projects, Experience, UIF };
