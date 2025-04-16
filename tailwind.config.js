@@ -2,6 +2,7 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx}"],
   mode: "jit",
+  plugins: [require('tailwind-scrollbar-hide')],
   theme: {
     extend: {
       colors: {

@@ -129,7 +129,7 @@ const technologies = [
 ];
 
 const experiences = [
-  {
+  /*{
     title: "Busienss Development Specialist",
     company_name: "Lemin Captcha by Capy Inc.",
     icon: lemin,
@@ -148,7 +148,7 @@ const experiences = [
     points: [
       "Developed and executed marketing strategies that drove brand awareness and user engagement, leveraging data-driven insights and innovative campaigns.",
     ],
-  },
+  },*/
 
   {
     title: "Website Intern (Full-Time)",
