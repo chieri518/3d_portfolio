@@ -29,6 +29,13 @@ import {
   uif13,
   uif14,
   uif15,
+  uif21,
+  uif22,
+  uif23,
+  uif24,
+  uif25,
+  uif26,
+  uif27,
   ellipsis,
   governormedal,
   honor,
@@ -372,7 +379,7 @@ const works = [
       },
     ],
     image: uif1,
-    source_code_link: "https://chieriabe.vercel.app/uif",
+    source_code_link: "/uif",
   },
   {
     name: "Student Feature Video",
@@ -497,6 +504,30 @@ const steamhouse = [
   },
 ];
 
+const meetup = [
+  {
+    src: uif21,
+  },
+  {
+    src: uif22,
+  },
+  {
+    src: uif23,
+  },
+  {
+    src: uif24,
+  },
+  {
+    src: uif25,
+  },
+  {
+    src: uif26,
+  },
+  {
+    src: uif27,
+  },
+];
+
 const uiftimeline = [
   {
     week: "Week One",
@@ -512,7 +543,6 @@ const uiftimeline = [
     paragraph:
       "We explored design thinking as a human-centered approach to innovation by tackling the challenge: “How might universities support students’ social and emotional well-being?” Through this process, we practiced empathizing with users, brainstorming diverse ideas, and identifying surprising insights that emerged along the way. This session helped us understand how thoughtful, student-focused solutions can be developed by truly listening to the needs of the community and approaching problems with creativity and curiosity.",
   },
-
   {
     week: "Week Three",
     title: "Landscape Canvas",
@@ -520,7 +550,6 @@ const uiftimeline = [
     paragraph:
       "We focused on uncovering assets and identifying gaps within our campus innovation and entrepreneurship (I&E) ecosystem. We completed the Landscape Canvas spreadsheet and synthesized our findings to gain a clearer understanding of existing resources and areas for improvement. Additionally, we created or updated our Campus Overview page on the wiki to reflect our research. This session helped us build a strong foundation for future projects by mapping out the current state of I&E on campus and highlighting opportunities for growth.",
   },
-
   {
     week: "Week Four",
     title: "Strategic Priorities",
@@ -544,6 +573,21 @@ const uiftimeline = [
   },
 ];
 
+const uifprojects = [
+  {
+    title: "STEAM House",
+    color: "#DCD6FF",
+    paragraph:
+      "The strategic plan emerged from the challenge of sustaining the Innovation Center—originally launched by Menlo College’s inaugural UIF cohort in 2017—beyond the tenure of its founders.",
+  },
+  {
+    title: "Project Management Class",
+    color: "#D6F0FF",
+    paragraph:
+      "We explored design thinking as a human-centered approach to innovation by tackling the challenge: “How might universities support students’ social and emotional well-being?” Through this process, we practiced empathizing with users, brainstorming diverse ideas, and identifying surprising insights that emerged along the way. This session helped us understand how thoughtful, student-focused solutions can be developed by truly listening to the needs of the community and approaching problems with creativity and curiosity.",
+  },
+];
+
 export {
   services,
   technologies,
@@ -557,4 +601,6 @@ export {
   uif,
   steamhouse,
   uiftimeline,
+  uifprojects,
+  meetup,
 };

@@ -38,6 +38,13 @@ import uif12 from "./gallery/uif_12.png";
 import uif13 from "./gallery/uif_13.png";
 import uif14 from "./gallery/uif_14.png";
 import uif15 from "./gallery/uif_15.png";
+import uif21 from "./gallery/uif_21.png";
+import uif22 from "./gallery/uif_22.png";
+import uif23 from "./gallery/uif_23.png";
+import uif24 from "./gallery/uif_24.png";
+import uif25 from "./gallery/uif_25.png";
+import uif26 from "./gallery/uif_26.png";
+import uif27 from "./gallery/uif_27.png";
 
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
@@ -95,6 +102,13 @@ export {
   uif13,
   uif14,
   uif15,
+  uif21,
+  uif22,
+  uif23,
+  uif24,
+  uif25,
+  uif26,
+  uif27,
   governormedal,
   honor,
   marketingconf,
