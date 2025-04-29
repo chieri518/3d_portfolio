@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { About, Feedbacks, Awards, Highlights } from "./components";
+import { About, Feedbacks, Awards, Highlights, LinkedIn } from "./components";
 import { Projects, Experience, UIF, Navbar } from "./pages";
 import { Analytics } from "@vercel/analytics/react";
 
@@ -12,6 +12,8 @@ const LandingPage = () => {
       <About />
       <Highlights />
       <Awards />
+      <LinkedIn />
+
       <Feedbacks />
     </>
   );

@@ -393,6 +393,7 @@ const UIF = () => {
               alt="steamhouse"
               className="w-full h-full object-contain"
             />
+            <STEAMHouseGallery />
           </div>
         )}
         {activeTab === "PM" && (
@@ -413,12 +414,6 @@ const UIF = () => {
           </div>
         )}
       </div>
-
-      <motion.div
-        variants={fadeIn("", "", 0.5, 1)}
-        className="xs:w-[250px] w-full"
-      ></motion.div>
-      <STEAMHouseGallery />
       <h2 className={styles.sectionHeadText}>UIF Silicon Valley Meetup</h2>
       <MeetupGallery />
     </section>
