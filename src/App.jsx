@@ -1,6 +1,6 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import { About, Feedbacks, Awards, Highlights, LinkedIn } from "./components";
-import { Projects, Experience, UIF, Navbar } from "./pages";
+import { Projects, Experience, UIF, Navbar, NotFound } from "./pages";
 import { Analytics } from "@vercel/analytics/react";
 
 const LandingPage = () => {
@@ -13,7 +13,6 @@ const LandingPage = () => {
       <Highlights />
       <Awards />
       <LinkedIn />
-
       <Feedbacks />
     </>
   );
@@ -60,6 +59,7 @@ const App = () => {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/uif" element={<UIFPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Analytics />
     </BrowserRouter>
