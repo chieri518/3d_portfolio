@@ -3,6 +3,7 @@ import {
   target,
   plane,
   rocket,
+  peoplemap,
   javascript,
   typescript,
   html,
@@ -303,58 +304,24 @@ const awards = [
 
 const highlights = [
   {
-    name: "Social Media Marketing",
+    name: "Digital Marketing",
     description:
-      "Skilled in creating and managing targeted social media campaigns across platforms, I focus on building brand engagement, increasing follower growth, and delivering content that resonates with diverse audiences. My approach combines audience insights with strategic content planning to optimize reach and engagement.",
-    tags: [
-      {
-        name: "Photoshop",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Premiere",
-        color: "pink-text-gradient",
-      },
-    ],
+      "Crafts and executes data-driven campaigns across web, email, and social platforms to amplify brand presence, engage diverse audiences, and convert insights into measurable results.",
     image: socialmedia,
     source_code_link: "/projects",
   },
   {
-    name: "Data Analysis",
+    name: "Growth Strategy",
     description:
-      "Proficient in data interpretation and analytics tools, I turn raw data into actionable insights that drive marketing decisions. By analyzing campaign metrics and user behavior, I identify trends, measure effectiveness, and continuously refine strategies to maximize ROI and impact.",
-    tags: [
-      {
-        name: "Google Analytics",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Hootsuite",
-        color: "green-text-gradient",
-      },
-    ],
+      "Designs and implements scalable strategies that drive user acquisition, engagement, and retention by aligning business goals with audience behavior and performance metrics.",
     image: dataanalysis,
     source_code_link: "/projects",
   },
   {
-    name: "Website Development",
+    name: "Project Management",
     description:
-      "Experienced in developing and maintaining user-friendly websites, I create digital experiences that are both visually appealing and functional. My work includes designing, updating, and optimizing websites to ensure they meet the needs of varied audiences and align with brand objectives.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "typescript",
-        color: "green-text-gradient",
-      },
-      {
-        name: "HTML",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: websitedev,
+      "Leads cross-functional projects from concept to execution by managing timelines, resources, and stakeholder communication to ensure smooth delivery and impactful outcomes.",
+    image: peoplemap,
     source_code_link: "/projects",
   },
 ];
@@ -534,7 +501,7 @@ const uiftimeline = [
     title: "Wayfinding",
     color: "#DCD6FF",
     paragraph:
-      "We kicked off our training journey by learning the essential tools, platforms, and techniques that would guide us throughout the program and beyond. We played the UIF Monopoly game, engaging in activities that helped us explore different aspects of innovation and entrepreneurship on campus. We shared our results on the team’s Training Mural and began planning for our upcoming stakeholder meeting by setting a date, identifying invitees, and considering logistics. Additionally, we got an early start on the Landscape Canvas, knowing it would require in-depth research. This session laid the groundwork for collaboration, strategic thinking, and a deeper understanding of our campus ecosystem.",
+      "We kicked off our training journey by learning the tools, platforms, and techniques that would guide us throughout the program and beyond. We explored different aspects of innovation and entrepreneurship. Based on the activity, we began planning for our upcoming stakeholder meeting by setting a date, identifying invitees, and considering logistics. Additionally, we got an early start on the Landscape Canvas, knowing it would require in-depth research. This session laid the groundwork for collaboration, strategic thinking, and a deeper understanding of our campus ecosystem.",
   },
   {
     week: "Week Two",

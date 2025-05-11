@@ -57,8 +57,10 @@ const About = () => {
             className="animate-text bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent font-black"
           >
             chieriabe518@gmail.com
-          </a>{" "}
-          . I'm always open to new opportunities and collaborations!{" "}
+          </a>
+          . I'm always open to new opportunities and collaborations! <br />
+          <br />
+          This website was made with NextJS and React:)
         </p>
         <Tilt className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
           <div

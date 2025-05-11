@@ -3,6 +3,7 @@ import click from "./click.png";
 import target from "./target.png";
 import plane from "./plane.png";
 import rocket from "./rocket.png";
+import peoplemap from "./peoplemap.png";
 import readmore from "./readmore.png";
 import menu from "./menu.svg";
 import close from "./close.svg";
@@ -64,12 +65,15 @@ import linkedinpost from "./linkedinpost.png";
 import uiflogo from "./uiflogo.png";
 import steamhousewide from "./steamhousewide.png";
 
+import chetzlogo from "./chetzlogo.png";
+
 export {
   logo,
   click,
   target,
   plane,
   rocket,
+  peoplemap,
   readmore,
   menu,
   close,
@@ -122,4 +126,5 @@ export {
   linkedinpost,
   uiflogo,
   steamhousewide,
+  chetzlogo,
 };
