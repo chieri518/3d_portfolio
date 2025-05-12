@@ -3,30 +3,9 @@ import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
 import { chetzlogo } from "../assets";
-import { organizations } from "../constants";
+import { organizations, events } from "../constants";
 
 import Navbar from "./navbar";
-
-const events = [
-  {
-    name: "Language Exchange",
-    description:
-      "Hosted events that facilitated mutual language learning and cultural exchange among participants from diverse backgrounds.",
-    image: "src/assets/chetz/langexch.png",
-  },
-  {
-    name: " English Workshops",
-    description:
-      "Partnered with local Japanese communities (senior homes, children’s centers, etc.) to conduct engaging English workshops.",
-    image: "src/assets/chetz/workshop.png",
-  },
-  {
-    name: "Online Seminars",
-    description:
-      "Collaborated with various organizations to give talks about studying abroad, cross-cultural understanding, and youth leadership.",
-    image: "src/assets/chetz/seminar.png",
-  },
-];
 
 const chetz = () => {
   return (

@@ -40,7 +40,9 @@ import {
   ellipsis,
   governormedal,
   honor,
+  honor2,
   marketingconf,
+  BGS,
   websitedev,
   socialmedia,
   dataanalysis,
@@ -50,6 +52,22 @@ import {
   youtubevid,
   instareel,
   linkedinpost,
+  bluebase,
+  dawn,
+  ikkadanran,
+  langexch,
+  manabity,
+  meeting,
+  ownleg,
+  pando,
+  seminar,
+  sisec,
+  u18,
+  uofa,
+  warmhearts,
+  wic,
+  workshop,
+  honor2,
 } from "../assets";
 
 export const navLinks = [
@@ -285,31 +303,31 @@ const awards = [
     name: "The Governor General’s Academic Medal",
     description:
       "Honors a student graduating with the highest grade point average from a high school.",
-    image: "src/assets/governormedal.png",
+    image: governormedal,
   },
   {
     name: "Richard F. O’Brien Award",
     description:
       "Honors two students per class who exemplify the true spirit of Menlo through all-around excellence.",
-    image: "src/assets/honor.png",
+    image: honor,
   },
   {
     name: "The Young Leadership Award",
     description:
       "Honors a few brands and pioneers who are relentlessly pushing the frontiers of innovation in the marketing industry.",
-    image: "src/assets/marketingconf.png",
+    image: marketingconf,
   },
   {
     name: "Richard F. O’Brien Award",
     description:
       "Honors two students per class who exemplify the true spirit of Menlo through all-around excellence.",
-    image: "src/assets/honor2.png",
+    image: honor2,
   },
   {
     name: "Beta Gamma Sigma",
     description:
       "Honors the top 10% of undergraduates in AACSB-accredited schools, the top 5% of business programs worldwide.",
-    image: "src/assets/BGS.png",
+    image: BGS,
   },
 ];
 
@@ -356,7 +374,7 @@ const works = [
         color: "pink-text-gradient",
       },
     ],
-    image: "src/assets/chetz/meeting.png",
+    image: meeting,
     source_code_link: "/chetz",
   },
   {
@@ -605,47 +623,68 @@ const linkedinhighlight = [
 const organizations = [
   {
     name: "Japanese Conversation Club at University of Alberta",
-    logo: "src/assets/chetz/uofa.jpg",
+    logo: uofa,
   },
   {
     name: "SISEC at Sophia University",
-    logo: "src/assets/chetz/sisec.jpg",
+    logo: sisec,
   },
   {
     name: "Waseda International Club at Waseda University",
-    logo: "src/assets/chetz/wic.jpg",
+    logo: wic,
   },
   {
     name: "OWNLEG",
-    logo: "src/assets/chetz/ownleg.jpg",
+    logo: ownleg,
   },
   {
     name: "Blue Base",
-    logo: "src/assets/chetz/bluebase.jpg",
+    logo: bluebase,
   },
   {
     name: "manabity",
-    logo: "src/assets/chetz/manabity.png",
+    logo: manabity,
   },
   {
     name: "Ikkadanran",
-    logo: "src/assets/chetz/ikkadanran.png",
+    logo: ikkadanran,
   },
   {
     name: "U18 career summit",
-    logo: "src/assets/chetz/u18.jpg",
+    logo: u18,
   },
   {
     name: "Dawn Community",
-    logo: "src/assets/chetz/dawn.jpg",
+    logo: dawn,
   },
   {
     name: "Warm Hearts Coffee",
-    logo: "src/assets/chetz/warmhearts.png",
+    logo: warmhearts,
   },
   {
     name: "Pando",
-    logo: "src/assets/chetz/pando.png",
+    logo: pando,
+  },
+];
+
+const events = [
+  {
+    name: "Language Exchange",
+    description:
+      "Hosted events that facilitated mutual language learning and cultural exchange among participants from diverse backgrounds.",
+    image: langexch,
+  },
+  {
+    name: " English Workshops",
+    description:
+      "Partnered with local Japanese communities (senior homes, children’s centers, etc.) to conduct engaging English workshops.",
+    image: workshop,
+  },
+  {
+    name: "Online Seminars",
+    description:
+      "Collaborated with various organizations to give talks about studying abroad, cross-cultural understanding, and youth leadership.",
+    image: seminar,
   },
 ];
 
@@ -666,4 +705,5 @@ export {
   meetup,
   linkedinhighlight,
   organizations,
+  events,
 };

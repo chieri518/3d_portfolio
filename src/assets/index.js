@@ -49,7 +49,9 @@ import uif27 from "./gallery/uif_27.png";
 
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
+import honor2 from "./honor2.png";
 import marketingconf from "./marketingconf.png";
+import BGS from "./BGS.png";
 
 import websitedev from "./websitedev.png";
 import socialmedia from "./socialmedia.png";
@@ -66,6 +68,21 @@ import uiflogo from "./uiflogo.png";
 import steamhousewide from "./steamhousewide.png";
 
 import chetzlogo from "./chetz/chetzlogo.png";
+import bluebase from "./chetz/bluebase.jpg";
+import dawn from "./chetz/dawn.jpg";
+import ikkadanran from "./chetz/ikkadanran.png";
+import langexch from "./chetz/langexch.png";
+import manabity from "./chetz/manabity.png";
+import meeting from "./chetz/meeting.png";
+import ownleg from "./chetz/ownleg.jpg";
+import pando from "./chetz/pando.png";
+import seminar from "./chetz/seminar.png";
+import sisec from "./chetz/sisec.jpg";
+import u18 from "./chetz/u18.jpg";
+import uofa from "./chetz/uofa.jpg";
+import warmhearts from "./chetz/warmhearts.png";
+import wic from "./chetz/wic.jpg";
+import workshop from "./chetz/workshop.png";
 
 export {
   logo,
@@ -115,7 +132,9 @@ export {
   uif27,
   governormedal,
   honor,
+  honor2,
   marketingconf,
+  BGS,
   websitedev,
   socialmedia,
   dataanalysis,
@@ -127,4 +146,19 @@ export {
   uiflogo,
   steamhousewide,
   chetzlogo,
+  bluebase,
+  dawn,
+  ikkadanran,
+  langexch,
+  manabity,
+  meeting,
+  ownleg,
+  pando,
+  seminar,
+  sisec,
+  u18,
+  uofa,
+  warmhearts,
+  wic,
+  workshop,
 };
