@@ -67,7 +67,6 @@ import {
   warmhearts,
   wic,
   workshop,
-  honor2,
 } from "../assets";
 
 export const navLinks = [
