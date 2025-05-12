@@ -56,7 +56,7 @@ const Highlights = () => {
         <h2 className={styles.sectionHeadText}>Highlights</h2>
       </motion.div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-10 flex flex-wrap gap-7">
         {highlights.map((highlight, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...highlight} />
         ))}

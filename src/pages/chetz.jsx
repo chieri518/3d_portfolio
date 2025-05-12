@@ -53,7 +53,7 @@ const chetz = () => {
           my high school abroad in Canada, I felt a strong desire to stay
           connected with the world. At the same time, tools like Zoom became
           more accessible, opening up new possibilities for online interaction.
-          This inspired me to launch Chetz as a completely online platform,
+          This inspired me to launch chetz as a completely online platform,
           enabling global participation regardless of location. At the
           beginning, I managed everything by myself—promotion, recruitment,
           website development, and operations. Over time, we grew into a diverse
@@ -87,7 +87,7 @@ const chetz = () => {
         <p className="mt-4 mb-4">
           All of our activities are conducted online, making it easy to
           participate from anywhere. Whether you're new to volunteering or have
-          limited time, Chetz offers opportunities to contribute at your own
+          limited time, chetz offers opportunities to contribute at your own
           pace.
         </p>
       </section>

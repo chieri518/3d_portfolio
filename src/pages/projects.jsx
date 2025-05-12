@@ -69,7 +69,7 @@ const Projects = () => {
         </motion.p>
       </div>
 
-      <div className="mt-10 md:mt-20 p-3 md:p-5 gap-5 md:gap-7 flex flex-col">
+      <div className="p-3 md:p-5 gap-5 md:gap-7 flex flex-col">
         {works.map((highlight, index) => (
           <PostCard key={`post-${index}`} index={index} {...highlight} />
         ))}
