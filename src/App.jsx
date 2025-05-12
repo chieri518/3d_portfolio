@@ -4,7 +4,7 @@ import {
   Projects,
   Experience,
   UIF,
-  chetz,
+  Chetz,
   Navbar,
   NotFound,
   JobHunt,
@@ -58,13 +58,13 @@ const UIFPage = () => {
   );
 };
 
-const chetzPage = () => {
+const ChetzPage = () => {
   return (
     <>
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <Navbar />
       </div>
-      <chetz />
+      <Chetz />
     </>
   );
 };
@@ -88,7 +88,7 @@ const App = () => {
         <Route path="/experience" element={<ExperiencePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/uif" element={<UIFPage />} />
-        <Route path="/chetz" element={<chetzPage />} />
+        <Route path="/chetz" element={<ChetzPage />} />
         <Route path="/jobhunt" element={<JobHuntPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

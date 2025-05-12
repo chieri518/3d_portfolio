@@ -65,7 +65,7 @@ import linkedinpost from "./linkedinpost.png";
 import uiflogo from "./uiflogo.png";
 import steamhousewide from "./steamhousewide.png";
 
-import chetzlogo from "./chetzlogo.png";
+import chetzlogo from "./chetz/chetzlogo.png";
 
 export {
   logo,

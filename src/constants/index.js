@@ -308,25 +308,46 @@ const highlights = [
     description:
       "Crafts and executes data-driven campaigns across web, email, and social platforms to amplify brand presence, engage diverse audiences, and convert insights into measurable results.",
     image: socialmedia,
-    source_code_link: "/projects",
+    redirect_link: "/projects",
   },
   {
     name: "Growth Strategy",
     description:
       "Designs and implements scalable strategies that drive user acquisition, engagement, and retention by aligning business goals with audience behavior and performance metrics.",
     image: dataanalysis,
-    source_code_link: "/projects",
+    redirect_link: "/projects",
   },
   {
     name: "Project Management",
     description:
       "Leads cross-functional projects from concept to execution by managing timelines, resources, and stakeholder communication to ensure smooth delivery and impactful outcomes.",
     image: peoplemap,
-    source_code_link: "/projects",
+    redirect_link: "/projects",
   },
 ];
 
 const works = [
+  {
+    name: "Founder of chetz",
+    description:
+      "Established a non-profit to foster global connections for students all around the globe.",
+    tags: [
+      {
+        name: "Entrepreneurship",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "Project Management",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Event Coordination",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: "src/assets/chetz/meeting.png",
+    source_code_link: "/chetz",
+  },
   {
     name: "University Innovation Fellows",
     description:
@@ -413,7 +434,7 @@ const heroTexts = [
   500,
   "Digital Marketer",
   500,
-  "Senior at Menlo College",
+  "Founder",
   500,
 ];
 
@@ -570,6 +591,29 @@ const linkedinhighlight = [
   },
 ];
 
+const organizations = [
+  {
+    name: "manabity",
+    logo: "src/assets/chetz/manabity.png",
+  },
+  {
+    name: "Ikkadanran",
+    logo: "src/assets/chetz/ikkadanran.png",
+  },
+  {
+    name: "U18 career summit",
+    logo: "src/assets/chetz/u18.jpg",
+  },
+  {
+    name: "Dawn Community",
+    logo: "src/assets/chetz/dawn.jpg",
+  },
+  {
+    name: "Pando",
+    logo: "src/assets/chetz/pando.png",
+  },
+];
+
 export {
   services,
   technologies,
@@ -586,4 +630,5 @@ export {
   uifprojects,
   meetup,
   linkedinhighlight,
+  organizations,
 };

@@ -6,17 +6,10 @@ import { SectionWrapper } from "../hoc";
 import { highlights } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const ProjectCard = ({ index, name, description, image }) => {
+const ProjectCard = ({ index, name, description, image, redirect_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <Tilt
-        options={{
-          max: 45,
-          scale: 1,
-          speed: 450,
-        }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
-      >
+      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full transform transition-transform hover:scale-105">
         <div className="h-fit">
           <img src={image} alt={name} />
         </div>
@@ -25,7 +18,31 @@ const ProjectCard = ({ index, name, description, image }) => {
           <h3 className="text-black font-bold text-[24px]">{name}</h3>
           <p className="mt-2 text-secondary text-[14px]">{description}</p>
         </div>
-      </Tilt>
+        <div>
+          <a
+            href={redirect_link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-1 text-sm font-medium text-blue-600 transition duration-200 hover:text-blue-800"
+          >
+            Read More
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+              className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
     </motion.div>
   );
 };
