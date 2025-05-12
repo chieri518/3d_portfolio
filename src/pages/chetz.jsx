@@ -10,18 +10,21 @@ import Navbar from "./navbar";
 const events = [
   {
     name: "Language Exchange",
-    description: "Executed online campaigns reaching students in 5+ countries.",
-    image: "src/assets/light.png",
+    description:
+      "Hosted events that facilitated mutual language learning and cultural exchange among participants from diverse backgrounds.",
+    image: "src/assets/chetz/langexch.png",
   },
   {
     name: " English Workshops",
-    description: "Hosted interactive events empowering youth voices worldwide.",
-    image: "src/assets/light.png",
+    description:
+      "Partnered with local Japanese communities (senior homes, children’s centers, etc.) to conduct engaging English workshops.",
+    image: "src/assets/chetz/workshop.png",
   },
   {
     name: "Online Seminars",
-    description: "Featured in regional newspapers across Japan and Canada.",
-    image: "src/assets/light.png",
+    description:
+      "Collaborated with various organizations to give talks about studying abroad, cross-cultural understanding, and youth leadership.",
+    image: "src/assets/chetz/seminar.png",
   },
 ];
 
@@ -128,11 +131,7 @@ const chetz = () => {
               key={index}
               className="bg-gray-100 rounded-2xl overflow-hidden shadow-lg transform transition-transform hover:scale-105"
             >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full h-48 object-cover"
-              />
+              <img src={item.image} alt={item.name} />
               <div className="p-4">
                 <h3 className="text-xl font-bold text-gray-800">{item.name}</h3>
                 <p className="text-gray-600 mt-2 text-sm">{item.description}</p>
@@ -167,6 +166,9 @@ const chetz = () => {
               </div>
             </div>
           ))}
+          <div className="flex items-center justify-center h-32 border-2 border-dashed border-gray-300 rounded-lg text-gray-500 text-sm font-semibold">
+            and more...
+          </div>
         </div>
       </section>
     </section>

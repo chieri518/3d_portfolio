@@ -284,21 +284,32 @@ const awards = [
   {
     name: "The Governor General’s Academic Medal",
     description:
-      "For nearly 150 years, the Governor General’s Academic Medals have recognized the outstanding scholastic achievements of students in Canada. They are awarded to the student graduating with the highest average from a high school, as well as from approved college or university programs.",
-
-    image: governormedal,
+      "Honors a student graduating with the highest grade point average from a high school.",
+    image: "src/assets/governormedal.png",
   },
   {
     name: "Richard F. O’Brien Award",
     description:
-      "These awards are designated for students from each class who best exemplify the true spirit of Menlo College through all-around excellence.",
-    image: honor,
+      "Honors two students per class who exemplify the true spirit of Menlo through all-around excellence.",
+    image: "src/assets/honor.png",
   },
   {
     name: "The Young Leadership Award",
     description:
-      "The Young Leadership Award was given to only 3 qualified individuals based on the internal evaluation on the set parameters by the conference committee with regards to the individual's skills and influence to the industry.",
-    image: marketingconf,
+      "Honors a few brands and pioneers who are relentlessly pushing the frontiers of innovation in the marketing industry.",
+    image: "src/assets/marketingconf.png",
+  },
+  {
+    name: "Richard F. O’Brien Award",
+    description:
+      "Honors two students per class who exemplify the true spirit of Menlo through all-around excellence.",
+    image: "src/assets/honor2.png",
+  },
+  {
+    name: "Beta Gamma Sigma",
+    description:
+      "Honors the top 10% of undergraduates in AACSB-accredited schools, the top 5% of business programs worldwide.",
+    image: "src/assets/BGS.png",
   },
 ];
 
@@ -306,21 +317,21 @@ const highlights = [
   {
     name: "Digital Marketing",
     description:
-      "Crafts and executes data-driven campaigns across web, email, and social platforms to amplify brand presence, engage diverse audiences, and convert insights into measurable results.",
+      "Crafting, executing and analying data-driven campaigns across web, email, and social platforms to elevate brand presence, engage diverse audiences, and convert insights into measurable results.",
     image: socialmedia,
     redirect_link: "/projects",
   },
   {
     name: "Growth Strategy",
     description:
-      "Designs and implements scalable strategies that drive user acquisition, engagement, and retention by aligning business goals with audience behavior and performance metrics.",
+      "Designing and implementing scalable strategies that drive user acquisition, engagement, and retention by aligning business goals with audience behavior and performance metrics.",
     image: dataanalysis,
     redirect_link: "/projects",
   },
   {
     name: "Project Management",
     description:
-      "Leads cross-functional projects from concept to execution by managing timelines, resources, and stakeholder communication to ensure smooth delivery and impactful outcomes.",
+      "Leading cross-functional projects from concept to completion by managing timelines, resources, and stakeholder communication to ensure smooth delivery and impactful outcomes.",
     image: peoplemap,
     redirect_link: "/projects",
   },
@@ -593,6 +604,26 @@ const linkedinhighlight = [
 
 const organizations = [
   {
+    name: "Japanese Conversation Club at University of Alberta",
+    logo: "src/assets/chetz/uofa.jpg",
+  },
+  {
+    name: "SISEC at Sophia University",
+    logo: "src/assets/chetz/sisec.jpg",
+  },
+  {
+    name: "Waseda International Club at Waseda University",
+    logo: "src/assets/chetz/wic.jpg",
+  },
+  {
+    name: "OWNLEG",
+    logo: "src/assets/chetz/ownleg.jpg",
+  },
+  {
+    name: "Blue Base",
+    logo: "src/assets/chetz/bluebase.jpg",
+  },
+  {
     name: "manabity",
     logo: "src/assets/chetz/manabity.png",
   },
@@ -607,6 +638,10 @@ const organizations = [
   {
     name: "Dawn Community",
     logo: "src/assets/chetz/dawn.jpg",
+  },
+  {
+    name: "Warm Hearts Coffee",
+    logo: "src/assets/chetz/warmhearts.png",
   },
   {
     name: "Pando",

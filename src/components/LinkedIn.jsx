@@ -38,6 +38,8 @@ const LinkedIn = () => {
     dots: true,
     infinite: true,
     speed: 500,
+    autoplay: true,
+    autoplaySpeed: 3000,
     slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: <NextArrow />,

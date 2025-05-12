@@ -45,20 +45,21 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          I am a Senior at Menlo College majoring in Entrepreneurship and
-          minoring in Business Analytics. I have a unique perspective shaped by
-          my extensive international experience✈️ I've been studying abroad
-          since I was 10 years old, spending my junior high years in Malaysia
-          and high school years in Canada. This has allowed me to develop a
-          broad perspective and cultural sensitivity that I bring to all aspects
-          of my work🌍 Feel free to explore my projects and get in touch at{" "}
+          With years of marketing experience creating digital experiences that
+          elevate brand impact and drive audience growth, I bring a strategic
+          and creative approach to every project. I leverage innovative
+          strategies tailored to diverse audiences, drawing on perspectives
+          gained from living in four countries and working across cultures.🌍
+          <br />
+          Feel free to explore my projects and get in touch at{" "}
           <a
             href="mailto:chieriabe518@gmail.com"
             className="animate-text bg-gradient-to-r from-blue-500 to-pink-500 bg-clip-text text-transparent font-black"
           >
             chieriabe518@gmail.com
           </a>
-          . I'm always open to new opportunities and collaborations! <br />
+          . <br />
+          I'm always open to new opportunities and collaborations! <br />
           <br />
           This website was made with NextJS and React:)
         </p>
