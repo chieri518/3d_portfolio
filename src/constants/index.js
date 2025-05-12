@@ -374,7 +374,7 @@ const works = [
       },
     ],
     image: meeting,
-    source_code_link: "/chetz",
+    link: "/chetz",
   },
   {
     name: "University Innovation Fellows",
@@ -395,7 +395,7 @@ const works = [
       },
     ],
     image: uif1,
-    source_code_link: "/uif",
+    link: "/uif",
   },
   {
     name: "Student Feature Video",
@@ -412,7 +412,7 @@ const works = [
       },
     ],
     image: youtubevid,
-    source_code_link: "https://youtu.be/U3l9ExJTvOk?si=CXvnUglL9hM56aQB",
+    link: "https://youtu.be/U3l9ExJTvOk?si=CXvnUglL9hM56aQB",
   },
   {
     name: "Graduation Celebration Reel",
@@ -429,7 +429,7 @@ const works = [
       },
     ],
     image: instareel,
-    source_code_link: "https://www.instagram.com/reel/CsfHVGigWhI",
+    link: "https://www.instagram.com/reel/CsfHVGigWhI",
   },
   {
     name: "Senior Spotlight Post",
@@ -450,8 +450,7 @@ const works = [
       },
     ],
     image: linkedinpost,
-    source_code_link:
-      "https://www.linkedin.com/posts/menlo-college_celebrating-seniors-raymond-juballa-23-activity-7054948106827689984-619v",
+    link: "https://www.linkedin.com/posts/menlo-college_celebrating-seniors-raymond-juballa-23-activity-7054948106827689984-619v",
   },
 ];
 

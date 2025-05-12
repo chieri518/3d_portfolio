@@ -1,4 +1,3 @@
-import Tilt from "react-parallax-tilt";
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
@@ -10,14 +9,15 @@ const ProjectCard = ({ index, name, description, image, redirect_link }) => {
   return (
     <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
       <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full transform transition-transform hover:scale-105">
-        <div className="h-fit">
+        <a href={redirect_link} target="_blank" rel="noopener noreferrer">
           <img src={image} alt={name} />
-        </div>
+          <div className="h-fit"></div>
 
-        <div className="mt-5">
-          <h3 className="text-black font-bold text-[24px]">{name}</h3>
-          <p className="mt-2 text-secondary text-[14px]">{description}</p>
-        </div>
+          <div className="mt-5">
+            <h3 className="text-black font-bold text-[24px]">{name}</h3>
+            <p className="mt-2 text-secondary text-[14px]">{description}</p>
+          </div>
+        </a>
         <div>
           <a
             href={redirect_link}

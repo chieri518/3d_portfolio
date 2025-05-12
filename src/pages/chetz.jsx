@@ -40,70 +40,36 @@ const chetz = () => {
           🚀 The Beginning of a Vision
         </h2>
         <p>
-          In a quiet corner of my room, with nothing more than an idea and a
-          deep sense of purpose,
-          <strong> chetz </strong> was born. No members. No resources. Just me —
-          and a question I couldn’t ignore:
-        </p>
-        <blockquote className="italic my-4 pl-4 border-l-4 border-blue-400">
-          "What if young people across borders could unite to tackle the world’s
-          most pressing challenges together?"
-        </blockquote>
-        <p>
-          I didn’t have a playbook. But I had a mission — and that was enough to
-          start.
+          Our vision is to{" "}
+          <strong>serve as a bridge between Japan and the world</strong>,
+          encouraging young people to expand their perspectives through cultural
+          and language exchange.
         </p>
       </section>
       <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">
-          💡 Building the Foundation
-        </h2>
+        <h2 className="text-2xl font-semibold mb-2">💡 Our Story</h2>
         <p>
-          I began by reaching out to friends, classmates, and anyone who would
-          listen. I created a simple message:
+          In 2020, when the COVID-19 pandemic forced me to return to Japan from
+          my high school abroad in Canada, I felt a strong desire to stay
+          connected with the world. At the same time, tools like Zoom became
+          more accessible, opening up new possibilities for online interaction.
+          This inspired me to launch Chetz as a completely online platform,
+          enabling global participation regardless of location. At the
+          beginning, I managed everything by myself—promotion, recruitment,
+          website development, and operations. Over time, we grew into a diverse
+          team of over 20 members from 6 different countries. Although all of
+          our members were high school students, we welcomed anyone regardless
+          of age or experience, as long as they shared our passion.
         </p>
-        <blockquote className="italic my-4 pl-4 border-l-4 border-green-400">
-          "You don’t have to wait to make a difference. Join me."
-        </blockquote>
-        <p>
-          From the first meeting with just two attendees, to late-night
-          brainstorming sessions over Zoom,
-          <strong> chetz </strong> took shape. Each person who joined brought
-          new energy and perspective. Slowly, the circle widened.
-        </p>
-      </section>
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">🌐 Going Global</h2>
-        <p>
-          What started as a passion project in my local community evolved into a
-          global movement. We built our first online campaign — and it reached
-          students in five countries. We collaborated with educators, social
-          innovators, and student leaders worldwide.
-        </p>
-        <p className="mt-2 font-semibold">
-          From 0 to over 20 members in 6 countries, <strong>chetz</strong>{" "}
-          became a network of changemakers united by purpose.
-        </p>
-      </section>
-      <section className="mb-10">
-        <h2 className="text-2xl font-semibold mb-2">🤝 What We Stand For</h2>
-        <ul className="list-disc list-inside space-y-2">
-          <li>
-            <strong>Youth-Driven:</strong> We believe young people aren’t just
-            the leaders of tomorrow — we’re the leaders of now.
-          </li>
-          <li>
-            <strong>Globally Connected:</strong> Diversity isn’t just welcomed —
-            it’s our strength.
-          </li>
-          <li>
-            <strong>Action-Oriented:</strong> We don’t just talk about change.
-            We build it.
-          </li>
-        </ul>
       </section>
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-4">🌟 Events</h2>
+        <p className="mt-2 mb-4">
+          chetz provides a flexible space where volunteers can lead activities
+          based on their own skills and experiences. We intentionally do not
+          limit ourselves to a specific field, allowing for a wide range of
+          volunteer-led events, including:
+        </p>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {events.map((item, index) => (
             <div
@@ -118,14 +84,18 @@ const chetz = () => {
             </div>
           ))}
         </div>
+        <p className="mt-4 mb-4">
+          All of our activities are conducted online, making it easy to
+          participate from anywhere. Whether you're new to volunteering or have
+          limited time, Chetz offers opportunities to contribute at your own
+          pace.
+        </p>
       </section>
       <section className="mb-10">
         <h2 className="text-2xl font-semibold mb-2">🛠️ Our Impact</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li>Hosted [insert #] global workshops</li>
-          <li>Launched [insert #] student-led initiatives</li>
-          <li>Partnered with organizations in [insert continents/countries]</li>
-          <li>Featured in [media/publications if any]</li>
+          <li>Recruited 20+ members from 6 countries</li>
+          <li>Collaborated with 10+ organizations worldwide</li>
         </ul>
       </section>
       <section className="mb-10">

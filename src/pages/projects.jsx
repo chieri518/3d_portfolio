@@ -1,57 +1,50 @@
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { readmore } from "../assets";
 import { SectionWrapper } from "../hoc";
 import { works } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
-const PostCard = ({
-  index,
-  name,
-  description,
-  tags,
-  image,
-  source_code_link,
-}) => {
+const PostCard = ({ index, name, description, tags, image, link }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <div className="bg-tertiary p-4 md:p-5 rounded-2xl flex flex-col md:flex-row w-full my-5">
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      className="group"
+    >
+      <div className="relative bg-tertiary p-4 md:p-5 rounded-2xl flex flex-col md:flex-row w-full my-5 shadow-md hover:shadow-lg transition-shadow duration-300">
         <div className="w-full md:w-1/3 h-auto relative">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-          <div className="absolute bottom-3 right-3 card-img_hover">
-            <div
-              onClick={() => window.open(source_code_link, "_blank")}
-              className="pink-gradient rounded-full w-8 h-8 md:w-10 md:h-10 flex justify-center items-center cursor-pointer"
-            >
-              <img
-                src={readmore}
-                alt="readmore"
-                className="w-1/2 h-1/2 object-contain"
-              />
-            </div>
-          </div>
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <img
+              src={image}
+              alt={name}
+              className="w-full h-full object-cover rounded-2xl"
+            />
+          </a>
         </div>
 
-        <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-5">
-          <h3 className="text-black font-bold text-[20px] md:text-[24px]">
-            {name}
-          </h3>
-          <p className="mt-2 text-secondary text-[15px]">{description}</p>
+        <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-5 flex flex-col justify-between relative">
+          <div>
+            <h3 className="text-black font-bold text-[20px] md:text-[24px]">
+              {name}
+            </h3>
+            <p className="mt-2 text-secondary text-[15px]">{description}</p>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            {tags.map((tag) => (
-              <p
-                key={tag.name}
-                className={`text-[12px] md:text-[14px] ${tag.color}`}
-              >
-                #{tag.name}
-              </p>
-            ))}
+            <div className="mt-4 flex flex-wrap gap-2">
+              {tags.map((tag) => (
+                <p
+                  key={tag.name}
+                  className={`text-[12px] md:text-[14px] ${tag.color}`}
+                >
+                  #{tag.name}
+                </p>
+              ))}
+            </div>
           </div>
+          <button
+            onClick={() => window.open(link, "_blank")}
+            className="absolute bottom-0 right-0 mb-4 mr-4 bg-primary text-white text-sm md:text-base px-4 py-2 rounded-full hover:bg-secondary transition-colors"
+          >
+            Learn More →
+          </button>
         </div>
       </div>
     </motion.div>
