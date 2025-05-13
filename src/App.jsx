@@ -10,6 +10,7 @@ import {
   JobHunt,
 } from "./pages";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const LandingPage = () => {
   return (
@@ -93,6 +94,7 @@ const App = () => {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Analytics />
+      <SpeedInsights />
     </BrowserRouter>
   );
 };

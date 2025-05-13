@@ -175,28 +175,6 @@ const ProjectCard = ({ title }) => (
   </motion.div>
 );
 
-const MeetupCard = ({ index, name, description, image }) => {
-  return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
-      <div className="bg-tertiary p-4 md:p-5 rounded-2xl flex flex-col md:flex-row w-full my-5">
-        <div className="w-full md:w-1/3 h-auto relative">
-          <img
-            src={image}
-            alt={name}
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
-        <div className="w-full md:w-2/3 mt-4 md:mt-0 md:ml-5">
-          <h3 className="text-black font-bold text-[20px] md:text-[24px]">
-            {name}
-          </h3>
-          <p className="mt-2 text-secondary text-[15px]">{description}</p>
-        </div>
-      </div>
-    </motion.div>
-  );
-};
-
 const UIFCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: experience.color, color: "#000000" }}
@@ -247,6 +225,7 @@ const STEAMHouseImages = memo(function STEAMHouseImages() {
     </>
   );
 });
+
 const MeetupImages = memo(function MeetupImages() {
   const images = [...meetup, ...meetup];
   return (
