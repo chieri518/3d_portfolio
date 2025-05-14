@@ -1,5 +1,5 @@
 import logo from "./logo.png";
-import resume from "./resume.pdf";
+import resume from "./Resume.pdf";
 import click from "./click.png";
 import target from "./target.png";
 import plane from "./plane.png";
