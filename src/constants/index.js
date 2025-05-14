@@ -257,7 +257,7 @@ const references = [
     designation: "Digital Marketing Manager",
     company: "Menlo College",
     image:
-      "https://media.licdn.com/dms/image/v2/D4E35AQFj9iiryFEdFw/profile-framedphoto-shrink_400_400/B4EZVxRoatHcAc-/0/1741362202528?e=1745290800&v=beta&t=fl7G7cUNEgfKkgDL7DaCrA47Qs5rjUL0TNKriVxoXJo",
+      "https://media.licdn.com/dms/image/v2/D4E35AQFj9iiryFEdFw/profile-framedphoto-shrink_400_400/B4EZVxRoatHcAc-/0/1741362202528?e=1747720800&v=beta&t=X3sZgEoVt3TW-lVOorkLG2rLoHzchMu06Ky0JiWgefs",
   },
   {
     reference:

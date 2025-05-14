@@ -102,13 +102,12 @@ const sliderSettings = {
 
 const Experience = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <section className="relative w-full h-screen mx-auto mt-10">
       <Navbar />
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far...</p>
         <h2 className={styles.sectionHeadText}>Work Experience</h2>
       </motion.div>
-
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
           {experiences.map((experience, index) => (
@@ -116,17 +115,18 @@ const Experience = () => {
           ))}
         </VerticalTimeline>
       </div>
-      <motion.div variants={textVariant()}>
+      <motion.div variants={textVariant()} className="mt-20">
         <p className={styles.sectionSubText}>My achievements</p>
         <h2 className={styles.sectionHeadText}>Awards</h2>
       </motion.div>
-      <div className="mt-20">
+      <div className="mt-10">
         <Slider {...sliderSettings}>
           {awards.map((award, index) => (
             <AwardCard key={`award-${index}`} index={index} {...award} />
           ))}
         </Slider>
       </div>
+      <div className="h-20" />
     </section>
   );
 };
