@@ -6,7 +6,7 @@ import { styles } from "../styles";
 import { socials } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
-import { profile } from "../assets";
+import { profile, resume } from "../assets";
 
 import { TypeAnimation } from "react-type-animation";
 import { heroTexts } from "../constants";
@@ -101,12 +101,7 @@ const About = () => {
             </a>
           ))}
         </div>
-        <a
-          href="document/Resume_CA.pdf"
-          target="_blank"
-          rel="noreferrer"
-          className="w-fit"
-        >
+        <a href={resume} target="_blank" rel="noreferrer" className="w-fit">
           <div className="btn w-fit bg-tertiary text-primary px-7 py-2 rounded-md overflow-hidden relative cursor-pointer">
             <div className="original bg-primary text-black px-7 py-2">
               Resume
