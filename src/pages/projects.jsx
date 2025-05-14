@@ -58,16 +58,6 @@ const Projects = () => {
         <p className={styles.sectionSubText}>WHAT I WORKED ON SO FAR...</p>
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
-      <div className="w-full flex">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[15px] md:text-[17px] max-w-full md:max-w-3xl leading-[24px] md:leading-[30px]"
-        >
-          By blending creativity with data-driven insights, I create targeted
-          campaigns and user-centered websites to deliver measurable marketing
-          results.
-        </motion.p>
-      </div>
 
       <div className="p-3 md:p-5 gap-5 md:gap-7 flex flex-col">
         {works.map((highlight, index) => (
