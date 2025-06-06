@@ -29,7 +29,7 @@ const PostCard = ({ index, name, description, image, link }) => {
             </div>
             <button
               onClick={() => window.open(link, "_blank")}
-              className="absolute bottom-0 right-0 mb-4 mr-4 bg-primary text-white text-sm md:text-base px-4 py-2 rounded-full hover:bg-secondary transition-colors"
+              className="mt-2 mb-2 bg-primary text-white text-sm md:text-base py-2 rounded-full hover:bg-secondary transition-colors max-w-[200px]"
             >
               Learn More →
             </button>
@@ -48,7 +48,7 @@ const Projects = () => {
         <h2 className={styles.sectionHeadText}>Projects</h2>
       </motion.div>
 
-      <div className="p-3 md:p-5 gap-5 md:gap-7 flex flex-col">
+      <div className="absolute p-3 md:p-5 gap-5 md:gap-7 flex flex-col">
         {works.map((highlight, index) => (
           <PostCard key={`post-${index}`} index={index} {...highlight} />
         ))}

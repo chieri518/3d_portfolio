@@ -147,9 +147,9 @@ const technologies = [
 ];
 
 const experiences = [
-  /*{
-    title: "Busienss Development Specialist",
-    company_name: "Lemin Captcha by Capy Inc.",
+  {
+    title: "Busienss Development Representative",
+    company_name: "Capy Inc.",
     icon: lemin,
     iconBg: "#FFF9EC",
     date: "Feb 2025 - Present",
@@ -157,7 +157,7 @@ const experiences = [
       "Supported company's brand and community growth by developing marketing strategies, executing KPI reporting, and conducting targeted cold outreach to foster strategic relationships.",
     ],
   },
-  {
+  /*{
     title: "Senior Marketing Manager",
     company_name: "Metapyxl",
     icon: metapyxl,
