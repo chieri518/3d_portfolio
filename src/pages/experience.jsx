@@ -10,7 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import { styles } from "../styles";
-import { experiences, awards } from "../constants";
+import { experiences, educations, awards } from "../constants";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -21,7 +21,7 @@ const ExperienceCard = ({ experience }) => (
     contentStyle={{ background: "#eafbff", color: "#000000" }}
     contentArrowStyle={{ borderRight: "7px solid #77ddf9" }}
     date={experience.date}
-    iconStyle={{ background: experience.iconBg }}
+    iconStyle={{ background: "#E6DEDD" }}
     icon={
       <div className="flex justify-center items-center w-full h-full">
         <img
@@ -45,6 +45,44 @@ const ExperienceCard = ({ experience }) => (
       {experience.points.map((point, index) => (
         <li
           key={`experience-point-${index}`}
+          className="text-black text-[14px] pl-1 tracking-wider"
+        >
+          {point}
+        </li>
+      ))}
+    </ul>
+  </VerticalTimelineElement>
+);
+
+const EducationCard = ({ education }) => (
+  <VerticalTimelineElement
+    contentStyle={{ background: "#eafbff", color: "#000000" }}
+    contentArrowStyle={{ borderRight: "7px solid #77ddf9" }}
+    date={education.date}
+    iconStyle={{ background: "#E6DEDD" }}
+    icon={
+      <div className="flex justify-center items-center w-full h-full">
+        <img
+          src={education.icon}
+          alt={education.school}
+          className="w-[60%] h-[60%] object-contain"
+        />
+      </div>
+    }
+  >
+    <div>
+      <h3 className="text-black text-[24px] font-bold">{education.degree}</h3>
+      <p
+        className="text-secondary text-[16px] font-semibold"
+        style={{ margin: 0 }}
+      >
+        {education.school}
+      </p>
+    </div>
+    <ul className="mt-5 list-disc c-5 space-y-2">
+      {education.points.map((point, index) => (
+        <li
+          key={`education-point-${index}`}
           className="text-black text-[14px] pl-1 tracking-wider"
         >
           {point}
@@ -112,6 +150,16 @@ const Experience = () => {
         <VerticalTimeline>
           {experiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
+          ))}
+        </VerticalTimeline>
+      </div>
+      <motion.div variants={textVariant()} className="mt-20">
+        <h2 className={styles.sectionHeadText}>Education</h2>
+      </motion.div>
+      <div className="mt-20 flex flex-col">
+        <VerticalTimeline>
+          {educations.map((education, index) => (
+            <EducationCard key={index} education={education} />
           ))}
         </VerticalTimeline>
       </div>

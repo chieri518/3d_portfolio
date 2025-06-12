@@ -61,7 +61,7 @@ const About = () => {
           . <br />
           I'm always open to new opportunities and collaborations! <br />
           <br />
-          <strong>👩🏻‍💻 This website was made with NextJS and React!</strong>
+          <strong>👩🏻‍💻 This website was built with NextJS and React!</strong>
         </p>
         <Tilt className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
           <div

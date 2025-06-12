@@ -15,7 +15,7 @@ import {
   docker,
   premiere,
   photoshop,
-  lemin,
+  capy,
   metapyxl,
   hilton,
   owned,
@@ -150,18 +150,17 @@ const experiences = [
   {
     title: "Busienss Development Representative",
     company_name: "Capy Inc.",
-    icon: lemin,
-    iconBg: "#FFF9EC",
+    icon: capy,
     date: "Feb 2025 - Present",
     points: [
-      "Supported company's brand and community growth by developing marketing strategies, executing KPI reporting, and conducting targeted cold outreach to foster strategic relationships.",
+      "Redefined KPIs and built a new dashboard to enhance data visibility and enable more informed decision-making.",
+      "Implemented AI tools like Apollo and Genspark to automate the full sales cycle, saving 30+ hours per month.",
     ],
   },
   /*{
     title: "Senior Marketing Manager",
     company_name: "Metapyxl",
     icon: metapyxl,
-    iconBg: "#E6DEDD",
     date: "Nov 2024 - Present",
     points: [
       "Developed and executed marketing strategies that drove brand awareness and user engagement, leveraging data-driven insights and innovative campaigns.",
@@ -172,7 +171,6 @@ const experiences = [
     title: "Website Intern (Full-Time)",
     company_name: "Hilton",
     icon: hilton,
-    iconBg: "#E6DEDD",
     date: "Oct 2023 - Jun 2024",
     points: [
       "Elevated the digital presence of all 21 Hilton managed hotels in Japan by leveraging Google Analytics insights and property feedback to develop highly engaging, user-friendly webpages across both owned and external platforms.",
@@ -184,7 +182,6 @@ const experiences = [
     title: "Web Engineering Intern",
     company_name: "Owned 株式会社",
     icon: owned,
-    iconBg: "#E6DEDD",
     date: "Sep 2023 - Oct 2023",
     points: [
       "Developed a user management API using Next.js, Prisma, and TypeScript, incorporating validation schemas, handling user data updates based on form responses, and integrating a booking system with error handling and user information retrieval.",
@@ -195,7 +192,6 @@ const experiences = [
     title: "Social Media and Marketing Intern",
     company_name: "Ellipsis Health",
     icon: ellipsis,
-    iconBg: "#E6DEDD",
     date: "Jun 2023 - Aug 2023",
     points: [
       "Curated, monitored, and analyzed LinkedIn and Twitter content, refining social media strategy through engagement insights for stronger brand resonance, achieving 41.4% increase in LinkedIn followers since I joined.",
@@ -208,7 +204,6 @@ const experiences = [
     title: "Digital Marketing Assistant",
     company_name: "Menlo College",
     icon: menlo,
-    iconBg: "#E6DEDD",
     date: "Feb 2022 - Aug 2023",
     points: [
       "Boosted the College’s social media reach by increasing post impressions on Instagram by 57.5% and on Facebook by 23.4%, while improving post engagement rates on LinkedIn by 79%, and on Twitter by 66%, resulting in higher audience engagement and brand awareness.",
@@ -220,7 +215,6 @@ const experiences = [
     title: "Library Co-Coordinator",
     company_name: "Bowman Library at Menlo College",
     icon: menlo,
-    iconBg: "#E6DEDD",
     date: "Feb 2022 - Aug 2023",
     points: [
       "Served as Co-chair of the Library Student Advisory Council(LSAC) simultaneously.",
@@ -294,6 +288,16 @@ const references = [
     company: "Menlo College",
     image:
       "https://media.licdn.com/dms/image/v2/D5603AQH4Dj_gWI8sUA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1692732734910?e=1750291200&v=beta&t=yCQnh3gjQnc10wjK5w9_-qCpZ5HBi656FJsCBUbYmJs",
+  },
+];
+
+const educations = [
+  {
+    degree: "Bachelor of Science in Entrepreneurship and Innovation",
+    school: "Menlo College",
+    icon: menlo,
+    date: "Aug 2021 - May 2025",
+    points: ["Minor in Business Analytics", "GPA: 3.85/4.00"],
   },
 ];
 
@@ -633,6 +637,7 @@ export {
   services,
   technologies,
   experiences,
+  educations,
   references,
   awards,
   highlights,
