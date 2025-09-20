@@ -148,13 +148,19 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Busienss Development Representative",
-    company_name: "Capy Inc.",
+    title: "Solutions Consultant",
+    company_name: "Google (via Azaaki",
     icon: capy,
-    date: "Feb 2025 - Present",
+    date: "September 2025 - Present",
+    points: ["Vehicle Ads team."],
+  },
+  {
+    title: "Founder & CEO",
+    company_name: "Bery LLC",
+    icon: capy,
+    date: "May 2025 - Present",
     points: [
-      "Redefined KPIs and built a new dashboard to enhance data visibility and enable more informed decision-making.",
-      "Implemented AI tools like Apollo and Genspark to automate the full sales cycle, saving 30+ hours per month.",
+      "Founded and grew a marketing agency delivering brand strategy, digital campaigns, and creative solutions for diverse clients.",
     ],
   },
   /*{
