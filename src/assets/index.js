@@ -23,7 +23,8 @@ import typescript from "./tech/typescript.png";
 import photoshop from "./tech/photoshop.png";
 import premiere from "./tech/premiere.png";
 
-import capy from "./company/capy.png";
+import google from "./company/google.png";
+import bery from "./company/bery.png";
 import metapyxl from "./company/metapyxl.png";
 import hilton from "./company/hilton.png";
 import owned from "./company/owned.png";
@@ -109,7 +110,8 @@ export {
   typescript,
   premiere,
   photoshop,
-  capy,
+  google,
+  bery,
   metapyxl,
   hilton,
   owned,

@@ -15,7 +15,8 @@ import {
   docker,
   premiere,
   photoshop,
-  capy,
+  google,
+  bery,
   metapyxl,
   hilton,
   owned,
@@ -149,15 +150,15 @@ const technologies = [
 const experiences = [
   {
     title: "Solutions Consultant",
-    company_name: "Google (via Azaaki",
-    icon: capy,
+    company_name: "Google (via Azaaki LLC)",
+    icon: google,
     date: "September 2025 - Present",
     points: ["Vehicle Ads team."],
   },
   {
     title: "Founder & CEO",
     company_name: "Bery LLC",
-    icon: capy,
+    icon: bery,
     date: "May 2025 - Present",
     points: [
       "Founded and grew a marketing agency delivering brand strategy, digital campaigns, and creative solutions for diverse clients.",
