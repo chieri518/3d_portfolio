@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { necx } from "../constants";
+import { necx } from "../assets";
 
 import Navbar from "./navbar";
 
@@ -18,11 +18,9 @@ const NECX = () => {
         <h1 className={styles.sectionHeadText}>NEC X</h1>
       </motion.div>
       <section className="overview">
-        <h3>Overview</h3>
-
-        <div className="subsection">
-          <h4>Context</h4>
-          <p>
+        <h2 className={styles.sectionHeadText}>About NEC X</h2>
+        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+          <p className="text-secondary text-[17px] max-w-4xl leading-[30px]">
             NEC X is a Silicon Valley-based venture studio backed by NEC
             Corporation, running a multi-phase accelerator program connecting
             early-stage startups with corporate resources, mentorship, and

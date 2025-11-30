@@ -374,7 +374,7 @@ const highlights = [
     description:
       "Managing program operations and events while leading their marketing strategy across social media, paid ads, and community outreach.",
     image: necx_group,
-    redirect_link: "/projects",
+    redirect_link: "/necx",
   },
 ];
 
