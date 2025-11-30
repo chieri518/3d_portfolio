@@ -45,11 +45,17 @@ const About = () => {
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          With years of marketing experience creating digital experiences that
-          elevate brand impact and drive audience growth, I bring a strategic
-          and creative approach to every project. I leverage innovative
-          strategies tailored to diverse audiences, drawing on perspectives
-          gained from living in four countries and working across cultures.🌍
+          My work lives at the intersection of community design, systems
+          optimization, and entrepreneurship, guided by a question that has
+          shaped my life: <br />
+          <span style={{ fontStyle: "italic", fontWeight: "bold" }}>
+            How might we design systems that expand possibility instead of
+            limiting it?
+          </span>
+          <br />
+          I bring a strategic, human-centered approach to every project,
+          leveraging insights from living in four countries and working across
+          cultures to design solutions that resonate with diverse audiences. 🌍
           <br />
           Feel free to explore my projects and get in touch at{" "}
           <a
@@ -61,7 +67,6 @@ const About = () => {
           . <br />
           I'm always open to new opportunities and collaborations! <br />
           <br />
-          <strong>👩🏻‍💻 This website was built with NextJS and React!</strong>
         </p>
         <Tilt className="xs:w-[350px] xs:h-[350px] w-full h-full m-auto max-[1000px]:my-14">
           <div

@@ -311,88 +311,45 @@ const UIF = () => {
           ))}
         </VerticalTimeline>
       </div>
-      <h2 className={styles.sectionHeadText}>The 2022 UIF Projects</h2>
-      <div className="flex justify-center gap-5 flex-wrap mt-5">
-        <a
-          onClick={() => handleTabClick("STEAM")}
-          className={`cursor-pointer ${
-            activeTab === "STEAM" ? "text-blue-500" : ""
-          }`}
-        >
-          <ProjectCard title="STEAM House" />
-        </a>
-        <a
-          onClick={() => handleTabClick("PM")}
-          className={`cursor-pointer ${
-            activeTab === "PM" ? "text-blue-500" : ""
-          }`}
-        >
-          <ProjectCard title="Project Management" />
-        </a>
-      </div>
-      <div className="tab-content mt-5">
-        {activeTab === "STEAM" && (
-          <div id="STEAM" className="tab-pane fade in active">
-            <h3>{uifprojects.title}</h3>
+      <h2 className={styles.sectionHeadText}>The 2022 UIF Project</h2>
+      <p>
+        The strategic plan emerged from the challenge of sustaining the
+        Innovation Center—originally launched by Menlo College’s inaugural UIF
+        cohort in 2017—beyond the tenure of its founders. <br />
+        <br />
+        Our goal was to develop the center into a premier, inclusive community
+        hub on campus while preserving future cohorts' ability to pursue their
+        own impactful projects. Through extensive exploration of key operational
+        components—such as funding, governance, programming, training, equipment
+        maintenance, scheduling, marketing, and alignment with college values—we
+        crafted a multi-year strategic plan.
+        <br />
+        <br /> This plan is intentionally aligned with Menlo College’s broader
+        strategic vision and centers on student engagement, inclusion, and
+        creative exploration across all disciplines, including the arts. This
+        year, we took a pivotal step by stocking the maker space and beginning
+        program implementation. <br />
+        <br />
+        The center now features a variety of tools, including small and large
+        FDM 3D printers, 3D pens, a Glowforge laser cutter, a Cricut cutter,
+        sewing, and button-making machines, a soldering station, VR headsets,
+        both PC and Mac computers, gaming setups, and large-format printers.
+        Programming that redefines creativity to include mindset and design
+        thinking is also underway. <br />
+        <br />
+        In April, we hosted a Grand Reopening to showcase the center’s new
+        capabilities. Students, faculty, and staff engaged with hands-on demos
+        and left with custom 3D-printed souvenirs, generating excitement for
+        future workshops.
+      </p>
+      <img
+        loading="lazy"
+        src={steamhousewide}
+        alt="steamhouse"
+        className="w-full h-full object-contain"
+      />
+      <STEAMHouseGallery />
 
-            <p>
-              The strategic plan emerged from the challenge of sustaining the
-              Innovation Center—originally launched by Menlo College’s inaugural
-              UIF cohort in 2017—beyond the tenure of its founders. <br />
-              <br />
-              Our goal was to develop the center into a premier, inclusive
-              community hub on campus while preserving future cohorts' ability
-              to pursue their own impactful projects. Through extensive
-              exploration of key operational components—such as funding,
-              governance, programming, training, equipment maintenance,
-              scheduling, marketing, and alignment with college values—we
-              crafted a multi-year strategic plan.
-              <br />
-              <br /> This plan is intentionally aligned with Menlo College’s
-              broader strategic vision and centers on student engagement,
-              inclusion, and creative exploration across all disciplines,
-              including the arts. This year, we took a pivotal step by stocking
-              the maker space and beginning program implementation. <br />
-              <br />
-              The center now features a variety of tools, including small and
-              large FDM 3D printers, 3D pens, a Glowforge laser cutter, a Cricut
-              cutter, sewing, and button-making machines, a soldering station,
-              VR headsets, both PC and Mac computers, gaming setups, and
-              large-format printers. Programming that redefines creativity to
-              include mindset and design thinking is also underway. <br />
-              <br />
-              In April, we hosted a Grand Reopening to showcase the center’s new
-              capabilities. Students, faculty, and staff engaged with hands-on
-              demos and left with custom 3D-printed souvenirs, generating
-              excitement for future workshops.
-            </p>
-            <img
-              loading="lazy"
-              src={steamhousewide}
-              alt="steamhouse"
-              className="w-full h-full object-contain"
-            />
-            <STEAMHouseGallery />
-          </div>
-        )}
-        {activeTab === "PM" && (
-          <div id="PM" className="tab-pane fade">
-            <p>
-              The Project Management Course at Menlo College offers a hands-on
-              learning experience where students work on real-world projects,
-              such as organizing events like Techstars Startup Weekend and
-              TEDxMenloCollege. It’s open to students from all majors, bridging
-              theory with practical skills, and preparing students for future
-              careers by teaching industry-relevant project management skills.
-              For Menlo College, the course boosts visibility, sustains large
-              campus events, and enhances the overall educational experience.
-              The course will be credit-bearing and promoted through various
-              channels, with a syllabus developed in collaboration with faculty
-              and aligned with key events.
-            </p>
-          </div>
-        )}
-      </div>
       <h2 className={styles.sectionHeadText}>UIF Silicon Valley Meetup</h2>
       <MeetupGallery />
     </section>

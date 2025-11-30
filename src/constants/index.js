@@ -16,6 +16,8 @@ import {
   premiere,
   photoshop,
   google,
+  necx,
+  capy,
   bery,
   metapyxl,
   hilton,
@@ -44,9 +46,7 @@ import {
   honor2,
   marketingconf,
   BGS,
-  websitedev,
-  socialmedia,
-  dataanalysis,
+  necx_group,
   email,
   github,
   linkedin,
@@ -68,6 +68,7 @@ import {
   warmhearts,
   wic,
   workshop,
+  chetzlogo,
 } from "../assets";
 
 export const navLinks = [
@@ -78,25 +79,6 @@ export const navLinks = [
   {
     id: "experience",
     title: "Experience",
-  },
-];
-
-const services = [
-  {
-    title: "Digital Marketing",
-    icon: click,
-  },
-  {
-    title: "Entrepreneurship",
-    icon: rocket,
-  },
-  {
-    title: "Global Perspective",
-    icon: plane,
-  },
-  {
-    title: "Leadership",
-    icon: target,
   },
 ];
 
@@ -153,18 +135,31 @@ const experiences = [
     company_name: "Google (via Azaaki LLC)",
     icon: google,
     date: "September 2025 - Present",
-    points: ["Vehicle Ads team."],
-  },
-  {
-    title: "Founder & CEO",
-    company_name: "Bery LLC",
-    icon: bery,
-    date: "May 2025 - Present",
     points: [
-      "Founded and grew a marketing agency delivering brand strategy, digital campaigns, and creative solutions for diverse clients.",
+      "Analyzing feature data using visualization and AI tools to define problem areas, uncover systemic issues (63% from a single root cause), and deliver actionable insights that shaped next-quarter Product priorities and feature improvements.",
+      "Onboarding APAC and EMEA merchants for Vehicle Ads by leading data quality reviews and hosting office hours.",
     ],
   },
-  /*{
+  {
+    title: "Marketing / Community Engagement Specialist",
+    company_name: "NEC X",
+    icon: necx,
+    date: "Jun 2025 - Present",
+    points: [
+      " Managed logistics and marketing for 220-attendee event, including registration systems, paid ads, startup outreach, vendor coordination, and presentation materials.",
+    ],
+  },
+  {
+    title: "Business Development Representative",
+    company_name: "Capy",
+    icon: capy,
+    date: "Feb 2025 - May 2025",
+    points: [
+      "Redefined KPIs and built a new dashboard to enhance data visibility and enable more informed decision-making.",
+      "Implemented AI tools like Apollo and Genspark to automate the full sales cycle, saving 30+ hours per month.",
+    ],
+  },
+  {
     title: "Senior Marketing Manager",
     company_name: "Metapyxl",
     icon: metapyxl,
@@ -172,7 +167,7 @@ const experiences = [
     points: [
       "Developed and executed marketing strategies that drove brand awareness and user engagement, leveraging data-driven insights and innovative campaigns.",
     ],
-  },*/
+  },
 
   {
     title: "Website Intern (Full-Time)",
@@ -228,6 +223,24 @@ const experiences = [
       "Supervised a team of student assistants, providing training and support on library processes and policies, resulting in increased efficiency and productivity.",
       "Spearhead campaigns on Instagram, increasing the library's brand awareness and engagement.",
       "Collaborate with library staff and student advisory council to plan and execute a wide range of events, programs, and services, enhancing library experience for users.",
+    ],
+  },
+  {
+    title: "Assistant to CEO",
+    company_name: "Women's Startup Lab ",
+    icon: menlo,
+    date: "Dec 2021 - Feb 2022",
+    points: [" ... "],
+  },
+  {
+    title: "Founder & President",
+    company_name: "chetz",
+    icon: chetzlogo,
+    date: "Oct 2020 - Aug 2021",
+    points: [
+      "Founded and scaled international language exchange nonprofit from ~10 to 40+ participants per monthly event",
+      "Built partnerships with major universities including University of Alberta, Sophia University, and Waseda University",
+      "Organization sustained for 5+ years after founder departure; at least 5 students decided to study abroad because of participation",
     ],
   },
 ];
@@ -343,24 +356,24 @@ const awards = [
 
 const highlights = [
   {
-    name: "Digital Marketing",
+    name: "chetz",
     description:
-      "Crafting, executing and analying data-driven campaigns across web, email, and social platforms to elevate brand presence, engage diverse audiences, and convert insights into measurable results.",
-    image: socialmedia,
-    redirect_link: "/projects",
+      "Created a community where students discover global perspectives through language and connection",
+    image: langexch,
+    redirect_link: "/chetz",
   },
   {
-    name: "Growth Strategy",
+    name: "University Innovation Fellowship",
     description:
-      "Designing and implementing scalable strategies that drive user acquisition, engagement, and retention by aligning business goals with audience behavior and performance metrics.",
-    image: dataanalysis,
-    redirect_link: "/projects",
+      "Transformed an underutilized Innovation Center into a sustainable, well-equipped makerspace and community hub.",
+    image: uif1,
+    redirect_link: "/uif",
   },
   {
-    name: "Project Management",
+    name: "NEC X",
     description:
-      "Leading cross-functional projects from concept to completion by managing timelines, resources, and stakeholder communication to ensure smooth delivery and impactful outcomes.",
-    image: peoplemap,
+      "Managing program operations and events while leading their marketing strategy across social media, paid ads, and community outreach.",
+    image: necx_group,
     redirect_link: "/projects",
   },
 ];
@@ -409,6 +422,8 @@ const works = [
 ];
 
 const heroTexts = [
+  "Solutions Consultant",
+  500,
   "Global Citizen",
   500,
   "Website Developer",
@@ -503,42 +518,49 @@ const uiftimeline = [
     title: "Wayfinding",
     color: "#DCD6FF",
     paragraph:
-      "We kicked off our training journey by learning the tools, platforms, and techniques that would guide us throughout the program and beyond. We explored different aspects of innovation and entrepreneurship. Based on the activity, we began planning for our upcoming stakeholder meeting by setting a date, identifying invitees, and considering logistics. Additionally, we got an early start on the Landscape Canvas, knowing it would require in-depth research. This session laid the groundwork for collaboration, strategic thinking, and a deeper understanding of our campus ecosystem.",
+      "We kicked off our training journey by playing UIF Monopoly to learn the tools, platforms, and techniques that would guide us throughout the program and beyond. We explored different aspects of innovation and entrepreneurship. ",
   },
   {
     week: "Week Two",
     title: "Design Thinking",
     color: "#D6F0FF",
     paragraph:
-      "We explored design thinking as a human-centered approach to innovation by tackling the challenge: “How might universities support students’ social and emotional well-being?” Through this process, we practiced empathizing with users, brainstorming diverse ideas, and identifying surprising insights that emerged along the way. This session helped us understand how thoughtful, student-focused solutions can be developed by truly listening to the needs of the community and approaching problems with creativity and curiosity.",
+      "We explored design thinking as a human-centered approach to innovation.  We practiced empathizing with users, brainstorming ideas, and prototyping. This session taught us the importance of listening to the needs of the community and approaching problems with creativity and curiosity.",
   },
   {
     week: "Week Three",
     title: "Landscape Canvas",
     color: "#DFFFEF",
     paragraph:
-      "We focused on uncovering assets and identifying gaps within our campus innovation and entrepreneurship (I&E) ecosystem. We completed the Landscape Canvas spreadsheet and synthesized our findings to gain a clearer understanding of existing resources and areas for improvement. Additionally, we created or updated our Campus Overview page on the wiki to reflect our research. This session helped us build a strong foundation for future projects by mapping out the current state of I&E on campus and highlighting opportunities for growth.",
+      "We mapped assets and identified gaps within our campus innovation and entrepreneurship (I&E) ecosystem. Using the Landscape Canvas, we synthesized our findings to understand existing resources and areas for improvement. This session built a foundation for future projects.",
   },
   {
     week: "Week Four",
     title: "Strategic Priorities",
     color: "#FFFAF0",
     paragraph:
-      "We narrowed our focus to 3 to 4 high-impact projects that have the potential to significantly enhance the innovation and entrepreneurship (I&E) ecosystem on campus. We began prototyping and refining our ideas, using feedback and insights to shape more effective solutions. As part of this process, we also fleshed out our project plans and documented them on our public-facing wiki page. This session pushed us to move from research to action, turning our ideas into tangible initiatives that address real needs within our campus community.",
+      "We narrowed our focus to 3 projects that have the potential to significantly enhance the I&E ecosystem on campus. We began prototyping and refining our ideas, using insights to shape more effective solutions. This session pushed us to move from research to action.",
   },
   {
     week: "Week Five",
     title: "Lean Startup",
     color: "#FFEDED",
     paragraph:
-      "We focused on building meaningful relationships with key stakeholders in our campus innovation and entrepreneurship (I&E) ecosystem. Rather than pitching our projects, we met one-on-one with stakeholders to understand their needs, success metrics, and perspectives. Using the Change Model Canvas, we conducted interviews with campus leaders and engaged in thoughtful conversations to ensure our projects align with broader institutional goals. We also held meetings with our Faculty Champions and previously-trained Fellows to gather feedback and refine both our project strategies and the Campus Overview and Strategic Priorities wiki pages. This session emphasized the importance of collaboration, empathy, and alignment in creating initiatives that are both impactful and sustainable.",
+      "We met one-on-one with stakeholders to understand their needs, success metrics, and perspectives to ensure our projects align with broader institutional goals. This session emphasized the importance of collaboration, empathy, and alignment in creating initiatives that are both impactful and sustainable.",
   },
   {
     week: "Week Six",
     title: "Storytelling",
     color: "#FFDEDE",
     paragraph:
-      "We focused on using strategic storytelling to share our vision for change on campus. We outlined, prototyped, and produced storytelling artifacts that effectively communicated the purpose and impact of our UIF projects. To gain broader campus support, we held a stakeholder meeting where we presented our initiatives and gathered feedback. We also ensured that all deliverables from previous sessions were finalized and that our public-facing materials accurately and professionally reflected both our team and our campus. This session emphasized the power of storytelling as a tool to inspire action, build support, and bring our ideas to life.",
+      "We focused on using strategic storytelling to share our vision for change on campus. We outlined, prototyped, and produced storytelling artifacts that communicated the purpose and impact of our projects. This session emphasized the power of storytelling as a tool to inspire action, build support, and bring our ideas to life.",
+  },
+  {
+    week: "Stakeholder Meeting",
+    title: "Vision to Action",
+    color: "#FFDEDE",
+    paragraph:
+      "To gain broader campus support, we held a stakeholder meeting where we presented our initiatives and gathered feedback. ",
   },
 ];
 
@@ -641,7 +663,6 @@ const events = [
 ];
 
 export {
-  services,
   technologies,
   experiences,
   educations,

@@ -24,6 +24,8 @@ import photoshop from "./tech/photoshop.png";
 import premiere from "./tech/premiere.png";
 
 import google from "./company/google.png";
+import necx from "./company/necx.jpeg";
+import capy from "./company/capy.png";
 import bery from "./company/bery.png";
 import metapyxl from "./company/metapyxl.png";
 import hilton from "./company/hilton.png";
@@ -48,6 +50,12 @@ import uif24 from "./gallery/uif_24.png";
 import uif25 from "./gallery/uif_25.png";
 import uif26 from "./gallery/uif_26.png";
 import uif27 from "./gallery/uif_27.png";
+import uif_week1 from "./gallery/uif_week1.png";
+import uif_week2 from "./gallery/uif_week2.png";
+import uif_week3 from "./gallery/uif_week3.png";
+import uif_week4 from "./gallery/uif_week4.png";
+import uif_week5 from "./gallery/uif_week5.png";
+import steamhouse_mindmap from "./gallery/steamhouse_mindmap.png";
 
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
@@ -86,6 +94,8 @@ import warmhearts from "./chetz/warmhearts.png";
 import wic from "./chetz/wic.jpg";
 import workshop from "./chetz/workshop.png";
 
+import necx_group from "./necx_group.png";
+
 export {
   logo,
   resume,
@@ -111,6 +121,8 @@ export {
   premiere,
   photoshop,
   google,
+  necx,
+  capy,
   bery,
   metapyxl,
   hilton,
@@ -134,6 +146,12 @@ export {
   uif25,
   uif26,
   uif27,
+  uif_week1,
+  uif_week2,
+  uif_week3,
+  uif_week4,
+  uif_week5,
+  steamhouse_mindmap,
   governormedal,
   honor,
   honor2,
@@ -165,4 +183,5 @@ export {
   warmhearts,
   wic,
   workshop,
+  necx_group,
 };
