@@ -3,7 +3,8 @@ import Projects from "./projects";
 import Experience from "./experience";
 import UIF from "./uif";
 import Chetz from "./chetz";
+import NECX from "./necx";
 import JobHunt from "./jobhunt";
 import NotFound from "./notfound";
 
-export { Navbar, Projects, Experience, UIF, Chetz, JobHunt, NotFound };
+export { Navbar, Projects, Experience, UIF, Chetz, NECX, JobHunt, NotFound };

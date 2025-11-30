@@ -8,13 +8,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import {
-  uif,
-  steamhouse,
-  uiftimeline,
-  uifprojects,
-  meetup,
-} from "../constants";
+import { uif, steamhouse, uiftimeline, meetup } from "../constants";
 import { uiflogo, steamhousewide } from "../assets";
 
 import Navbar from "./navbar";
@@ -162,18 +156,6 @@ const UIFImages = memo(function UIFImages() {
     </>
   );
 });
-
-const ProjectCard = ({ title }) => (
-  <motion.div
-    whileHover={{ scale: 1.05 }}
-    transition={{ type: "spring", stiffness: 300 }}
-    className="w-fit mx-auto"
-  >
-    <div className="bg-primary rounded-[20px] py-5 px-12 flex flex-col justify-center items-center">
-      <h3 className="text-black text-[20px] font-bold text-center">{title}</h3>
-    </div>
-  </motion.div>
-);
 
 const UIFCard = ({ experience }) => (
   <VerticalTimelineElement

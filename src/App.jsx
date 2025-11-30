@@ -5,6 +5,7 @@ import {
   Experience,
   UIF,
   Chetz,
+  NECX,
   Navbar,
   NotFound,
   JobHunt,
@@ -70,6 +71,17 @@ const ChetzPage = () => {
   );
 };
 
+const NECXPage = () => {
+  return (
+    <>
+      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
+        <Navbar />
+      </div>
+      <NECX />
+    </>
+  );
+};
+
 const JobHuntPage = () => {
   return (
     <>
@@ -90,6 +102,7 @@ const App = () => {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/uif" element={<UIFPage />} />
         <Route path="/chetz" element={<ChetzPage />} />
+        <Route path="/necx" element={<NECXPage />} />
         <Route path="/jobhunt" element={<JobHuntPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
