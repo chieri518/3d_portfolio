@@ -397,6 +397,14 @@ const works = [
     link: "/uif",
   },
   {
+    name: "NEC X",
+    description:
+      "Managing program operations and events while leading their marketing strategy across social media, paid ads, and community outreach.",
+
+    image: necx_group,
+    link: "/necx",
+  },
+  {
     name: "Student Feature Video",
     description:
       "Had the privilege of editing a video featuring Catherine Batang, a recent graduate who passionately shared her experiences at Menlo College. In my editing process, I applied my digital marketing expertise by strategically incorporating B-roll footage to enhance visual engagement and narrative depth. I also focused on improving audio quality by reducing background noise and meticulously cutting pauses to ensure a polished final product. I am proud to contribute to a piece that celebrates the strength of our community.",

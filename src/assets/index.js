@@ -33,29 +33,29 @@ import owned from "./company/owned.png";
 import ellipsis from "./company/ellipsis.png";
 import menlo from "./company/menlo.png";
 
-import uif1 from "./gallery/uif_01.png";
-import uif2 from "./gallery/uif_02.png";
-import uif3 from "./gallery/uif_03.png";
-import uif4 from "./gallery/uif_04.png";
-import uif5 from "./gallery/uif_05.png";
-import uif11 from "./gallery/uif_11.png";
-import uif12 from "./gallery/uif_12.png";
-import uif13 from "./gallery/uif_13.png";
-import uif14 from "./gallery/uif_14.png";
-import uif15 from "./gallery/uif_15.png";
-import uif21 from "./gallery/uif_21.png";
-import uif22 from "./gallery/uif_22.png";
-import uif23 from "./gallery/uif_23.png";
-import uif24 from "./gallery/uif_24.png";
-import uif25 from "./gallery/uif_25.png";
-import uif26 from "./gallery/uif_26.png";
-import uif27 from "./gallery/uif_27.png";
-import uif_week1 from "./gallery/uif_week1.png";
-import uif_week2 from "./gallery/uif_week2.png";
-import uif_week3 from "./gallery/uif_week3.png";
-import uif_week4 from "./gallery/uif_week4.png";
-import uif_week5 from "./gallery/uif_week5.png";
-import steamhouse_mindmap from "./gallery/steamhouse_mindmap.png";
+import uif1 from "./uif/uif_01.png";
+import uif2 from "./uif/uif_02.png";
+import uif3 from "./uif/uif_03.png";
+import uif4 from "./uif/uif_04.png";
+import uif5 from "./uif/uif_05.png";
+import uif11 from "./uif/uif_11.png";
+import uif12 from "./uif/uif_12.png";
+import uif13 from "./uif/uif_13.png";
+import uif14 from "./uif/uif_14.png";
+import uif15 from "./uif/uif_15.png";
+import uif21 from "./uif/uif_21.png";
+import uif22 from "./uif/uif_22.png";
+import uif23 from "./uif/uif_23.png";
+import uif24 from "./uif/uif_24.png";
+import uif25 from "./uif/uif_25.png";
+import uif26 from "./uif/uif_26.png";
+import uif27 from "./uif/uif_27.png";
+import uif_week1 from "./uif/uif_week1.png";
+import uif_week2 from "./uif/uif_week2.png";
+import uif_week3 from "./uif/uif_week3.png";
+import uif_week4 from "./uif/uif_week4.png";
+import uif_week5 from "./uif/uif_week5.png";
+import steamhouse_mindmap from "./uif/steamhouse_mindmap.png";
 
 import governormedal from "./governormedal.png";
 import honor from "./honor.png";
@@ -96,7 +96,12 @@ import wic from "./chetz/wic.jpg";
 import workshop1 from "./chetz/ikkadanan_workshop_ 1.png";
 import workshop2 from "./chetz/ikkadanan_workshop_ 2.jpg";
 
-import necx_group from "./necx_group.png";
+import necx_group from "./necx/necx_group.png";
+import elevx from "./necx/elevx.jpeg";
+import spin1 from "./necx/spin1.jpeg";
+import spin2 from "./necx/spin2.jpeg";
+import spin3 from "./necx/spin3.jpeg";
+import spin4 from "./necx/spin4.jpeg";
 
 export {
   logo,
@@ -188,4 +193,9 @@ export {
   workshop1,
   workshop2,
   necx_group,
+  elevx,
+  spin1,
+  spin2,
+  spin3,
+  spin4,
 };
