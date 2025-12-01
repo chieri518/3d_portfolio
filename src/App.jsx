@@ -1,5 +1,5 @@
 import { Route, BrowserRouter, Routes } from "react-router-dom";
-import { About, Feedbacks, Highlights, LinkedIn } from "./components";
+import { About, Feedbacks, Highlights, LinkedIn, Footer } from "./components";
 import {
   Projects,
   Experience,
@@ -13,83 +13,74 @@ import {
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
-const LandingPage = () => {
+const Layout = ({ children }) => {
   return (
-    <>
+    <div className="min-h-screen flex flex-col">
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <Navbar />
       </div>
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
+  );
+};
+
+const LandingPage = () => {
+  return (
+    <Layout>
       <About />
       <Highlights />
       <LinkedIn />
       <Feedbacks />
-    </>
+    </Layout>
   );
 };
 
 const ExperiencePage = () => {
   return (
-    <>
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-      </div>
+    <Layout>
       <Experience />
-    </>
+    </Layout>
   );
 };
 
 const ProjectsPage = () => {
   return (
-    <>
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-      </div>
+    <Layout>
       <Projects />
-    </>
+    </Layout>
   );
 };
 
 const UIFPage = () => {
   return (
-    <>
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-      </div>
+    <Layout>
       <UIF />
-    </>
+    </Layout>
   );
 };
 
 const ChetzPage = () => {
   return (
-    <>
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-      </div>
+    <Layout>
       <Chetz />
-    </>
+    </Layout>
   );
 };
 
 const NECXPage = () => {
   return (
-    <>
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-      </div>
+    <Layout>
       <NECX />
-    </>
+    </Layout>
   );
 };
 
 const JobHuntPage = () => {
   return (
-    <>
-      <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
-        <Navbar />
-      </div>
+    <Layout>
       <JobHunt />
-    </>
+    </Layout>
   );
 };
 

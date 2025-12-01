@@ -86,9 +86,11 @@ import langexch1 from "./chetz/langexch1.png";
 import langexch2 from "./chetz/langexch2.png";
 import manabity from "./chetz/manabity.png";
 import group1 from "./chetz/group1.png";
+import group2 from "./chetz/group2.png";
 import ownleg from "./chetz/ownleg.jpg";
 import pando from "./chetz/pando.png";
-import seminar from "./chetz/seminar.png";
+import seminar1 from "./chetz/seminar1.png";
+import seminar2 from "./chetz/seminar2.png";
 import sisec from "./chetz/sisec.jpg";
 import u18 from "./chetz/u18.jpg";
 import uofa from "./chetz/uofa.jpg";
@@ -96,6 +98,12 @@ import warmhearts from "./chetz/warmhearts.png";
 import wic from "./chetz/wic.jpg";
 import workshop1 from "./chetz/ikkadanan_workshop_ 1.png";
 import workshop2 from "./chetz/ikkadanan_workshop_ 2.jpg";
+import workshop3 from "./chetz/ikkadanan_workshop_ 3.png";
+import manabity1 from "./chetz/manabity1.png";
+import manabity2 from "./chetz/manabity2.png";
+import meeting1 from "./chetz/meeting1.png";
+import meeting2 from "./chetz/meeting2.png";
+import meeting3 from "./chetz/meeting3.png";
 
 import necx_group from "./necx/necx_group.png";
 import elevx from "./necx/elevx.jpeg";
@@ -103,6 +111,12 @@ import spin1 from "./necx/spin1.jpeg";
 import spin2 from "./necx/spin2.jpeg";
 import spin3 from "./necx/spin3.jpeg";
 import spin4 from "./necx/spin4.jpeg";
+import luma1 from "./necx/luma1.jpg";
+import luma2 from "./necx/luma2.jpg";
+import luma3 from "./necx/luma3.jpg";
+import luma4 from "./necx/luma4.jpg";
+import luma5 from "./necx/luma5.jpg";
+import luma6 from "./necx/luma6.jpg";
 
 export {
   logo,
@@ -184,9 +198,11 @@ export {
   langexch2,
   manabity,
   group1,
+  group2,
   ownleg,
   pando,
-  seminar,
+  seminar1,
+  seminar2,
   sisec,
   u18,
   uofa,
@@ -194,10 +210,22 @@ export {
   wic,
   workshop1,
   workshop2,
+  workshop3,
+  manabity1,
+  manabity2,
+  meeting1,
+  meeting2,
+  meeting3,
   necx_group,
   elevx,
   spin1,
   spin2,
   spin3,
   spin4,
+  luma1,
+  luma2,
+  luma3,
+  luma4,
+  luma5,
+  luma6,
 };

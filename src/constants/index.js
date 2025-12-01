@@ -62,7 +62,8 @@ import {
   group1,
   ownleg,
   pando,
-  seminar,
+  seminar1,
+  seminar2,
   sisec,
   u18,
   uofa,
@@ -667,7 +668,7 @@ const events = [
     name: "Online Seminars",
     description:
       "Collaborated with various organizations to give talks about studying abroad, cross-cultural understanding, and youth leadership.",
-    image: seminar,
+    image: seminar1,
   },
 ];
 

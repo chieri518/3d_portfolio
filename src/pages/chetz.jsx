@@ -1,11 +1,139 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { textVariant } from "../utils/motion";
-import { chetzlogo, langexch1 } from "../assets";
+import {
+  chetzlogo,
+  group1,
+  group2,
+  workshop1,
+  workshop2,
+  workshop3,
+  manabity1,
+  manabity2,
+  meeting1,
+  meeting2,
+  meeting3,
+  langexch1,
+  langexch2,
+  seminar1,
+  seminar2,
+} from "../assets";
 import { organizations, events } from "../constants";
 
 import Navbar from "./navbar";
+
+const photoSlides = [
+  {
+    image: group1,
+    alt: "Language exchange group session",
+    caption: "Language Exchange Community",
+  },
+  {
+    image: group2,
+    alt: "chetz team group photo",
+    caption: "Volunteer Team & Community",
+  },
+  {
+    image: workshop2,
+    alt: "Ikkadanan workshop session",
+    caption: "Ikkadanan Workshop Series",
+  },
+  {
+    image: workshop3,
+    alt: "Ikkadanran workshop breakout",
+    caption: "Small-Group Workshop Activities",
+  },
+  {
+    image: manabity1,
+    alt: "Manabity program session",
+    caption: "Manabity Learning Support",
+  },
+  {
+    image: manabity2,
+    alt: "Manabity students collaborating",
+    caption: "Students Learning Together",
+  },
+  {
+    image: meeting1,
+    alt: "Online planning meeting",
+    caption: "Online Planning Meeting",
+  },
+  {
+    image: meeting2,
+    alt: "Program operations discussion",
+    caption: "Program Operations & Coordination",
+  },
+  {
+    image: meeting3,
+    alt: "Casual team catch-up",
+    caption: "Casual Team Catch-up",
+  },
+  {
+    image: langexch1,
+    alt: "Casual team catch-up",
+    caption: "Casual Team Catch-up",
+  },
+  {
+    image: langexch2,
+    alt: "Casual team catch-up",
+    caption: "Casual Team Catch-up",
+  },
+  {
+    image: seminar1,
+    alt: "Casual team catch-up",
+    caption: "Casual Team Catch-up",
+  },
+  {
+    image: seminar2,
+    alt: "Casual team catch-up",
+    caption: "Casual Team Catch-up",
+  },
+];
+
+const PhotoSlideshow = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % photoSlides.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const current = photoSlides[index];
+
+  return (
+    <div className="w-full max-w-3xl mx-auto">
+      <div className="relative overflow-hidden rounded-2xl shadow-lg bg-gray-100 aspect-[4320/3042]">
+        <img
+          src={current.image}
+          alt={current.alt}
+          className="w-full h-full object-cover transition-transform duration-700 ease-out"
+        />
+        <div className="absolute inset-x-0 bottom-0 bg-black/55 text-white px-4 py-3 text-xs sm:text-sm">
+          {current.caption}
+        </div>
+      </div>
+
+      <div className="flex items-center justify-center gap-2 mt-4">
+        {photoSlides.map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            aria-label={`Go to slide ${i + 1}`}
+            className={`h-2 w-2 rounded-full transition-colors duration-300 ${
+              i === index ? "bg-primary" : "bg-gray-300"
+            }`}
+            onClick={() => setIndex(i)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
 
 const TimelinePhase = ({
   phase,
@@ -145,247 +273,6 @@ const chetz = () => {
           </p>
         </div>
       </div>
-      {/* THE JOURNEY - TIMELINE */}
-      <section className="journey-section py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center mb-16 text-gray-900">
-            The Journey
-          </h2>
-
-          <div className="space-y-16">
-            <TimelinePhase
-              phase="1"
-              title="Beginning of chetz"
-              date="October 2020"
-              side="left"
-            >
-              <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-                <ul className="list-disc list-inside text-secondary text-[17px] lg:w-[70%] leading-[30px]">
-                  <li>Week 1: Created name, website and logo → pivot</li>
-                  <li>Week 2-3: Recruited co-founder and first volunteers</li>
-                  <li>
-                    , Week 4: First language exchange event with ~10 people
-                    (friends + members)
-                  </li>
-                </ul>
-
-                <img
-                  src={langexch1}
-                  alt="First language exchange event"
-                  className="lg:w-[30%] w-full h-auto object-contain"
-                />
-              </div>
-            </TimelinePhase>
-
-            {/* Phase 2 */}
-            <TimelinePhase
-              phase="2"
-              title="Building the Machine"
-              date="Nov 2020 - Feb 2021"
-              side="right"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-bold text-lg mb-30">Systems Built:</h4>
-                  <ul className="list-disc list-inside space-y-2 text-secondary">
-                    <li>Training materials & onboarding</li>{" "}
-                    <li>Slack channels (internal + external)</li>
-                    <li>Branding guide</li>
-                    <li>CRM tracking system</li>
-                    <li>Multi-platform marketing</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-gray-800">
-                    Growth Strategy:
-                  </h4>
-                  <ul className="list-disc list-inside space-y-2 text-secondary">
-                    <li>Strategic cold outreach</li>
-                    <li>Partnerships with other social organizations</li>
-                    <li>
-                      Network effect → Organizations started reaching out to us
-                    </li>
-                    <li>Recruited more students as the organization grew</li>
-                  </ul>
-                </div>
-              </div>
-            </TimelinePhase>
-
-            {/* Phase 3 */}
-            <TimelinePhase
-              phase="3"
-              title="Cultural Transformation"
-              date="March 2021"
-              side="left"
-              highlight={true}
-            >
-              <div className="space-y-6">
-                {/* The Problem */}
-                <p className="font-semibold text-lg mb-3 text-gray-800">
-                  The Problem:
-                </p>
-                <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
-                  <li>Team commitment dropped as organization grew</li>
-                  <li>
-                    Members ghosting meetings, not delivering tasks, being flaky
-                  </li>
-                  <li>More responsibilities fell on me</li>
-                </ul>
-                {/* The Solution */}
-                <p className="font-semibold text-lg mb-3 text-gray-800">
-                  The Solution:
-                </p>
-                <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
-                  <li>
-                    Conducted 1-on-1 conversations with every member. Asked:
-                    What do you <em>want</em> to do?
-                  </li>
-                  <li>
-                    Realigned team roles, set clear expectations and goals.
-                  </li>
-                </ul>
-                <p className="font-semibold text-lg mb-3 text-gray-800">
-                  Leadership Shift & Results:
-                </p>
-                <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
-                  <li>
-                    Leadership shift from trying to teach/control to trusting
-                    members and giving them real ownership.
-                  </li>
-                  <li>
-                    Culture transformed overnight from formal and stressful to
-                    collaborative and empowering.
-                  </li>
-                  <li>
-                    Team became genuine friends (never met in person, but kept a
-                    LINE group open all day).
-                  </li>
-                  <li>
-                    Members began taking initiative: hosting programs
-                    independently and suggesting new ideas.
-                  </li>
-                  <li>
-                    Everyone could trust each other and no longer needed you to
-                    finish tasks.
-                  </li>
-                </ul>
-              </div>
-            </TimelinePhase>
-
-            {/* Phase 4 */}
-            <TimelinePhase
-              phase="4"
-              title="Sustainable Handoff"
-              date="August 2021"
-              side="right"
-            >
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-bold text-lg mb-3 text-gray-800">
-                    Selection Process:
-                  </h4>
-                  <p className="text-gray-700">
-                    Identified successor who took initiative - independently
-                    recruiting new members without being asked. Taught through
-                    shadowing, not instruction. Transferred knowledge, not
-                    control.
-                  </p>
-                </div>
-                <div className="bg-blue-50 p-6 rounded-lg">
-                  <p className="font-bold text-lg mb-3 text-gray-800">
-                    The Result:
-                  </p>
-                  <p className="text-gray-700 mb-3">
-                    Most founder-led student organizations die when the founder
-                    leaves.
-                  </p>
-                  <p className="text-2xl font-bold text-blue-600">
-                    chetz is still running 5 years later.
-                  </p>
-                </div>
-              </div>
-            </TimelinePhase>
-          </div>
-        </div>
-      </section>
-
-      {/* KEY LEARNINGS */}
-      <section className="learnings-section py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-4 text-center text-primary">
-            Key Learnings
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <LearningCard
-              icon="🤝"
-              title="Trust Empowers Better Than Control"
-              content="I shifted from teaching people what to do to creating an environment where they could succeed. The team transformed overnight when given agency aligned with genuine interests."
-            />
-            <LearningCard
-              icon="🎯"
-              title="Mission Clarity Protects Quality"
-              content="Refused 'easy wins'—celebrity speakers, gift cards—that would compromise our peer-to-peer community values."
-            />
-            <LearningCard
-              icon="⚙️"
-              title="Systems Enable Scale"
-              content="Documentation, processes, and culture-building allowed the organization to outlive founder involvement. Still operating 5 years later without founder."
-            />
-          </div>
-        </div>
-      </section>
-
-      <div className={`${styles.padding} py-12`}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center text-primary">
-            Events
-          </h2>
-
-          <div className="text-center mb-8">
-            <p className="text-secondary text-[17px] leading-[30px] max-w-4xl mx-auto">
-              chetz provides a flexible space where volunteers can lead
-              activities based on their own skills and experiences. We
-              intentionally do not limit ourselves to a specific field, allowing
-              for a wide range of volunteer-led events, including:
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {events.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="h-40 overflow-hidden">
-                  <img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">
-                    {item.name}
-                  </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center">
-            <p className="text-secondary text-[17px] leading-[30px] max-w-4xl mx-auto">
-              All of our activities are conducted online, making it easy to
-              participate from anywhere. Whether you're new to volunteering or
-              have limited time, chetz offers opportunities to contribute at
-              your own pace.
-            </p>
-          </div>
-        </div>
-      </div>
       <div className={`${styles.padding} bg-gray-50 py-12`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Impact</h2>
@@ -415,11 +302,9 @@ const chetz = () => {
 
       <div className={`${styles.padding} py-12`}>
         <div className="max-w-7xl mx-auto">
-          <motion.div variants={textVariant()}>
-            <h2 className="text-3xl font-bold mb-8 text-center text-primary">
-              Our Collaborations
-            </h2>
-          </motion.div>
+          <h2 className="text-3xl font-bold mb-8 text-center text-primary">
+            Our Collaborations
+          </h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
             {organizations.map((org, idx) => (
@@ -444,6 +329,251 @@ const chetz = () => {
 
             <div className="flex items-center justify-center h-28 border-2 border-dashed border-gray-300 rounded-2xl text-gray-500 text-sm font-semibold bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
               and more...
+            </div>
+          </div>
+        </div>
+        {/* THE JOURNEY - TIMELINE */}
+        <section className="journey-section py-20 bg-gray-50">
+          <div className="container mx-auto px-6">
+            <h2 className="text-5xl font-bold text-center mb-16 text-gray-900">
+              The Journey
+            </h2>
+
+            <div className="space-y-16">
+              <TimelinePhase
+                phase="1"
+                title="Beginning of chetz"
+                date="October 2020"
+                side="left"
+              >
+                <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                  <ul className="list-disc list-inside text-secondary text-[17px] lg:w-[70%] leading-[30px]">
+                    <li>Week 1: Created name, website and logo → pivot</li>
+                    <li>Week 2-3: Recruited co-founder and first volunteers</li>
+                    <li>
+                      , Week 4: First language exchange event with ~10 people
+                      (friends + members)
+                    </li>
+                  </ul>
+
+                  <img
+                    src={langexch1}
+                    alt="First language exchange event"
+                    className="lg:w-[30%] w-full h-auto object-contain"
+                  />
+                </div>
+              </TimelinePhase>
+
+              {/* Phase 2 */}
+              <TimelinePhase
+                phase="2"
+                title="Building the Machine"
+                date="Nov 2020 - Feb 2021"
+                side="right"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-bold text-lg mb-30">Systems Built:</h4>
+                    <ul className="list-disc list-inside space-y-2 text-secondary">
+                      <li>Training materials & onboarding</li>{" "}
+                      <li>Slack channels (internal + external)</li>
+                      <li>Branding guide</li>
+                      <li>CRM tracking system</li>
+                      <li>Multi-platform marketing</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-gray-800">
+                      Growth Strategy:
+                    </h4>
+                    <ul className="list-disc list-inside space-y-2 text-secondary">
+                      <li>Strategic cold outreach</li>
+                      <li>Partnerships with other social organizations</li>
+                      <li>
+                        Network effect → Organizations started reaching out to
+                        us
+                      </li>
+                      <li>Recruited more students as the organization grew</li>
+                    </ul>
+                  </div>
+                </div>
+              </TimelinePhase>
+
+              {/* Phase 3 */}
+              <TimelinePhase
+                phase="3"
+                title="Cultural Transformation"
+                date="March 2021"
+                side="left"
+                highlight={true}
+              >
+                <div className="space-y-6">
+                  {/* The Problem */}
+                  <p className="font-semibold text-lg mb-3 text-gray-800">
+                    The Problem:
+                  </p>
+                  <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                    <li>Team commitment dropped as organization grew</li>
+                    <li>
+                      Members ghosting meetings, not delivering tasks, being
+                      flaky
+                    </li>
+                    <li>More responsibilities fell on me</li>
+                  </ul>
+                  {/* The Solution */}
+                  <p className="font-semibold text-lg mb-3 text-gray-800">
+                    The Solution:
+                  </p>
+                  <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                    <li>
+                      Conducted 1-on-1 conversations with every member. Asked:
+                      What do you <em>want</em> to do?
+                    </li>
+                    <li>
+                      Realigned team roles, set clear expectations and goals.
+                    </li>
+                  </ul>
+                  <p className="font-semibold text-lg mb-3 text-gray-800">
+                    Leadership Shift & Results:
+                  </p>
+                  <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                    <li>
+                      Leadership shift from trying to teach/control to trusting
+                      members and giving them real ownership.
+                    </li>
+                    <li>
+                      Culture transformed overnight from formal and stressful to
+                      collaborative and empowering.
+                    </li>
+                    <li>
+                      Team became genuine friends (never met in person, but kept
+                      a LINE group open all day).
+                    </li>
+                    <li>
+                      Members began taking initiative: hosting programs
+                      independently and suggesting new ideas.
+                    </li>
+                    <li>
+                      Everyone could trust each other and no longer needed you
+                      to finish tasks.
+                    </li>
+                  </ul>
+                </div>
+              </TimelinePhase>
+
+              {/* Phase 4 */}
+              <TimelinePhase
+                phase="4"
+                title="Sustainable Handoff"
+                date="August 2021"
+                side="right"
+              >
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-bold text-lg mb-3 text-gray-800">
+                      Selection Process:
+                    </h4>
+                    <p className="text-gray-700">
+                      Identified successor who took initiative - independently
+                      recruiting new members without being asked. Taught through
+                      shadowing, not instruction. Transferred knowledge, not
+                      control.
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <p className="font-bold text-lg mb-3 text-gray-800">
+                      The Result:
+                    </p>
+                    <p className="text-gray-700 mb-3">
+                      Most founder-led student organizations die when the
+                      founder leaves.
+                    </p>
+                    <p className="text-2xl font-bold text-blue-600">
+                      chetz is still running 5 years later.
+                    </p>
+                  </div>
+                </div>
+              </TimelinePhase>
+            </div>
+          </div>
+        </section>
+
+        {/* KEY LEARNINGS */}
+        <section className="learnings-section py-20">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-4 text-center text-primary">
+              Key Learnings
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <LearningCard
+                icon="🤝"
+                title="Trust Empowers Better Than Control"
+                content="I shifted from teaching people what to do to creating an environment where they could succeed. The team transformed overnight when given agency aligned with genuine interests."
+              />
+              <LearningCard
+                icon="🎯"
+                title="Mission Clarity Protects Quality"
+                content="Refused 'easy wins'—celebrity speakers, gift cards—that would compromise our peer-to-peer community values."
+              />
+              <LearningCard
+                icon="⚙️"
+                title="Systems Enable Scale"
+                content="Documentation, processes, and culture-building allowed the organization to outlive founder involvement. Still operating 5 years later without founder."
+              />
+            </div>
+          </div>
+        </section>
+
+        <div className={`${styles.padding} py-12`}>
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-center text-primary">
+              Events
+            </h2>
+
+            <div className="text-center mb-8">
+              <p className="text-secondary text-[17px] leading-[30px] max-w-4xl mx-auto">
+                chetz provides a flexible space where volunteers can lead
+                activities based on their own skills and experiences. We
+                intentionally do not limit ourselves to a specific field,
+                allowing for a wide range of volunteer-led events, including:
+              </p>
+            </div>
+
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {events.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="h-40 overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                    />
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2">
+                      {item.name}
+                    </h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12">
+              <h3 className="text-2xl font-bold mb-4 text-center text-primary">
+                Photo Highlights
+              </h3>
+              <p className="text-secondary text-[15px] leading-[26px] max-w-3xl mx-auto mb-6 text-center">
+                A few snapshots from language exchanges, workshops, and fun
+                moments!
+              </p>
+              <PhotoSlideshow />
             </div>
           </div>
         </div>
