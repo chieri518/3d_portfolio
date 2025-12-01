@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -11,48 +13,62 @@ import Slider from "react-slick";
 
 import { styles } from "../styles";
 import { experiences, educations, awards } from "../constants";
-import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 
-import Navbar from "./navbar";
+const ExperienceCard = ({ experience }) => {
+  const isNECX = experience.company_name === "NEC X";
+  const isChetz = experience.company_name === "chetz";
 
-const ExperienceCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: "#eafbff", color: "#000000" }}
-    contentArrowStyle={{ borderRight: "7px solid #77ddf9" }}
-    date={experience.date}
-    iconStyle={{ background: "#E6DEDD" }}
-    icon={
-      <div className="flex justify-center items-center w-full h-full">
-        <img
-          src={experience.icon}
-          alt={experience.company_name}
-          className="w-[65%] h-[65%] object-contain"
-        />
-      </div>
-    }
-  >
-    <div>
-      <h3 className="text-black text-[24px] font-bold">{experience.title}</h3>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        {experience.company_name}
-      </p>
-    </div>
-    <ul className="mt-5 list-disc c-5 space-y-2">
-      {experience.points.map((point, index) => (
-        <li
-          key={`experience-point-${index}`}
-          className="text-black text-[14px] pl-1 tracking-wider"
+  return (
+    <VerticalTimelineElement
+      contentStyle={{ background: "#eafbff", color: "#000000" }}
+      contentArrowStyle={{ borderRight: "7px solid #77ddf9" }}
+      date={experience.date}
+      iconStyle={{ background: "#E6DEDD" }}
+      icon={
+        <div className="flex justify-center items-center w-full h-full">
+          <img
+            src={experience.icon}
+            alt={experience.company_name}
+            className="w-[65%] h-[65%] object-contain"
+          />
+        </div>
+      }
+    >
+      <div>
+        <h3 className="text-black text-[24px] font-bold">{experience.title}</h3>
+        <p
+          className="text-secondary text-[16px] font-semibold"
+          style={{ margin: 0 }}
         >
-          {point}
-        </li>
-      ))}
-    </ul>
-  </VerticalTimelineElement>
-);
+          {experience.company_name}
+        </p>
+      </div>
+      <ul className="mt-5 list-disc c-5 space-y-2">
+        {experience.points.map((point, index) => (
+          <li
+            key={`experience-point-${index}`}
+            className="text-black text-[14px] pl-1 tracking-wider"
+          >
+            {point}
+          </li>
+        ))}
+      </ul>
+
+      {(isNECX || isChetz) && (
+        <div className="mt-3">
+          <Link
+            to={isNECX ? "/necx" : "/chetz"}
+            className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:text-secondary hover:underline transition-colors duration-200"
+          >
+            <span>Read more</span>
+            <span aria-hidden="true">→</span>
+          </Link>
+        </div>
+      )}
+    </VerticalTimelineElement>
+  );
+};
 
 const EducationCard = ({ education }) => (
   <VerticalTimelineElement
@@ -139,19 +155,37 @@ const sliderSettings = {
 };
 
 const Experience = () => {
+  const [showAllExperiences, setShowAllExperiences] = useState(false);
+
+  const visibleExperiences = showAllExperiences
+    ? experiences
+    : experiences.slice(0, 3);
+
   return (
-    <section className="relative w-full h-screen mx-auto mt-10">
-      <Navbar />
+    <section className={`${styles.padding} w-full mx-auto mt-10`}>
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>What I have done so far...</p>
         <h2 className={styles.sectionHeadText}>Experience</h2>
       </motion.div>
       <div className="mt-20 flex flex-col">
         <VerticalTimeline>
-          {experiences.map((experience, index) => (
+          {visibleExperiences.map((experience, index) => (
             <ExperienceCard key={index} experience={experience} />
           ))}
         </VerticalTimeline>
+        {experiences.length > 3 && (
+          <div className="mt-6 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAllExperiences((prev) => !prev)}
+              className="px-5 py-2 rounded-full border border-secondary/60 text-sm font-medium text-primary bg-white/80 hover:bg-secondary hover:text-white transition-colors duration-200 shadow-sm"
+            >
+              {showAllExperiences
+                ? "Show less experience"
+                : "Show full experience"}
+            </button>
+          </div>
+        )}
       </div>
       <motion.div variants={textVariant()} className="mt-20">
         <h2 className={styles.sectionHeadText}>Education</h2>
@@ -179,4 +213,4 @@ const Experience = () => {
   );
 };
 
-export default SectionWrapper(Experience, "work");
+export default Experience;

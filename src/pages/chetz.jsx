@@ -135,22 +135,9 @@ const PhotoSlideshow = () => {
   );
 };
 
-const TimelinePhase = ({
-  phase,
-  title,
-  date,
-  side,
-  children,
-  highlight = false,
-}) => {
-  const isRight = side === "right";
-
+const TimelinePhase = ({ phase, title, date, children, highlight = false }) => {
   return (
-    <div
-      className={`relative flex ${
-        isRight ? "flex-row-reverse" : "flex-row"
-      } gap-8`}
-    >
+    <div className={`relative flex gap-8`}>
       {/* Timeline Connector */}
       <div className="flex flex-col items-center flex-shrink-0">
         <div
@@ -183,15 +170,6 @@ const TimelinePhase = ({
     </div>
   );
 };
-
-// Component: Learning Card
-const LearningCard = ({ icon, title, content }) => (
-  <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow">
-    <div className="text-5xl mb-4">{icon}</div>
-    <h3 className="text-xl font-bold mb-4 text-gray-900">{title}</h3>
-    <p className="text-gray-700 italic leading-relaxed">"{content}"</p>
-  </div>
-);
 
 const chetz = () => {
   return (
@@ -235,7 +213,7 @@ const chetz = () => {
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Vision</h2>
 
           <p className="text-secondary text-[17px] leading-[30px]">
-            Our vision is to{" "}
+            To{" "}
             <strong className="text-primary">
               serve as a bridge between Japan and the world
             </strong>
@@ -245,7 +223,7 @@ const chetz = () => {
         </div>
       </div>
 
-      <div className={`${styles.padding} bg-gray-50 py-12`}>
+      <div className={`${styles.padding} py-12`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Story</h2>
 
@@ -273,7 +251,7 @@ const chetz = () => {
           </p>
         </div>
       </div>
-      <div className={`${styles.padding} bg-gray-50 py-12`}>
+      <div className={`${styles.padding} py-12`}>
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Impact</h2>
 
@@ -302,7 +280,7 @@ const chetz = () => {
 
       <div className={`${styles.padding} py-12`}>
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center text-primary">
+          <h2 className="text-3xl font-bold mb-8 text-primary">
             Our Collaborations
           </h2>
 
@@ -333,8 +311,8 @@ const chetz = () => {
           </div>
         </div>
         {/* THE JOURNEY - TIMELINE */}
-        <section className="journey-section py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
+        <section className="journey-section py-20">
+          <div className="container mx-auto px-6 py-6 bg-gray-50">
             <h2 className="text-5xl font-bold text-center mb-16 text-gray-900">
               The Journey
             </h2>
@@ -344,14 +322,13 @@ const chetz = () => {
                 phase="1"
                 title="Beginning of chetz"
                 date="October 2020"
-                side="left"
               >
                 <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
                   <ul className="list-disc list-inside text-secondary text-[17px] lg:w-[70%] leading-[30px]">
                     <li>Week 1: Created name, website and logo → pivot</li>
                     <li>Week 2-3: Recruited co-founder and first volunteers</li>
                     <li>
-                      , Week 4: First language exchange event with ~10 people
+                      Week 4: First language exchange event with ~10 people
                       (friends + members)
                     </li>
                   </ul>
@@ -367,9 +344,8 @@ const chetz = () => {
               {/* Phase 2 */}
               <TimelinePhase
                 phase="2"
-                title="Building the Machine"
+                title="Scaling the Organization"
                 date="Nov 2020 - Feb 2021"
-                side="right"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -404,7 +380,6 @@ const chetz = () => {
                 phase="3"
                 title="Cultural Transformation"
                 date="March 2021"
-                side="left"
                 highlight={true}
               >
                 <div className="space-y-6">
@@ -466,7 +441,6 @@ const chetz = () => {
                 phase="4"
                 title="Sustainable Handoff"
                 date="August 2021"
-                side="right"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -488,7 +462,7 @@ const chetz = () => {
                       Most founder-led student organizations die when the
                       founder leaves.
                     </p>
-                    <p className="text-2xl font-bold text-blue-600">
+                    <p className="text-xl font-bold text-blue-500">
                       chetz is still running 5 years later.
                     </p>
                   </div>
@@ -498,34 +472,7 @@ const chetz = () => {
           </div>
         </section>
 
-        {/* KEY LEARNINGS */}
-        <section className="learnings-section py-20">
-          <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-4 text-center text-primary">
-              Key Learnings
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <LearningCard
-                icon="🤝"
-                title="Trust Empowers Better Than Control"
-                content="I shifted from teaching people what to do to creating an environment where they could succeed. The team transformed overnight when given agency aligned with genuine interests."
-              />
-              <LearningCard
-                icon="🎯"
-                title="Mission Clarity Protects Quality"
-                content="Refused 'easy wins'—celebrity speakers, gift cards—that would compromise our peer-to-peer community values."
-              />
-              <LearningCard
-                icon="⚙️"
-                title="Systems Enable Scale"
-                content="Documentation, processes, and culture-building allowed the organization to outlive founder involvement. Still operating 5 years later without founder."
-              />
-            </div>
-          </div>
-        </section>
-
-        <div className={`${styles.padding} py-12`}>
+        <div className={`${styles.padding} py-10`}>
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold mb-4 text-center text-primary">
               Events
@@ -565,7 +512,7 @@ const chetz = () => {
               ))}
             </div>
 
-            <div className="mt-12">
+            <div className="mt-12 py-10 ">
               <h3 className="text-2xl font-bold mb-4 text-center text-primary">
                 Photo Highlights
               </h3>

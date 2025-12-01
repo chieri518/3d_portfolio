@@ -71,6 +71,7 @@ import {
   wic,
   workshop1,
   chetzlogo,
+  wsl,
 } from "../assets";
 
 export const navLinks = [
@@ -230,9 +231,11 @@ const experiences = [
   {
     title: "Assistant to CEO",
     company_name: "Women's Startup Lab ",
-    icon: menlo,
+    icon: wsl,
     date: "Dec 2021 - Feb 2022",
-    points: [" ... "],
+    points: [
+      "Managed email prioritization, invoice tracking, and banking issue resolution for CEO of startup accelerator.",
+    ],
   },
   {
     title: "Founder & President",
@@ -358,23 +361,20 @@ const awards = [
 
 const highlights = [
   {
-    name: "chetz",
-    description:
-      "Created a community where students discover global perspectives through language and connection",
-    image: langexch2,
+    name: "Designing a Global Community",
+    description: "Founder @ chetz",
+    image: group1,
     redirect_link: "/chetz",
   },
   {
-    name: "University Innovation Fellowship",
-    description:
-      "Transformed an underutilized Innovation Center into a sustainable, well-equipped makerspace and community hub.",
+    name: "Building a Sustainable Makerspace",
+    description: "University Innovation Fellowship run by Stanford d.school",
     image: uif1,
     redirect_link: "/uif",
   },
   {
-    name: "NEC X",
-    description:
-      "Managing program operations and events while leading their marketing strategy across social media, paid ads, and community outreach.",
+    name: "Empowering early-stage founders",
+    description: "Marketing and Community Engagement Specialist @ NEC X",
     image: necx_group,
     redirect_link: "/necx",
   },

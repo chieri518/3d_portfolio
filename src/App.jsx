@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
       <div className="bg-hero-pattern bg-cover bg-center bg-no-repeat">
         <Navbar />
       </div>
-      <main className="flex-1">{children}</main>
+      <main className="flex-1 bg-white">{children}</main>
       <Footer />
     </div>
   );

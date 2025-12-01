@@ -78,6 +78,7 @@ import linkedinpost from "./linkedinpost.png";
 import uiflogo from "./uiflogo.png";
 import steamhousewide from "./steamhousewide.png";
 
+import wsl from "./company/wsl.png";
 import chetzlogo from "./chetz/chetzlogo.png";
 import bluebase from "./chetz/bluebase.jpg";
 import dawn from "./chetz/dawn.jpg";
@@ -190,6 +191,7 @@ export {
   linkedinpost,
   uiflogo,
   steamhousewide,
+  wsl,
   chetzlogo,
   bluebase,
   dawn,
