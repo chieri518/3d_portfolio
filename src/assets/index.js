@@ -55,6 +55,7 @@ import uif_week2 from "./uif/uif_week2.png";
 import uif_week3 from "./uif/uif_week3.png";
 import uif_week4 from "./uif/uif_week4.png";
 import uif_week5 from "./uif/uif_week5.png";
+import uif_week6 from "./uif/uif_week6.png";
 import steamhouse_mindmap from "./uif/steamhouse_mindmap.png";
 
 import governormedal from "./governormedal.png";
@@ -158,6 +159,7 @@ export {
   uif_week3,
   uif_week4,
   uif_week5,
+  uif_week6,
   steamhouse_mindmap,
   governormedal,
   honor,

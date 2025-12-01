@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
-import { necx } from "../assets";
+import { necx, elevx, spin1, spin2, spin3, spin4 } from "../assets";
 
 import Navbar from "./navbar";
 
@@ -229,6 +229,44 @@ const NECX = () => {
           </div>
         </section>
 
+        <section className="py-16">
+          <div className={`${styles.paddingX} max-w-6xl mx-auto`}>
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="w-full overflow-hidden rounded-2xl border border-gray-100 bg-gray-50">
+                <img
+                  src={spin1}
+                  alt="Group photo from NEC X flagship event"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+              </div>
+
+              <div className="w-full overflow-hidden rounded-2xl border border-gray-100 bg-gray-50">
+                <img
+                  src={spin2}
+                  alt="Conversation with founder at NEC X event"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+              </div>
+
+              <div className="w-full overflow-hidden rounded-2xl border border-gray-100 bg-gray-50">
+                <img
+                  src={spin3}
+                  alt="Group photo from NEC X event session"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+              </div>
+
+              <div className="w-full overflow-hidden rounded-2xl border border-gray-100 bg-gray-50">
+                <img
+                  src={spin4}
+                  alt="Closing group photo at NEC X event"
+                  className="w-full aspect-[4/3] object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="program-operations py-16">
           <div
             className={`${styles.paddingX} max-w-6xl mx-auto flex flex-col gap-10`}
@@ -248,26 +286,43 @@ const NECX = () => {
               <h4 className="text-2xl font-semibold text-gray-900 mb-4">
                 Coordinating a Multi-Phase Accelerator Ecosystem
               </h4>
-              <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px] mb-6">
-                Beyond marketing, I became the operational backbone for NEC X's
-                accelerator program, which runs twice yearly and spans three
-                phases:
-              </p>
-              <ul className="space-y-3 text-secondary text-[15px] leading-[24px]">
-                <li>
-                  <strong>Phase 1:</strong> Workshops, mentorship sessions,
-                  customer discovery → pitch evaluation
-                </li>
-                <li>
-                  <strong>Phase 2:</strong> Advanced workshops with in-person
-                  intensives (weeks 1 &amp; 4) → pitch → investment
-                  consideration
-                </li>
-                <li>
-                  <strong>Phase 3:</strong> Investment support and corporate
-                  partnership development
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 md:grid-cols-[minmax(0,3fr)_minmax(0,2fr)] gap-8 items-start">
+                <div>
+                  <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px] mb-6">
+                    Beyond marketing, I became the operational backbone for NEC
+                    X's accelerator program, which runs twice yearly and spans
+                    three phases:
+                  </p>
+                  <ul className="space-y-3 text-secondary text-[15px] leading-[24px]">
+                    <li>
+                      <strong>Phase 1:</strong> Workshops, mentorship sessions,
+                      customer discovery → pitch evaluation
+                    </li>
+                    <li>
+                      <strong>Phase 2:</strong> Advanced workshops with
+                      in-person intensives (weeks 1 &amp; 4) → pitch →
+                      investment consideration
+                    </li>
+                    <li>
+                      <strong>Phase 3:</strong> Investment support and corporate
+                      partnership development
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="flex flex-col items-center gap-3">
+                  <div className="w-full rounded-2xl overflow-hidden shadow-md border border-gray-100 bg-gray-50">
+                    <img
+                      src={elevx}
+                      alt="Phase 1 workshop at NEC X accelerator"
+                      className="w-full h-full object-cover max-h-72"
+                    />
+                  </div>
+                  <p className="text-xs md:text-sm text-secondary text-center max-w-sm">
+                    Batch 14 Kickoff Call
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="subsection">

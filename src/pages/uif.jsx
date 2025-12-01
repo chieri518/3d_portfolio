@@ -1,15 +1,22 @@
 import { memo, useState, useEffect, useRef } from "react";
 import cn from "classnames";
-import {
-  VerticalTimeline,
-  VerticalTimelineElement,
-} from "react-vertical-timeline-component";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { SectionWrapper } from "../hoc";
 import { fadeIn, textVariant } from "../utils/motion";
 import { uif, steamhouse, uiftimeline, meetup } from "../constants";
-import { uiflogo, steamhousewide } from "../assets";
+import {
+  uiflogo,
+  steamhousewide,
+  uif1,
+  uif_week1,
+  uif_week2,
+  uif_week3,
+  uif_week4,
+  uif_week5,
+  uif_week6,
+  steamhouse_mindmap,
+} from "../assets";
 
 import Navbar from "./navbar";
 
@@ -157,26 +164,47 @@ const UIFImages = memo(function UIFImages() {
   );
 });
 
-const UIFCard = ({ experience }) => (
-  <VerticalTimelineElement
-    contentStyle={{ background: experience.color, color: "#000000" }}
-    contentArrowStyle={{ borderRight: "7px solid #77ddf9" }}
-    iconStyle={{ display: "none" }}
-  >
-    <div>
-      <p
-        className="text-secondary text-[16px] font-semibold"
-        style={{ margin: 0 }}
-      >
-        {experience.week}
+const weekImages = [
+  uif_week1,
+  uif_week2,
+  uif_week3,
+  uif_week4,
+  uif_week5,
+  uif_week6,
+  uif1,
+];
+
+const UIFCard = ({ experience, index }) => {
+  const image = weekImages[index] || null;
+
+  return (
+    <div
+      className="min-w-[280px] max-w-xs flex-shrink-0 rounded-2xl p-4 flex flex-col gap-3"
+      style={{ background: experience.color }}
+    >
+      {image && (
+        <div className="w-full h-40 rounded-xl overflow-hidden mb-1">
+          <img
+            src={image}
+            alt={experience.week}
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
+      <div>
+        <p className="text-secondary text-[16px] font-semibold mb-1">
+          {experience.week}
+        </p>
+        <h3 className="text-black text-[20px] font-bold leading-snug">
+          {experience.title}
+        </h3>
+      </div>
+      <p className="text-black text-[14px] tracking-wider">
+        {experience.paragraph}
       </p>
-      <h3 className="text-black text-[24px] font-bold">{experience.title}</h3>
     </div>
-    <p className="text-black text-[14px] pl-1 tracking-wider">
-      {experience.paragraph}
-    </p>
-  </VerticalTimelineElement>
-);
+  );
+};
 
 const STEAMHouseImages = memo(function STEAMHouseImages() {
   const images = [...steamhouse, ...steamhouse];
@@ -240,101 +268,487 @@ const MeetupImages = memo(function MeetupImages() {
 
 const UIF = () => {
   const [activeTab, setActiveTab] = useState("STEAM");
+  const [isMindmapOpen, setIsMindmapOpen] = useState(false);
+  const [mindmapZoom, setMindmapZoom] = useState(1);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  const openMindmap = () => {
+    setMindmapZoom(1);
+    setIsMindmapOpen(true);
+  };
+
+  const closeMindmap = () => {
+    setIsMindmapOpen(false);
+    setMindmapZoom(1);
+  };
+
+  const zoomInMindmap = () =>
+    setMindmapZoom((z) => Math.min(2, Math.round((z + 0.25) * 100) / 100));
+  const zoomOutMindmap = () =>
+    setMindmapZoom((z) => Math.max(0.75, Math.round((z - 0.25) * 100) / 100));
+  const resetMindmapZoom = () => setMindmapZoom(1);
   return (
-    <section className="relative w-full h-screen mx-auto">
+    <div className="relative w-full min-h-screen mx-auto">
       <Navbar />
-      <motion.div variants={textVariant()}>
-        <h1 className={styles.sectionHeadText}>
-          University Innovation Fellowship
-        </h1>
-        <p className={styles.sectionSubText}>
-          @ Hasso Plattner Institute of Design at Stanford University
-        </p>
-      </motion.div>
-
-      <div className="mt-20 flex flex-col">
-        <UIFGallery />
-      </div>
-      <h2 className={styles.sectionHeadText}>About UIF</h2>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-        <p className="text-secondary text-[17px] max-w-4xl leading-[30px]">
-          The University Innovation Fellows (UIF) is a global program that
-          empowers university students to become change agents at their schools
-          by fostering innovation, entrepreneurship, creativity, and design
-          thinking. Supported by Stanford University's d.school, Fellows
-          collaborate with faculty, peers, and campus leaders to improve
-          learning experiences and drive institutional change. The program
-          includes a 6-week intensive training, year-round mentorship, and a
-          chance to attend a Silicon Valley Meetup at Stanford. With over 2,900
-          Fellows from 300+ schools worldwide, UIF is shaping the future of
-          higher education through student-led impact.
-        </p>
-        <a
-          href="https://universityinnovationfellows.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            src={uiflogo}
-            alt="uiflogo"
-            className="w-full h-full object-contain"
-          />
-        </a>
-      </div>
-      <h2 className={styles.sectionHeadText}>Six-Week Training Overview</h2>
-      <div className="mt-20 flex flex-col">
-        <VerticalTimeline>
-          {uiftimeline.map((experience, index) => (
-            <UIFCard key={index} experience={experience} />
-          ))}
-        </VerticalTimeline>
-      </div>
-      <h2 className={styles.sectionHeadText}>The 2022 UIF Project</h2>
-      <p>
-        The strategic plan emerged from the challenge of sustaining the
-        Innovation Center—originally launched by Menlo College’s inaugural UIF
-        cohort in 2017—beyond the tenure of its founders. <br />
-        <br />
-        Our goal was to develop the center into a premier, inclusive community
-        hub on campus while preserving future cohorts' ability to pursue their
-        own impactful projects. Through extensive exploration of key operational
-        components—such as funding, governance, programming, training, equipment
-        maintenance, scheduling, marketing, and alignment with college values—we
-        crafted a multi-year strategic plan.
-        <br />
-        <br /> This plan is intentionally aligned with Menlo College’s broader
-        strategic vision and centers on student engagement, inclusion, and
-        creative exploration across all disciplines, including the arts. This
-        year, we took a pivotal step by stocking the maker space and beginning
-        program implementation. <br />
-        <br />
-        The center now features a variety of tools, including small and large
-        FDM 3D printers, 3D pens, a Glowforge laser cutter, a Cricut cutter,
-        sewing, and button-making machines, a soldering station, VR headsets,
-        both PC and Mac computers, gaming setups, and large-format printers.
-        Programming that redefines creativity to include mindset and design
-        thinking is also underway. <br />
-        <br />
-        In April, we hosted a Grand Reopening to showcase the center’s new
-        capabilities. Students, faculty, and staff engaged with hands-on demos
-        and left with custom 3D-printed souvenirs, generating excitement for
-        future workshops.
+      <h1 className={styles.sectionHeadText}>
+        University Innovation Fellowship
+      </h1>
+      <p className={styles.sectionSubText}>
+        @ Hasso Plattner Institute of Design at Stanford University
       </p>
-      <img
-        loading="lazy"
-        src={steamhousewide}
-        alt="steamhouse"
-        className="w-full h-full object-contain"
-      />
-      <STEAMHouseGallery />
 
-      <h2 className={styles.sectionHeadText}>UIF Silicon Valley Meetup</h2>
-      <MeetupGallery />
-    </section>
+      <div className="max-w-4xl mx-auto mt-6">
+        <p className="text-secondary text-[17px] leading-[30px]">
+          As part of Menlo College&apos;s 2018-2019 University Innovation
+          Fellowship cohort, I worked to transform an underutilized Innovation
+          Center (originally established in 2017) into a sustainable,
+          well-equipped makerspace and community hub.
+        </p>
+      </div>
+
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-6xl mx-auto">
+          <UIFGallery />
+        </div>
+      </div>
+
+      {/* About UIF */}
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8">
+          <div className="flex-1">
+            <h2 className="text-3xl font-bold mb-4 text-primary">About UIF</h2>
+            <p className="text-secondary text-[17px] leading-[30px]">
+              The University Innovation Fellows (UIF) is a global program that
+              empowers university students to become change agents at their
+              schools by fostering innovation, entrepreneurship, creativity, and
+              design thinking. Supported by Stanford University&apos;s d.school,
+              Fellows collaborate with faculty, peers, and campus leaders to
+              improve learning experiences and drive institutional change.
+            </p>
+          </div>
+          <a
+            href="https://universityinnovationfellows.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:w-56 w-full flex justify-center"
+          >
+            <img
+              src={uiflogo}
+              alt="University Innovation Fellows logo"
+              className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
+            />
+          </a>
+        </div>
+      </div>
+
+      {/* Highlights & Context */}
+      <div className={`${styles.padding} py-12 bg-gray-50`}>
+        <div className="max-w-5xl mx-auto space-y-10">
+          {/* Highlights */}
+          <div>
+            <h2 className="text-3xl font-bold mb-4 text-primary">Highlights</h2>
+            <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+              <li>
+                Secured{" "}
+                <strong className="text-primary">$6,000+ in funding</strong>{" "}
+                through pitching to key stakeholders.
+              </li>
+              <li>
+                Sourced and installed
+                <strong className="text-primary">
+                  {" "}
+                  $10,000+ worth of equipment
+                </strong>{" "}
+                through a mix of funding, donations, and vendor discounts (3D
+                printers, laser cutter, VR sets, sewing machines, etc.).
+              </li>
+              <li>
+                Designed a multi-year strategic plan intentionally aligned with
+                Menlo&apos;s institutional goals to ensure sustainability beyond
+                our cohort&apos;s graduation.
+              </li>
+            </ul>
+          </div>
+
+          {/* Context & Challenge */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold text-primary">
+              Context &amp; Challenge
+            </h2>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                The System
+              </h3>
+              <p className="text-secondary text-[17px] leading-[30px]">
+                The Innovation Center existed as a classroom with movable
+                furniture and a Mac monitor, but was cluttered, had no clear
+                ownership (shared between design thinking and art classes), and
+                saw minimal student engagement. Previous cohorts had created the
+                space, but there was no plan for sustaining or evolving it.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                The Opportunity
+              </h3>
+              <p className="text-secondary text-[17px] leading-[30px] mb-2">
+                Our cohort identified that students lacked hands-on skill
+                development opportunities. Rather than create one-off events
+                (like bringing back TEDx or Startup Weekend), we chose to focus
+                on the Innovation Center specifically because:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+                <li>The infrastructure already existed.</li>
+                <li>
+                  It could be inherited and sustained across cohorts (unlike
+                  events dependent on specific organizers).
+                </li>
+                <li>
+                  It addressed the core problem of giving students practical,
+                  maker-focused skills.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Key Challenge
+              </h3>
+              <p className="text-secondary text-[17px] leading-[30px]">
+                Navigating institutional bureaucracy and skepticism—the school
+                administration was slow to acknowledge problems, the Board of
+                Education made transferring resources difficult, and student
+                government initially opposed our budget request because it
+                competed with other clubs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Design Approach */}
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-6xl mx-auto space-y-8">
+          <h2 className="text-3xl font-bold text-primary">Design Approach</h2>
+
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-2xl font-semibold mb-3 text-gray-900">
+                Stakeholder Understanding
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+                <li>
+                  Conducted interviews with students, faculty, administrators,
+                  and prior UIF Fellows.
+                </li>
+                <li>
+                  Mapped roles, decision-makers, and blockers across the
+                  institutional system.
+                </li>
+                <li>
+                  Presented to the college president, vice president, deans, and
+                  student government.
+                </li>
+                <li>
+                  Delivered a persuasive pitch to all club presidents to secure
+                  funding.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-3 text-gray-900">
+                Key Design Decisions
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+                <li>
+                  <strong>Sustainability over novelty:</strong> Focused on
+                  long-term infrastructure rather than one-off events (e.g.,
+                  TEDx or Startup Weekend).
+                </li>
+                <li>
+                  <strong>Phased implementation:</strong> (1) Budget approval
+                  (2) Equipment acquisition &amp; installation (3) Space
+                  redesign &amp; re-opening (4) Operational role creation for
+                  ongoing oversight.
+                </li>
+                <li>
+                  <strong>Strategic reframing:</strong> Rebranded the space to
+                  <span className="font-bold"> STEAMhouse</span>, positioning it
+                  as a campus-wide asset aligned with Menlo&apos;s innovation
+                  and entrepreneurship priorities.
+                </li>
+                <li>
+                  <strong>Space redesign:</strong> Decluttered the room,
+                  reorganized storage, and created zones for different types of
+                  making (3D printing, laser cutting, sewing, VR).
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-2xl font-semibold mb-3 text-gray-900">
+                Methods &amp; Tools
+              </h3>
+              <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+                <li>
+                  d.school design thinking tools from UIF training (problem
+                  definition, stakeholder mapping, rapid ideation).
+                </li>
+                <li>
+                  Collaboration mapping to define ownership for operations,
+                  equipment, scheduling, inventory, and marketing.
+                </li>
+                <li>Vendor outreach for donations and discounts.</li>
+                <li>
+                  Navigated the formal student government budget approval
+                  process (required for requests &gt; $400).
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Six-Week Training Overview */}
+      <div className={`${styles.padding} py-12 bg-gray-50`}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-primary">
+            Six-Week Training Overview
+          </h2>
+          <div className="mt-4">
+            <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory">
+              {uiftimeline.map((experience, index) => (
+                <div key={index} className="snap-start">
+                  <UIFCard experience={experience} index={index} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* The 2022 UIF Project */}
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-5xl mx-auto space-y-8">
+          <h2 className="text-3xl font-bold text-primary">
+            The 2022 UIF Project
+          </h2>
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="flex-1 space-y-4 text-secondary text-[17px] leading-[30px]">
+              <p>
+                The strategic plan emerged from the challenge of sustaining the
+                Innovation Center, originally launched by Menlo College&apos;s
+                inaugural UIF cohort in 2017, beyond the tenure of its founders.
+                Our goal was to develop the center into an inclusive community
+                hub on campus while preserving future cohorts&apos; ability to
+                pursue their own impactful projects.
+              </p>
+              <p>
+                Through extensive exploration of key operational components—such
+                as funding, governance, programming, training, equipment
+                maintenance, scheduling, marketing, and alignment with college
+                values—we crafted a multi-year strategic plan.
+              </p>
+              <p>
+                The center now features a variety of tools, including 3D
+                printers, 3D pens, a laser cutter, sewing and button-making
+                machines, a soldering station, VR headsets, both PC and Mac
+                computers, gaming setups, and large-format printers.
+              </p>
+              <p>
+                In April, we hosted a <strong>Grand Reopening</strong> to
+                showcase the center&apos;s new capabilities. Students, faculty,
+                and staff engaged with hands-on demos and left with custom
+                3D-printed souvenirs, generating excitement for future
+                workshops.
+              </p>
+            </div>
+            <div className="w-full lg:w-[30%] max-w-sm mx-auto lg:mx-0">
+              <button
+                type="button"
+                onClick={openMindmap}
+                className="w-full focus:outline-none group"
+              >
+                <img
+                  src={steamhouse_mindmap}
+                  alt="STEAMhouse mindmap"
+                  className="w-full h-auto object-contain rounded-2xl shadow-md cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mindmap Lightbox */}
+      {isMindmapOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 px-4"
+          onClick={closeMindmap}
+        >
+          <div
+            className="relative max-w-4xl w-full max-h-[95vh] bg-black/40 rounded-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between px-4 py-2 bg-black/60 text-white text-sm">
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  onClick={zoomOutMindmap}
+                  className="px-2 py-1 rounded bg-white/10 hover:bg-white/20"
+                >
+                  -
+                </button>
+                <button
+                  type="button"
+                  onClick={resetMindmapZoom}
+                  className="px-2 py-1 rounded bg-white/10 hover:bg-white/20"
+                >
+                  100%
+                </button>
+                <button
+                  type="button"
+                  onClick={zoomInMindmap}
+                  className="px-2 py-1 rounded bg-white/10 hover:bg-white/20"
+                >
+                  +
+                </button>
+                <span className="ml-2 opacity-80">
+                  {Math.round(mindmapZoom * 100)}%
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={closeMindmap}
+                className="px-2 py-1 rounded bg-white text-gray-800 text-xs font-semibold hover:bg-gray-100"
+              >
+                Close
+              </button>
+            </div>
+            <div className="w-full h-full overflow-auto p-4 flex items-center justify-center">
+              <div
+                className="inline-block"
+                style={{
+                  transform: `scale(${mindmapZoom})`,
+                  transformOrigin: "center center",
+                }}
+              >
+                <img
+                  src={steamhouse_mindmap}
+                  alt="STEAMhouse mindmap enlarged"
+                  className="max-w-full max-h-[70vh] h-auto object-contain rounded-2xl shadow-xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* STEAMhouse Gallery */}
+      <div className={`${styles.padding} py-12 bg-gray-50`}>
+        <div className="max-w-6xl mx-auto space-y-6">
+          <img
+            loading="lazy"
+            src={steamhousewide}
+            alt="STEAMhouse makerspace"
+            className="w-full h-auto object-contain rounded-2xl shadow-md"
+          />
+          <STEAMHouseGallery />
+        </div>
+      </div>
+
+      {/* UIF Silicon Valley Meetup */}
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-6xl mx-auto space-y-6">
+          {/* Outcomes & Learnings */}
+          <div className={`${styles.padding} py-12`}>
+            <div className="max-w-5xl mx-auto space-y-10 text-secondary text-[17px] leading-[30px]">
+              {/* Outcomes */}
+              <div>
+                <h2 className="text-3xl font-bold mb-4 text-primary">
+                  Outcomes
+                </h2>
+
+                <ul className="list-disc list-inside space-y-2">
+                  <li>
+                    <strong>Funding secured:</strong> Full budget approval after
+                    intense debate and stakeholder alignment.
+                  </li>
+                  <li>
+                    <strong>Equipment installed:</strong> 3D printers, laser
+                    cutter, sewing machine, large-format printer, button maker,
+                    VR sets.
+                  </li>
+                  <li>
+                    <strong>Grand Re-Opening:</strong> April launch event with
+                    strong student/faculty turnout; attendees received custom
+                    3D-printed tokens.
+                  </li>
+                  <li>
+                    <strong>Programming established:</strong> Initial design
+                    thinking workshops and growth mindset sessions.
+                  </li>
+                  <li>
+                    <strong>Long-term continuity identified:</strong> Created
+                    the proposal for an operations oversight role to ensure
+                    governance and prevent misuse or "mission drift."
+                  </li>
+                </ul>
+              </div>
+
+              {/* What I Learned */}
+              <div>
+                <h2 className="text-3xl font-bold mb-4 text-primary">
+                  What I Learned
+                </h2>
+                <ol className="list-decimal list-inside space-y-3">
+                  <li>
+                    <span className="font-semibold">
+                      Design for inheritance, not heroics
+                    </span>
+                    <span className="block">
+                      Sustainable impact requires systems that outlive their
+                      creators. Infrastructure matters more than single events,
+                      and clear ownership and handoff plans matter more than the
+                      short-term excitement of launch.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="font-semibold">Systems need stewards</span>
+                    <span className="block">
+                      Even well-designed spaces drift without governance. I
+                      learned the importance of designing not just the space but
+                      the operational roles that maintain it.
+                    </span>
+                  </li>
+                  <li>
+                    <span className="font-semibold">
+                      Stakeholder alignment is emotional and political work
+                    </span>
+                    <span className="block">
+                      Winning resources in zero-sum environments required
+                      reframing the project as a shared asset. UIF&apos;s
+                      credibility and alignment with Menlo&apos;s strategic plan
+                      were key in shifting attitudes.
+                    </span>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+          <h2 className="text-3xl font-bold text-primary">
+            UIF Silicon Valley Meetup
+          </h2>
+          <MeetupGallery />
+        </div>
+      </div>
+    </div>
   );
 };
 

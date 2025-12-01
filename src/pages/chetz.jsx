@@ -46,7 +46,7 @@ const TimelinePhase = ({
         {/* Children Content */}
         <div
           className={`p-6 rounded-lg shadow-lg ${
-            highlight ? "bg-orange-50 border-2 border-orange-200" : "bg-white"
+            highlight ? "bg-blue-50 border-2 border-blue-200" : "bg-white"
           }`}
         >
           {children}
@@ -55,14 +55,6 @@ const TimelinePhase = ({
     </div>
   );
 };
-
-const MetricCard = ({ label, value, subtext }) => (
-  <div className="bg-white p-4 rounded-lg shadow text-center">
-    <div className="text-sm text-gray-600 mb-1">{label}</div>
-    <div className="text-xl font-bold text-gray-900">{value}</div>
-    <div className="text-xs text-gray-500">{subtext}</div>
-  </div>
-);
 
 // Component: Learning Card
 const LearningCard = ({ icon, title, content }) => (
@@ -130,18 +122,26 @@ const chetz = () => {
           <h2 className="text-3xl font-bold mb-4 text-primary">Our Story</h2>
 
           <p className="text-secondary text-[17px] leading-[30px]">
-            In 2020, when the COVID-19 pandemic forced me to return to Japan
-            from my high school abroad in Canada, I felt a strong desire to stay
-            connected with the world. At the same time, tools like Zoom became
-            more accessible, opening up new possibilities for online
-            interaction. This inspired me to launch chetz as a completely online
-            platform, enabling global participation regardless of location. At
-            the beginning, I managed everything by myself—promotion,
-            recruitment, website development, and operations. Over time, we grew
-            into a diverse team of over 20 members from 6 different countries.
-            Although all of our members were high school students, we welcomed
-            anyone regardless of age or experience, as long as they shared our
-            passion.
+            In 2020, the COVID-19 pandemic forced me back to Japan from high
+            school in Canada, cutting me off from the world that had shaped me.
+            I thought about all the students stuck in similar situations—feeling
+            like their futures were limited by quarantine and rigid school
+            systems. I wanted them to know that wasn't true. I believed that
+            broadening perspective opens up possibilities, that hearing about
+            different parts of the world could help them dream beyond their
+            current constraints. Within hours, I built a website offering
+            one-on-one English lessons and study-abroad consulting. <br />
+            Within a week, I realized I had it backwards. If I wanted to truly
+            open up possibilities for students, they needed to hear <i>
+              many
+            </i>{" "}
+            stories, not just mine, but from peers across borders who each had
+            different experiences and dreams. So I pivoted entirely. Instead of
+            teaching students, I created a space where they could learn{" "}
+            <i>with</i> each other and discover the possibilities waiting for
+            them. That shift became chetz: a peer-to-peer language exchange
+            community where students connect across borders to share their
+            cultures, languages, and lived experiences.
           </p>
         </div>
       </div>
@@ -153,18 +153,20 @@ const chetz = () => {
           </h2>
 
           <div className="space-y-16">
-            {/* Phase 1 */}
             <TimelinePhase
               phase="1"
-              title="The Spontaneous Start"
+              title="Beginning of chetz"
               date="October 2020"
               side="left"
             >
               <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
                 <ul className="list-disc list-inside text-secondary text-[17px] lg:w-[70%] leading-[30px]">
-                  <li>5pm on a random October afternoon</li>
-                  <li>Solo website creation → pivot within 3 weeks</li>
-                  <li>First event: 10 people (friends + members)</li>
+                  <li>Week 1: Created name, website and logo → pivot</li>
+                  <li>Week 2-3: Recruited co-founder and first volunteers</li>
+                  <li>
+                    , Week 4: First language exchange event with ~10 people
+                    (friends + members)
+                  </li>
                 </ul>
 
                 <img
@@ -184,119 +186,89 @@ const chetz = () => {
             >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h4 className="font-bold text-lg mb-3 text-gray-800">
-                    Systems Built:
-                  </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>✅ Comprehensive branding guide</li>
-                    <li>✅ CRM tracking system</li>
-                    <li>✅ Multi-platform marketing</li>
-                    <li>✅ Slack channels (internal + external)</li>
-                    <li>✅ Training materials & onboarding</li>
+                  <h4 className="font-bold text-lg mb-30">Systems Built:</h4>
+                  <ul className="list-disc list-inside space-y-2 text-secondary">
+                    <li>Training materials & onboarding</li>{" "}
+                    <li>Slack channels (internal + external)</li>
+                    <li>Branding guide</li>
+                    <li>CRM tracking system</li>
+                    <li>Multi-platform marketing</li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-3 text-gray-800">
                     Growth Strategy:
                   </h4>
-                  <ul className="space-y-2 text-gray-700">
-                    <li>🎯 Strategic university outreach</li>
-                    <li>🤝 University of Alberta, Sophia, Waseda</li>
-                    <li>📈 Network effect → Universities reached out to us</li>
+                  <ul className="list-disc list-inside space-y-2 text-secondary">
+                    <li>Strategic cold outreach</li>
+                    <li>Partnerships with other social organizations</li>
+                    <li>
+                      Network effect → Organizations started reaching out to us
+                    </li>
+                    <li>Recruited more students as the organization grew</li>
                   </ul>
                 </div>
               </div>
             </TimelinePhase>
 
-            {/* Phase 3 - Crisis */}
+            {/* Phase 3 */}
             <TimelinePhase
               phase="3"
-              title="The Crisis & Cultural Transformation"
+              title="Cultural Transformation"
               date="March 2021"
               side="left"
               highlight={true}
             >
               <div className="space-y-6">
                 {/* The Problem */}
-                <div className="bg-gray-800 text-white p-6 rounded-lg">
-                  <p className="text-lg">
-                    Team commitment dropped. Half weren't engaged. I was doing
-                    everything myself—teaching people what to do, finishing
-                    their tasks, controlling outcomes.
-                  </p>
-                </div>
-
+                <p className="font-semibold text-lg mb-3 text-gray-800">
+                  The Problem:
+                </p>
+                <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                  <li>Team commitment dropped as organization grew</li>
+                  <li>
+                    Members ghosting meetings, not delivering tasks, being flaky
+                  </li>
+                  <li>More responsibilities fell on me</li>
+                </ul>
                 {/* The Solution */}
-                <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
-                  <p className="font-semibold text-lg mb-3 text-gray-800">
-                    The Solution:
-                  </p>
-                  <p className="text-gray-700">
+                <p className="font-semibold text-lg mb-3 text-gray-800">
+                  The Solution:
+                </p>
+                <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                  <li>
                     Conducted 1-on-1 conversations with every member. Asked:
                     What do you <em>want</em> to do?
-                  </p>
-                </div>
-
-                {/* Case Study Card */}
-                <div className="bg-white border-2 border-orange-300 rounded-lg p-6 shadow-lg">
-                  <h4 className="font-bold text-xl mb-4 text-orange-600">
-                    CASE STUDY: The Illustration Artist
-                  </h4>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-3">
-                      <span className="text-red-500 font-bold">❌</span>
-                      <p className="text-gray-700">
-                        <strong>Assigned:</strong> Create promotional
-                        illustrations
-                        <span className="text-gray-500 italic">
-                          {" "}
-                          (stressed, ghosting meetings)
-                        </span>
-                      </p>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-500 font-bold">✅</span>
-                      <p className="text-gray-700">
-                        <strong>Shifted:</strong> English learning + programs
-                        team
-                        <span className="text-green-600 italic">
-                          {" "}
-                          (became most committed member)
-                        </span>
-                      </p>
-                    </div>
-                    <div className="mt-4 pt-4 border-t border-gray-200">
-                      <p className="font-semibold text-gray-800">
-                        INSIGHT: Match people to their genuine interests, not
-                        just their capabilities.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Transformation Metrics */}
-                <div className="grid grid-cols-2 gap-4">
-                  <MetricCard
-                    label="Team size"
-                    value="20 → 10"
-                    subtext="Cut half"
-                  />
-                  <MetricCard
-                    label="Engagement"
-                    value="⬆️ 100%"
-                    subtext="Committed"
-                  />
-                  <MetricCard
-                    label="Culture"
-                    value="Collaborative"
-                    subtext="Empowered"
-                  />
-                  <MetricCard
-                    label="Duration"
-                    value="Overnight"
-                    subtext="Transformation"
-                  />
-                </div>
+                  </li>
+                  <li>
+                    Realigned team roles, set clear expectations and goals.
+                  </li>
+                </ul>
+                <p className="font-semibold text-lg mb-3 text-gray-800">
+                  Leadership Shift & Results:
+                </p>
+                <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                  <li>
+                    Leadership shift from trying to teach/control to trusting
+                    members and giving them real ownership.
+                  </li>
+                  <li>
+                    Culture transformed overnight from formal and stressful to
+                    collaborative and empowering.
+                  </li>
+                  <li>
+                    Team became genuine friends (never met in person, but kept a
+                    LINE group open all day).
+                  </li>
+                  <li>
+                    Members began taking initiative: hosting programs
+                    independently and suggesting new ideas.
+                  </li>
+                  <li>
+                    Everyone could trust each other and no longer needed you to
+                    finish tasks.
+                  </li>
+                </ul>
               </div>
             </TimelinePhase>
 
@@ -340,7 +312,7 @@ const chetz = () => {
       {/* KEY LEARNINGS */}
       <section className="learnings-section py-20">
         <div className="container mx-auto px-6">
-          <h2 className="text-5xl font-bold text-center mb-16 text-gray-900">
+          <h2 className="text-3xl font-bold mb-4 text-center text-primary">
             Key Learnings
           </h2>
 
