@@ -81,9 +81,10 @@ import chetzlogo from "./chetz/chetzlogo.png";
 import bluebase from "./chetz/bluebase.jpg";
 import dawn from "./chetz/dawn.jpg";
 import ikkadanran from "./chetz/ikkadanran.png";
-import langexch from "./chetz/langexch.png";
+import langexch1 from "./chetz/langexch1.png";
+import langexch2 from "./chetz/langexch2.png";
 import manabity from "./chetz/manabity.png";
-import meeting from "./chetz/meeting.png";
+import group1 from "./chetz/group1.png";
 import ownleg from "./chetz/ownleg.jpg";
 import pando from "./chetz/pando.png";
 import seminar from "./chetz/seminar.png";
@@ -92,7 +93,8 @@ import u18 from "./chetz/u18.jpg";
 import uofa from "./chetz/uofa.jpg";
 import warmhearts from "./chetz/warmhearts.png";
 import wic from "./chetz/wic.jpg";
-import workshop from "./chetz/workshop.png";
+import workshop1 from "./chetz/ikkadanan_workshop_ 1.png";
+import workshop2 from "./chetz/ikkadanan_workshop_ 2.jpg";
 
 import necx_group from "./necx_group.png";
 
@@ -171,9 +173,10 @@ export {
   bluebase,
   dawn,
   ikkadanran,
-  langexch,
+  langexch1,
+  langexch2,
   manabity,
-  meeting,
+  group1,
   ownleg,
   pando,
   seminar,
@@ -182,6 +185,7 @@ export {
   uofa,
   warmhearts,
   wic,
-  workshop,
+  workshop1,
+  workshop2,
   necx_group,
 };

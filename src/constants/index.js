@@ -56,9 +56,10 @@ import {
   bluebase,
   dawn,
   ikkadanran,
-  langexch,
+  langexch1,
+  langexch2,
   manabity,
-  meeting,
+  group1,
   ownleg,
   pando,
   seminar,
@@ -67,7 +68,7 @@ import {
   uofa,
   warmhearts,
   wic,
-  workshop,
+  workshop1,
   chetzlogo,
 } from "../assets";
 
@@ -359,7 +360,7 @@ const highlights = [
     name: "chetz",
     description:
       "Created a community where students discover global perspectives through language and connection",
-    image: langexch,
+    image: langexch2,
     redirect_link: "/chetz",
   },
   {
@@ -384,7 +385,7 @@ const works = [
     description:
       "Founded chetz, a fully online volunteer organization connecting Japan and the world through free educational and cultural exchange programs. Launched during the COVID-19 pandemic to promote global awareness and youth empowerment. Led outreach, recruitment, and operations, growing the team to 20+ members across 6 countries and organizing over 10 monthly events in collaboration with schools, senior homes, and other organizations.",
 
-    image: meeting,
+    image: group1,
     link: "/chetz",
   },
   {
@@ -646,13 +647,13 @@ const events = [
     name: "Language Exchange",
     description:
       "Hosted events that facilitated mutual language learning and cultural exchange among participants from diverse backgrounds.",
-    image: langexch,
+    image: langexch2,
   },
   {
     name: " English Workshops",
     description:
       "Partnered with local Japanese communities (senior homes, children’s centers, etc.) to conduct engaging English workshops.",
-    image: workshop,
+    image: workshop1,
   },
   {
     name: "Online Seminars",
