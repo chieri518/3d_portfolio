@@ -22,8 +22,6 @@ import {
 } from "../assets";
 import { organizations, events } from "../constants";
 
-import Navbar from "./navbar";
-
 const photoSlides = [
   {
     image: group1,
@@ -173,46 +171,52 @@ const TimelinePhase = ({ phase, title, date, children, highlight = false }) => {
 
 const chetz = () => {
   return (
-    <div className="relative w-full min-h-screen mx-auto bg-white">
-      <Navbar />
-
-      <div className={`${styles.padding} pt-24`}>
-        <div className="text-center">
-          <h1 className={`${styles.sectionHeadText} mb-2 text-black`}>chetz</h1>
-          <p className={`${styles.sectionSubText} mb-8`}>
-            A global learning space where curiosity meets action.
-          </p>
-        </div>
-      </div>
-      <div className={`${styles.padding} bg-gray-50 py-12`}>
-        <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8 max-w-7xl mx-auto">
-          <div className="flex-1">
-            <p className="text-secondary text-[17px] leading-[30px]">
-              chetz is a student-led nonprofit organization founded in October
-              2020 to connect Japanese students with diverse cultures during the
-              COVID-19 pandemic. Rooted in the belief that global understanding
-              starts with communication, chetz creates online spaces where
-              students can engage, grow, and inspire each other. Our core
-              programs include Language Exchange, English Learning Support, and
-              Study Abroad Counseling. We also host collaborative events and
-              study sessions with fellow student organization, building bridges
-              not just across cultures, but across communities.
+    <>
+      <div
+        className={`${styles.paddingX} max-w-6xl mx-auto flex flex-col gap-10`}
+      >
+        <p className="text-secondary uppercase tracking-[0.2em] text-xs md:text-sm">
+          Language exchange · Community
+        </p>
+        <div className="flex flex-col md:flex-row text-center items-start gap-8">
+          <div className="flex-1 space-y-4">
+            <h1 className={styles.sectionHeadText}>chetz</h1>
+            <p className="text-secondary text-[16px] text-center md:text-[18px]">
+              Social Media Marketing, Event and Program Operations.
             </p>
-          </div>
-          <div className="lg:w-48 w-full">
-            <img
-              src={chetzlogo}
-              alt="chetz logo"
-              className="w-full h-auto object-contain hover:scale-105 transition-transform duration-300"
-            />
+            <div className="max-w-6xl mx-auto bg-gray-50 px-6 py-6 md:px-10 md:py-8">
+              <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                <div className="flex-1">
+                  <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+                    chetz is a student-led nonprofit organization founded in
+                    October 2020 to connect Japanese students with diverse
+                    cultures during the COVID-19 pandemic. Rooted in the belief
+                    that global understanding starts with communication, chetz
+                    creates online spaces where students can learn from each
+                    other.
+                  </p>
+                </div>
+
+                <div className="lg:w-48 w-full">
+                  <img
+                    src={chetzlogo}
+                    alt="chetz logo"
+                    className="w-[70%] h-auto object-contain hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className={`${styles.padding} py-12`}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Our Vision</h2>
 
-          <p className="text-secondary text-[17px] leading-[30px]">
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Our Vision
+          </h2>
+
+          <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
             To{" "}
             <strong className="text-primary">
               serve as a bridge between Japan and the world
@@ -224,38 +228,39 @@ const chetz = () => {
       </div>
 
       <div className={`${styles.padding} py-12`}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Our Story</h2>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Our Story
+          </h2>
 
-          <p className="text-secondary text-[17px] leading-[30px]">
-            In 2020, the COVID-19 pandemic forced me back to Japan from high
-            school in Canada, cutting me off from the world that had shaped me.
-            I thought about all the students stuck in similar situations—feeling
-            like their futures were limited by quarantine and rigid school
-            systems. I wanted them to know that wasn't true. I believed that
-            broadening perspective opens up possibilities, that hearing about
-            different parts of the world could help them dream beyond their
-            current constraints. Within hours, I built a website offering
-            one-on-one English lessons and study-abroad consulting. <br />
-            Within a week, I realized I had it backwards. If I wanted to truly
-            open up possibilities for students, they needed to hear <i>
-              many
-            </i>{" "}
-            stories, not just mine, but from peers across borders who each had
-            different experiences and dreams. So I pivoted entirely. Instead of
-            teaching students, I created a space where they could learn{" "}
-            <i>with</i> each other and discover the possibilities waiting for
-            them. That shift became chetz: a peer-to-peer language exchange
-            community where students connect across borders to share their
-            cultures, languages, and lived experiences.
+          <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+            In 2020, the COVID-19 pandemic forced me to return to Japan from my
+            high school in Canada, suddenly separating me from school, friends
+            and the international environment that had shaped me. I thought
+            about students around the world who were facing a similar
+            disconnection.
+            <br />
+            Then I wondered: what if I created a virtual space where students
+            could broaden their perspectives beyond their current restrictions?
+            Within hours, I built a website offering English lessons and
+            study-abroad consulting.
+            <br />
+            But soon, I realized I had it backwards. If I truly wanted students
+            to broaden their perspectives, they needed to hear <i>many</i>{" "}
+            stories, not just mine. So I pivoted and created a space where they
+            could learn <i>with</i> each other. That became chetz: a
+            peer-to-peer community where students connect across borders to
+            share their cultures, languages, and lived experiences.
           </p>
         </div>
       </div>
       <div className={`${styles.padding} py-12`}>
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-primary">Our Impact</h2>
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+            Our Impact
+          </h2>
 
-          <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+          <ul className="list-disc list-inside space-y-2 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
             <li>
               Recruited <strong className="text-primary">20+ members</strong>{" "}
               from 6 countries
@@ -279,8 +284,8 @@ const chetz = () => {
       </div>
 
       <div className={`${styles.padding} py-12`}>
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-primary">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8 text-gray-900">
             Our Collaborations
           </h2>
 
@@ -312,8 +317,8 @@ const chetz = () => {
         </div>
         {/* THE JOURNEY - TIMELINE */}
         <section className="journey-section py-20">
-          <div className="container mx-auto px-6 py-6 bg-gray-50">
-            <h2 className="text-5xl font-bold text-center mb-16 text-gray-900">
+          <div className="max-w-6xl mx-auto px-6 py-6 bg-gray-50">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">
               The Journey
             </h2>
 
@@ -324,7 +329,7 @@ const chetz = () => {
                 date="October 2020"
               >
                 <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
-                  <ul className="list-disc list-inside text-secondary text-[17px] lg:w-[70%] leading-[30px]">
+                  <ul className="list-disc list-inside text-gray-600 text-lg leading-7 lg:w-[70%]">
                     <li>Week 1: Created name, website and logo → pivot</li>
                     <li>Week 2-3: Recruited co-founder and first volunteers</li>
                     <li>
@@ -349,8 +354,10 @@ const chetz = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-bold text-lg mb-30">Systems Built:</h4>
-                    <ul className="list-disc list-inside space-y-2 text-secondary">
+                    <h4 className="font-bold text-lg mb-3 text-gray-900">
+                      Systems Built:
+                    </h4>
+                    <ul className="list-disc list-inside space-y-2 text-secondary text-[15px] leading-[24px]">
                       <li>Training materials & onboarding</li>{" "}
                       <li>Slack channels (internal + external)</li>
                       <li>Branding guide</li>
@@ -359,10 +366,10 @@ const chetz = () => {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold text-lg mb-3 text-gray-800">
+                    <h4 className="font-bold text-lg mb-3 text-gray-900">
                       Growth Strategy:
                     </h4>
-                    <ul className="list-disc list-inside space-y-2 text-secondary">
+                    <ul className="list-disc list-inside space-y-2 text-secondary text-[15px] leading-[24px]">
                       <li>Strategic cold outreach</li>
                       <li>Partnerships with other social organizations</li>
                       <li>
@@ -384,10 +391,10 @@ const chetz = () => {
               >
                 <div className="space-y-6">
                   {/* The Problem */}
-                  <p className="font-semibold text-lg mb-3 text-gray-800">
+                  <p className="font-semibold text-lg mb-3 text-gray-900">
                     The Problem:
                   </p>
-                  <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                  <ul className="list-disc list-inside text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
                     <li>Team commitment dropped as organization grew</li>
                     <li>
                       Members ghosting meetings, not delivering tasks, being
@@ -396,10 +403,10 @@ const chetz = () => {
                     <li>More responsibilities fell on me</li>
                   </ul>
                   {/* The Solution */}
-                  <p className="font-semibold text-lg mb-3 text-gray-800">
+                  <p className="font-semibold text-lg mb-3 text-gray-900">
                     The Solution:
                   </p>
-                  <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                  <ul className="list-disc list-inside text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
                     <li>
                       Conducted 1-on-1 conversations with every member. Asked:
                       What do you <em>want</em> to do?
@@ -408,10 +415,10 @@ const chetz = () => {
                       Realigned team roles, set clear expectations and goals.
                     </li>
                   </ul>
-                  <p className="font-semibold text-lg mb-3 text-gray-800">
+                  <p className="font-semibold text-lg mb-3 text-gray-900">
                     Leadership Shift & Results:
                   </p>
-                  <ul className="list-disc list-inside text-secondary text-[17px] leading-[30px]">
+                  <ul className="list-disc list-inside text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
                     <li>
                       Leadership shift from trying to teach/control to trusting
                       members and giving them real ownership.
@@ -444,7 +451,7 @@ const chetz = () => {
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-bold text-lg mb-3 text-gray-800">
+                    <h4 className="font-bold text-lg mb-3 text-gray-900">
                       Selection Process:
                     </h4>
                     <p className="text-gray-700">
@@ -455,12 +462,9 @@ const chetz = () => {
                     </p>
                   </div>
                   <div className="bg-blue-50 p-6 rounded-lg">
-                    <p className="font-bold text-lg mb-3 text-gray-800">
-                      The Result:
-                    </p>
                     <p className="text-gray-700 mb-3">
-                      Most founder-led student organizations die when the
-                      founder leaves.
+                      Most student-led organizations die when the founder
+                      leaves.
                     </p>
                     <p className="text-xl font-bold text-blue-500">
                       chetz is still running 5 years later.
@@ -473,17 +477,16 @@ const chetz = () => {
         </section>
 
         <div className={`${styles.padding} py-10`}>
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold mb-4 text-center text-primary">
-              Events
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-gray-900">
+              Programs
             </h2>
 
             <div className="text-center mb-8">
-              <p className="text-secondary text-[17px] leading-[30px] max-w-4xl mx-auto">
-                chetz provides a flexible space where volunteers can lead
-                activities based on their own skills and experiences. We
-                intentionally do not limit ourselves to a specific field,
-                allowing for a wide range of volunteer-led events, including:
+              <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px] max-w-4xl mx-auto">
+                chetz provides a flexible space where volunteers design
+                activities based on their own skills and experiences, enabling a
+                wide range of volunteer-led events, including:
               </p>
             </div>
 
@@ -491,13 +494,13 @@ const chetz = () => {
               {events.map((item, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  className="bg-white rounded-2xl overflow-hidden shadow-lg"
                 >
                   <div className="h-40 overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-4">
@@ -513,8 +516,8 @@ const chetz = () => {
             </div>
 
             <div className="mt-12 py-10 ">
-              <h3 className="text-2xl font-bold mb-4 text-center text-primary">
-                Photo Highlights
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-center text-gray-900">
+                Gallery
               </h3>
               <p className="text-secondary text-[15px] leading-[26px] max-w-3xl mx-auto mb-6 text-center">
                 A few snapshots from language exchanges, workshops, and fun
@@ -525,7 +528,7 @@ const chetz = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

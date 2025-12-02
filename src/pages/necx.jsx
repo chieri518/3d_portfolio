@@ -22,8 +22,6 @@ import {
   luma6,
 } from "../assets";
 
-import Navbar from "./navbar";
-
 const LumaImages = [luma1, luma2, luma3, luma4, luma5, luma6];
 
 function LumaGallery() {
@@ -77,88 +75,92 @@ function NECX() {
       <section
         className={`relative w-full min-h-screen mx-auto bg-white ${styles.paddingY}`}
       >
-        <Navbar />
         <div
-          className={`${styles.paddingX} max-w-6xl mx-auto flex flex-col gap-10 pt-10 pb-16`}
+          className={`${styles.paddingX} max-w-6xl mx-auto flex flex-col gap-10`}
         >
           <p className="text-secondary uppercase tracking-[0.2em] text-xs md:text-sm">
             Venture Studio · Silicon Valley · Japan
           </p>
-          <div className="flex flex-col md:flex-row items-start gap-8">
+          <div className="flex flex-col md:flex-row text-center items-start gap-8">
             <div className="flex-1 space-y-4">
               <h1 className={styles.sectionHeadText}>NEC X</h1>
-              <p className="text-secondary max-w-2xl text-[16px] leading-relaxed md:text-[18px]">
-                Marketing, community, and program operations across a
-                multi-phase deep-tech accelerator.
-              </p>
 
               <section className="overview">
-                <div className="rounded-2xl bg-white/80 shadow-md border border-gray-100 p-6 md:p-8 flex flex-col md:flex-row items-start gap-6">
-                  <div className="flex-1 flex flex-col gap-4">
-                    <h2 className={styles.sectionHeadText}>About NEC X</h2>
-                    <p className="text-secondary text-[16px] leading-[28px] md:text-[17px] md:leading-[30px]">
-                      NEC X is a Silicon Valley-based venture studio backed by
-                      NEC Corporation, running a multi-phase accelerator program
-                      connecting early-stage startups with corporate resources,
-                      mentorship, and investment opportunities.
-                    </p>
-                  </div>
+                <div className="max-w-6xl mx-auto bg-gray-50 px-6 py-6 md:px-10 md:py-8">
+                  <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                    <div className="flex-1">
+                      <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+                        NEC X is a Silicon Valley-based venture studio backed by
+                        NEC Corporation, running a multi-phase accelerator
+                        program connecting early-stage startups with corporate
+                        resources, mentorship, and investment opportunities.
+                      </p>
+                    </div>
 
-                  <a
-                    href="https://www.nec-x.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="md:w-40 w-28 flex-shrink-0 self-center md:self-start"
-                  >
-                    <img
-                      src={necx}
-                      alt="NEC X logo"
-                      className="w-full h-auto object-contain drop-shadow-md"
-                    />
-                  </a>
+                    <a
+                      href="https://www.nec-x.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img
+                        src={necx}
+                        alt="NEC X logo"
+                        className="w-[50%] h-auto object-contain drop-shadow-md"
+                      />
+                    </a>
+                  </div>
                 </div>
               </section>
 
-              <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 space-y-3">
-                <h2 className="text-xl font-semibold text-gray-900">
+              <div className="pt-10 space-y-4">
+                <h2 className="text-2xl font-semibold text-gray-900 text-center">
                   Key Contributions
                 </h2>
-                <ul className="space-y-2 text-secondary text-[15px] leading-[24px] list-disc list-inside">
-                  <li>
-                    Built <strong>bilingual social media presence</strong>{" "}
-                    (English + Japanese) across LinkedIn and Facebook
-                  </li>
-                  <li>
-                    Managed <strong>220-attendee event</strong> from promotion
-                    through execution, including paid ads, cold outreach, and
-                    day-of logistics
-                  </li>
-                  <li>
-                    Coordinated program operations: scheduling, documentation,
-                    platform management, and founder support
-                  </li>
-                  <li>
-                    Created <strong> video library</strong> (50+ recordings with
-                    summaries) enabling founders to revisit workshops
-                  </li>
-                </ul>
+                <div className="max-w-3xl mx-auto border-l-[3px] border-gray-300 pl-8">
+                  <ul className="space-y-3 text-[18px] leading-[24px] list-none text-left text-secondary">
+                    <li className="flex items-start gap-3">
+                      <a
+                        href="#social-media-marketing"
+                        className="hover:text-gray-900 hover:underline transition-colors"
+                      >
+                        1. Social Media Marketing - building program visibility
+                      </a>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <a
+                        href="#event-management"
+                        className="hover:text-gray-900 hover:underline transition-colors"
+                      >
+                        2. Event Management - converting interest into
+                        applications
+                      </a>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <a
+                        href="#program-coordination"
+                        className="hover:text-gray-900 hover:underline transition-colors"
+                      >
+                        3. Program Coordination - supporting founder success
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section id="social-media-marketing" className="py-16">
         <div className={`${styles.paddingX} max-w-6xl mx-auto space-y-10`}>
-          <div className="text-center max-w-3xl mx-auto">
-            <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               1. Social Media Marketing
-            </h3>
+            </h2>
             <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
               Building Program Visibility
             </p>
           </div>
-
           <div className="bg-white rounded-2xl shadow-md border border-gray-100 p-6 md:p-8 space-y-8">
             <div>
               <h4 className="text-2xl font-semibold text-gray-900 mb-3">
@@ -252,7 +254,7 @@ function NECX() {
         </div>
       </section>
 
-      <section className="py-16">
+      <section id="event-management" className="py-16">
         <div className={`${styles.paddingX} max-w-6xl mx-auto space-y-10`}>
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -367,7 +369,7 @@ function NECX() {
         </div>
       </section>
 
-      <section className="bg-gray-50 py-16">
+      <section id="program-coordination" className="py-16">
         <div className={`${styles.paddingX} max-w-6xl mx-auto space-y-10`}>
           <div className="text-center max-w-3xl mx-auto">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

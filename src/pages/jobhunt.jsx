@@ -1,29 +1,32 @@
 import React from "react";
 import { styles } from "../styles";
-import Navbar from "./navbar";
 
 const JobHunt = () => {
   return (
-    <section className="relative w-full h-screen mx-auto">
-      <Navbar />
-      <div className="p-6 max-w-4xl mx-auto text-gray-800 scroll-smooth">
+    <section className="relative w-full mx-auto">
+      <div className={`${styles.padding} max-w-4xl mx-auto text-gray-800`}>
         <h1 className={styles.sectionHeadText}>
           Navigating the Tech Job Market in 2025: A Five-Decade Perspective
         </h1>
-        <p className="italic mb-4">
+        <p className="italic mb-4 text-secondary text-[14px] sm:text-[15px]">
           By Chieri Abe, Menlo College 2025 with Frances Mann-Craik, Menlo
           College 1976
         </p>
 
-        <h2 className="text-2xl font-semibold mt-6 mb-2" id="introduction">
+        <h2
+          className="text-3xl md:text-4xl font-bold mt-8 mb-3 text-gray-900"
+          id="introduction"
+        >
           Introduction: Resilience in a Shifting Job Market
         </h2>
-        <p className="mb-4">
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
           The tech industry is no stranger to cycles of boom and bust...
         </p>
 
-        <h2 className="text-xl font-semibold mt-6">Table of Contents</h2>
-        <ul className="list-disc ml-6 mb-4 space-y-1">
+        <h2 className="text-2xl font-semibold mt-6 mb-2 text-gray-900">
+          Table of Contents
+        </h2>
+        <ul className="list-disc ml-6 mb-4 space-y-1 text-secondary text-[15px] leading-[24px]">
           <li>
             <a href="#part1" className="text-blue-600 hover:underline">
               Part 1: Lessons from the Job Market
@@ -61,43 +64,72 @@ const JobHunt = () => {
           </li>
         </ul>
 
-        <h2 className="text-2xl font-semibold mt-6" id="part1">
+        <h2
+          className="text-3xl md:text-4xl font-bold mt-8 mb-3 text-gray-900"
+          id="part1"
+        >
           Part 1: Lessons from the Job Market
         </h2>
 
-        <h3 className="text-xl font-bold mt-4" id="network">
+        <h3
+          className="text-xl md:text-2xl font-semibold mt-6 mb-1 text-gray-900"
+          id="network"
+        >
           1. Network with Everyone
         </h3>
-        <p className="mb-4">
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
           Back in the ‘70s, Frances interviewed a Harvard MBA student...
         </p>
 
-        <h3 className="text-xl font-bold mt-4" id="adaptable">
+        <h3
+          className="text-xl md:text-2xl font-semibold mt-6 mb-1 text-gray-900"
+          id="adaptable"
+        >
           2. Stay Adaptable, and Don’t Be Afraid to Take a Detour
         </h3>
-        <p className="mb-4">
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
           One of the reasons the job market is tight right now...
         </p>
 
-        <h3 className="text-xl font-bold mt-4" id="learning">
+        <h3
+          className="text-xl md:text-2xl font-semibold mt-6 mb-1 text-gray-900"
+          id="learning"
+        >
           3. Keep Learning Lean Into Hot Trends
         </h3>
-        <p className="mb-4">(You can insert the content here)</p>
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+          (You can insert the content here)
+        </p>
 
-        <h3 className="text-xl font-bold mt-4" id="brand">
+        <h3
+          className="text-xl md:text-2xl font-semibold mt-6 mb-1 text-gray-900"
+          id="brand"
+        >
           4. Brand Yourself – Stand Out from Other Job Seekers
         </h3>
-        <p className="mb-4">(You can insert the content here)</p>
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+          (You can insert the content here)
+        </p>
 
-        <h3 className="text-xl font-bold mt-4" id="summary">
+        <h3
+          className="text-xl md:text-2xl font-semibold mt-6 mb-1 text-gray-900"
+          id="summary"
+        >
           Summary: Turning Challenges into Opportunities
         </h3>
-        <p className="mb-4">(You can insert the content here)</p>
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+          (You can insert the content here)
+        </p>
 
-        <h2 className="text-2xl font-semibold mt-6" id="part2">
+        <h2
+          className="text-3xl md:text-4xl font-bold mt-8 mb-3 text-gray-900"
+          id="part2"
+        >
           Part 2: Job Market Cycles: Learning from History
         </h2>
-        <p className="mb-4">(You can insert the content here)</p>
+        <p className="mb-4 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+          (You can insert the content here)
+        </p>
       </div>
     </section>
   );

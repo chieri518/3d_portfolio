@@ -18,8 +18,6 @@ import {
   steamhouse_mindmap,
 } from "../assets";
 
-import Navbar from "./navbar";
-
 function UIFGallery() {
   const ref = useRef();
 
@@ -293,35 +291,21 @@ const UIF = () => {
 
   return (
     <div className="relative w-full min-h-screen mx-auto">
-      <Navbar />
       <h1 className={styles.sectionHeadText}>
         University Innovation Fellowship
       </h1>
       <p className={styles.sectionSubText}>
         @ Hasso Plattner Institute of Design at Stanford University
       </p>
-
-      <div className="max-w-4xl mx-auto mt-6">
-        <p className="text-secondary text-[17px] leading-[30px]">
-          As part of Menlo College&apos;s 2018-2019 University Innovation
-          Fellowship cohort, I worked to transform an underutilized Innovation
-          Center (originally established in 2017) into a sustainable,
-          well-equipped makerspace and community hub.
-        </p>
-      </div>
-
-      <div className={`${styles.padding} py-12`}>
-        <div className="max-w-6xl mx-auto">
-          <UIFGallery />
-        </div>
+      <div className="max-w-6xl mx-auto">
+        <UIFGallery />
       </div>
 
       {/* About UIF */}
-      <div className={`${styles.padding} py-12`}>
-        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8">
+      <div className={`${styles.padding} bg-gray-50 py-12`}>
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-8">
           <div className="flex-1">
-            <h2 className="text-3xl font-bold mb-4 text-primary">About UIF</h2>
-            <p className="text-secondary text-[17px] leading-[30px]">
+            <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
               The University Innovation Fellows (UIF) is a global program that
               empowers university students to become change agents at their
               schools by fostering innovation, entrepreneurship, creativity, and
@@ -345,96 +329,84 @@ const UIF = () => {
         </div>
       </div>
 
-      <div className="space-y-6">
-        <h2 className="text-3xl font-bold text-primary">
-          Building a sustainable makerspace on campus
-        </h2>
+      <div className={`${styles.padding} py-12`}>
+        <div className="max-w-6xl mx-auto space-y-6">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            "How might we inspire innovation on campus?"
+          </h2>
 
-        {/* The System (full width) */}
-        <div>
-          <h3 className="text-xl font-semibold mb-2 text-gray-900">
-            The System
-          </h3>
-          <p className="text-secondary text-[17px] leading-[30px]">
-            The Innovation Center existed as a classroom with movable furniture
-            and a Mac monitor, but was cluttered, had no clear ownership (shared
-            between design thinking and art classes), and saw minimal student
-            engagement. Previous cohorts had created the space, but there was no
-            plan for sustaining or evolving it.
-          </p>
-        </div>
+          {/* The Opportunity + Mindmap side by side */}
+          <div className="flex flex-col lg:flex-row gap-8 items-start">
+            <div className="flex-1">
+              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-900">
+                The Challenge
+              </h3>
+              <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+                The Innovation Center (a space designed by 2017 UIF cohort)
+                existed as a classroom with movable furniture and a Mac monitor,
+                but was cluttered, had no clear ownership, and saw minimal
+                student engagement.
+              </p>
+              <br />
+              <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-900">
+                The Opportunity
+              </h3>
+              <p className="text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px] mb-2">
+                Our cohort identified that students lacked hands-on skill
+                development opportunities. We chose to focus on the Innovation
+                Center specifically because:
+              </p>
+              <ul className="list-disc list-inside space-y-2 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
+                <li>The infrastructure already existed.</li>
 
-        {/* The Opportunity + Mindmap side by side */}
-        <div className="flex flex-col lg:flex-row gap-8 items-start">
-          <div className="flex-1">
-            <h3 className="text-xl font-semibold mb-2 text-gray-900">
-              The Opportunity
+                <li>
+                  It addressed the core problem of giving students prototyping
+                  skills.
+                </li>
+              </ul>
+            </div>
+
+            <div className="w-full lg:w-[30%] max-w-sm mx-auto lg:mx-0">
+              <button
+                type="button"
+                onClick={openMindmap}
+                className="w-full focus:outline-none group"
+              >
+                <img
+                  src={steamhouse_mindmap}
+                  alt="STEAMhouse mindmap"
+                  className="w-full h-auto object-contain rounded-2xl shadow-md cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]"
+                />
+              </button>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900">
+              Key Design Decisions
             </h3>
-            <p className="text-secondary text-[17px] leading-[30px] mb-2">
-              Our cohort identified that students lacked hands-on skill
-              development opportunities. Rather than create one-off events (like
-              bringing back TEDx or Startup Weekend), we chose to focus on the
-              Innovation Center specifically because:
-            </p>
-            <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
-              <li>The infrastructure already existed.</li>
+            <ul className="list-disc list-inside space-y-2 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
               <li>
-                It could be inherited and sustained across cohorts (unlike
-                events dependent on specific organizers).
+                <strong>Sustainability over novelty:</strong> Focused on
+                long-term infrastructure rather than one-off events.
               </li>
               <li>
-                It addressed the core problem of giving students practical,
-                maker-focused skills.
+                <strong>Phased implementation:</strong> (1) Budget approval (2)
+                Equipment acquisition &amp; installation (3) Space redesign
+                &amp; re-opening (4) Promotion (5) Operational role creation for
+                ongoing oversight.
+              </li>
+              <li>
+                <strong>Space redesign:</strong> Decluttered the room,
+                reorganized storage, and created zones for different types of
+                making.
               </li>
             </ul>
           </div>
-
-          <div className="w-full lg:w-[30%] max-w-sm mx-auto lg:mx-0">
-            <button
-              type="button"
-              onClick={openMindmap}
-              className="w-full focus:outline-none group"
-            >
-              <img
-                src={steamhouse_mindmap}
-                alt="STEAMhouse mindmap"
-                className="w-full h-auto object-contain rounded-2xl shadow-md cursor-pointer transition-transform duration-300 group-hover:scale-[1.03]"
-              />
-            </button>
-          </div>
-        </div>
-        <div>
-          <h3 className="text-2xl font-semibold mb-3 text-gray-900">
-            Key Design Decisions
-          </h3>
-          <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
-            <li>
-              <strong>Sustainability over novelty:</strong> Focused on long-term
-              infrastructure rather than one-off events (e.g., TEDx or Startup
-              Weekend).
-            </li>
-            <li>
-              <strong>Phased implementation:</strong> (1) Budget approval (2)
-              Equipment acquisition &amp; installation (3) Space redesign &amp;
-              re-opening (4) Operational role creation for ongoing oversight.
-            </li>
-            <li>
-              <strong>Strategic reframing:</strong> Rebranded the space to
-              <span className="font-bold"> STEAMhouse</span>, positioning it as
-              a campus-wide asset aligned with Menlo&apos;s innovation and
-              entrepreneurship priorities.
-            </li>
-            <li>
-              <strong>Space redesign:</strong> Decluttered the room, reorganized
-              storage, and created zones for different types of making (3D
-              printing, laser cutting, sewing, VR).
-            </li>
-          </ul>
         </div>
       </div>
       <div className={`${styles.padding} py-12 bg-gray-50`}>
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-primary">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
             Six-Week Training Overview
           </h2>
           <div className="mt-4">
@@ -514,11 +486,13 @@ const UIF = () => {
       )}
 
       <div className={`${styles.padding} py-12`}>
-        <div className="max-w-5xl mx-auto space-y-10 text-secondary text-[17px] leading-[30px]">
+        <div className="max-w-6xl mx-auto space-y-10 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-primary">Outcomes</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+              Outcomes
+            </h2>
 
-            <ul className="list-disc list-inside space-y-2 text-secondary text-[17px] leading-[30px]">
+            <ul className="list-disc list-inside space-y-2">
               <li>
                 Secured{" "}
                 <strong className="text-primary">$6,000+ in funding</strong>{" "}
@@ -534,8 +508,9 @@ const UIF = () => {
                 printers, laser cutter, VR sets, sewing machines, etc.).
               </li>
               <li>
-                <strong>Grand Re-Opening:</strong> April launch event with
-                strong student/faculty turnout; attendees received custom
+                Hosted{" "}
+                <strong className="text-primary">Grand Re-Opening</strong> event
+                with strong student/faculty turnout; attendees received custom
                 3D-printed tokens.
               </li>
               <li>
@@ -544,19 +519,14 @@ const UIF = () => {
                 our cohort&apos;s graduation.
               </li>
               <li>
-                <strong>Programming established:</strong> Initial design
-                thinking workshops and growth mindset sessions.
-              </li>
-              <li>
-                <strong>Long-term continuity identified:</strong> Created the
-                proposal for an operations oversight role to ensure governance
-                and prevent misuse or "mission drift."
+                Created the proposal for an operations oversight role to ensure
+                governance and prevent misuse.
               </li>
             </ul>
           </div>
         </div>
         {/* STEAMhouse Gallery */}
-        <div className={`${styles.padding} py-12`}>
+        <div className="py-12">
           <div className="max-w-6xl mx-auto space-y-6">
             <img
               loading="lazy"
@@ -567,9 +537,9 @@ const UIF = () => {
             <STEAMHouseGallery />
           </div>
         </div>
-        <div className="max-w-5xl mx-auto space-y-10 text-secondary text-[17px] leading-[30px]">
+        <div className="max-w-6xl mx-auto space-y-10 text-secondary text-[16px] md:text-[17px] leading-[28px] md:leading-[30px]">
           <div>
-            <h2 className="text-3xl font-bold mb-4 text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               What I Learned
             </h2>
             <ol className="list-decimal list-inside space-y-3">
@@ -607,7 +577,7 @@ const UIF = () => {
           </div>
 
           <div className="max-w-6xl mx-auto space-y-6">
-            <h2 className="text-3xl font-bold text-primary">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
               UIF Silicon Valley Meetup
             </h2>
             <MeetupGallery />
