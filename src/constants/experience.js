@@ -20,7 +20,7 @@ import {
 const experiences = [
   {
     title: "Solutions Consultant",
-    company_name: "Google (via Azaaki LLC)",
+    company_name: "Google",
     icon: google,
     date: "Sep 2025 - Apr 2026",
     points: [
@@ -58,7 +58,7 @@ const experiences = [
   },
 
   {
-    title: "Website Intern (Full-Time)",
+    title: "Ecommerce Growth Intern (Full-Time)",
     company_name: "Hilton",
     icon: hilton,
     date: "Oct 2023 - Jun 2024",
@@ -141,7 +141,9 @@ const educations = [
     school: "Carnegie Mellon University",
     icon: cmu,
     date: "Aug 2026 - Dec 2027",
-    points: [""],
+    points: [
+      "Coursework: Architecture & Programming Principles, Product Leadership, Product Management",
+    ],
   },
   {
     degree: "Bachelor of Science in Entrepreneurship and Innovation",

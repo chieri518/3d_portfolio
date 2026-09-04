@@ -138,6 +138,9 @@ const references = [
 
 const linkedinhighlight = [
   {
+    embed: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7496731889517346816?collapsed=1" height="603" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>`,
+  },
+  {
     embed: `<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7228960122385932288?collapsed=1" height="603" width="100%" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>`,
   },
   {
